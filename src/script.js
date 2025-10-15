@@ -34,6 +34,41 @@ if(navbarList){
     });
   });
 }
+document.querySelectorAll('.sss-card').forEach(function(card){
+  card.addEventListener('click', function(){
+    const icon = card.querySelector('.sss-list');
+    const metin = card.querySelector('.sss-title-bottom');
+    const isOpen = metin.classList.contains('open');
+    
+    // If this card is already open, close it
+    if (isOpen) {
+      metin.classList.remove('open');
+      icon.classList.remove('rotate-180');
+      icon.classList.add('rotate-0');
+    } else {
+      // Close all others and open this one simultaneously
+      document.querySelectorAll('.sss-card').forEach(otherCard => {
+        const otherMetin = otherCard.querySelector('.sss-title-bottom');
+        const otherIcon = otherCard.querySelector('.sss-list');
+        if (otherCard === card) {
+          // Open this one
+          if (otherMetin) otherMetin.classList.add('open');
+          if (otherIcon) {
+            otherIcon.classList.remove('rotate-0');
+            otherIcon.classList.add('rotate-180');
+          }
+        } else {
+          // Close others
+          if (otherMetin) otherMetin.classList.remove('open');
+          if (otherIcon) {
+            otherIcon.classList.remove('rotate-180');
+            otherIcon.classList.add('rotate-0');
+          }
+        }
+      });
+    }
+  });
+});
 
 document.querySelectorAll('.favorite-icon').forEach(function(icon){
   icon.addEventListener('click', function(){

@@ -48,7 +48,7 @@ header{
 }
 /*----------------endHeader----------------*/
 /*----------------Nav----------------*/
-nav{
+.header-nav{
   background: linear-gradient(135deg, var(--fish-teal) 0%, var(--fish-blue) 100%);
   color: var(--luxury-white);
   height: 55px;
@@ -494,10 +494,15 @@ article .article-content .content-img{
   background-color: var(--fish-sea-blue);
 }
 /*----------------endNewest----------------*/
+/*----------------SSS----------------*/
+.sss-list {
+  transition: transform 0.3s ease-in-out;
+}
+/*----------------endSSS----------------*/
+
 /*----------------Footer----------------*/
 footer{
   background: linear-gradient(135deg, var(--fish-teal) 0%, var(--fish-blue) 100%);
-  padding: 48px 0;
 }
 
 footer .container{
@@ -507,6 +512,41 @@ footer .container{
   gap: 20px;
 }
 
-footer a{ color: inherit; text-decoration: none; }
-
+footer a{
+  color: inherit; 
+  text-decoration: none; 
+}
+.footer-nav ul{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: fit-content;
+}
+.footer-nav ul li{
+  font-size: 20px;
+  font-weight: 300;
+}
+.footer-nav div{
+  font-size: 22px;
+  margin-bottom: 5px;
+}
 /*----------------endFooter----------------*/
+
+/*----------------SSS Animation----------------*/
+.sss-title-bottom {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  font-weight: 300;
+  font-size: large;
+}
+
+.sss-title-bottom.open {
+  max-height: 500px; /* Adjust based on content height */
+  margin-top: 20px;
+}
+
+.sss-list{
+  transition: all 0.3s ease-in-out;
+}
+/*----------------endSSS Animation----------------*/
