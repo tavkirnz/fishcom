@@ -70,40 +70,66 @@
             </div>
         </div>
     </header>
-    <nav class="header-nav flex justify-center sticky top-0 z-50">
-        <div class="container flex justify-between">
-            <div class="features-nav flex items-center gap-3">
-                <i class="fa-solid fa-bars text-2xl"></i>
-                <ul class="flex items-center gap-8  font-medium text-lg">
-                    <li><a href="">Ürünler</a></li>
-                    <li><a href="">Yeni Gelenler</a></li>
-                    <li><a href="">Kampanyalar</a></li>
-                    <li><a href="">Birlikte Al Kazan</a></li>
-                </ul>
+    <nav class="ext-nav sticky top-0 z-50">
+        <nav class="header-nav flex justify-center sticky top-0 z-50">
+            <div class="container flex justify-between">
+                <div class="features-nav flex items-center gap-5">
+                    <i class="fa-solid fa-bars text-2xl hamburger-menu cursor-pointer"></i>
+                    <ul class="flex items-center gap-8 font-medium text-lg mobile-menu">
+                        <li><a href="">Ürünler</a></li>
+                        <li><a href="">Yeni Gelenler</a></li>
+                        <li><a href="">Kampanyalar</a></li>
+                        <li><a href="">Birlikte Al Kazan</a></li>
+                    </ul>
+                </div>
+                <div class="user-nav flex items-center">
+                    <ul class="flex items-center gap-8 font-medium text-lg">
+                        <li><a href="">
+                            <i class="fa-solid fa-clock-rotate-left text-2xl"></i>
+                            Önceki Siparişlerim
+                        </a></li>
+                        <li><a href="">
+                            <i class="fa-solid fa-star text-2xl"></i>
+                            Yeni Ürünlerim
+                        </a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="user-nav flex items-center">
-                <ul class="flex items-center gap-8 font-medium text-lg">
-                    <li><a href="">
-                        <i class="fa-solid fa-clock-rotate-left text-2xl"></i>
-                        Önceki Siparişlerim
-                    </a></li>
-                    <li><a href="">
-                        <i class="fa-solid fa-star text-2xl"></i>
-                        Yeni Ürünlerim
-                    </a></li>
-                </ul>
+        </nav>
+        <nav class="open-header-nav w-full flex justify-center absolute top-[55px] z-9">
+            <div class="container">
+                <div class="open-nav flex w-fit">
+                    <ul class="items-center gap-8 mobile-menu">
+                        <h5 class="mb-2 font-medium">Öne Çıkan Ürünler</h5>
+                        <li><a href="">Balık Köftesi</a></li>
+                        <li><a href="">Hardal Soslu Pane Somon Fileto</a></li>
+                        <li><a href="">Balık Köftesi</a></li>
+                        <li><a href="">Hardal Soslu Pane Somon Fileto</a></li>
+                        <li><a href="">Balık Köftesi</a></li>
+                        <li><a href="">Hardal Soslu Pane Somon Fileto</a></li>
+                    </ul>
+                    <ul class="items-center gap-8 mobile-menu">
+                        <h5 class="mb-2 font-medium">Öne Çıkan Ürünler</h5>
+                        <li><a href="">Balık Köftesi</a></li>
+                        <li><a href="">Hardal Soslu Pane Somon Fileto</a></li>
+                        <li><a href="">Balık Köftesi</a></li>
+                        <li><a href="">Hardal Soslu Pane Somon Fileto</a></li>
+                        <li><a href="">Balık Köftesi</a></li>
+                        <li><a href="">Hardal Soslu Pane Somon Fileto</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </nav>
     </nav>
     <section class="hero flex justify-center relative">
         <div class="container flex justify-between items-center relative">
             <div class="hero-title w-5/12 flex flex-col gap-4">
                 <h1 class="text-5xl font-extrabold leading-15">Gurme Serisi Pesto Soslu Dil Balığı Dolmasını Denediniz mi ?</h1>
                 <p class="text-2xl font-medium">Menünüze yeni tatlar katmak için ürünü hemen sipariş edin.</p>
-                <a href="" class="fish-button size-fit mt-5">
-                    <div class="fish-image w-35 relative inline-block">
-                        <img src="assets/fishble.png" alt="">
-                        <span class="absolute inset-0 flex items-center justify-end text-lg font-normal text-white pr-6 pt-1">
+                <a href="#" class="fish-button size-fit mt-5 relative inline-block">
+                    <div class="fish-image w-30 relative inline-block">
+                        <img src="assets/fish.png" alt="">
+                        <span class="absolute inset-0 flex items-center justify-end text-lg font-medium text-white pr-3">
                             Satın Al
                         </span>
                     </div>
@@ -120,10 +146,22 @@
             </div>
         </div>
         <div class="hero-social absolute flex flex-col gap-4 text-3xl">
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href="" class="social-link">
+                <i class="fa-brands fa-instagram"></i>
+                <span class="instagram">Instagram</span>
+            </a>
+            <a href="" class="social-link">
+                <i class="fa-brands fa-facebook"></i>
+                <span class="facebook">Facebook</span>
+            </a>
+            <a href="" class="social-link">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span class="whatsapp">WhatsApp</span>
+            </a>
+            <a href="" class="social-link">
+                <i class="fa-brands fa-linkedin"></i>
+                <span class="linkedin">LinkedIn</span>
+            </a>
         </div>
     </section>
     <section class="features flex justify-center">
@@ -186,7 +224,7 @@
             </div>
             <div class="products-area flex flex-wrap w-full">
                 <div class="products-box group">
-                    <div class="products-card">
+                    <div class="products-card cursor-pointer">
                         <div class="image-area relative">
                             <span class="guluten-free"></span>
                             <img src="assets/yemek1.webp" alt="">
@@ -657,10 +695,10 @@
                 <h2 class="text-4xl">ŞEFLER İÇİN ÖZEL TARİFLER</h2>
                 <span class="biro text-3xl pt-10">Farklı tarifler, farklı tatlar...</span>
                 <p class="text-xl font-extralight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac iaculis ex. Suspendisse lacinia nibh sed metus dictum pellentesque. Mauris ut sem ut elit tristique maximus. Nunc in tortor nulla. Etiam tortor risus, pellentesque vitae pharetra.</p>
-                <a href="" class="fish-button size-fit my-10">
-                    <div class="fish-image w-35 relative inline-block">
-                        <img src="assets/fishble.png" alt="">
-                        <span class="absolute inset-0 flex items-center justify-end text-lg font-normal text-white pr-8 pt-1">
+                <a href="" class="fish-button size-fit my-10 relative inline-block">
+                    <div class="fish-image w-30 relative inline-block">
+                        <img src="assets/fish.png" alt="">
+                        <span class="absolute inset-0 flex items-center justify-end text-lg font-normal text-white pr-5">
                             İncele
                         </span>
                     </div>
@@ -868,15 +906,28 @@
         </div>
     </section>
     <section class="kitchen-academy flex justify-center">
-        <div class="container flex flex-col justify-center py-20 gap-10">
+        <div class="container flex flex-col justify-center py-20 ">
             <div class="academy-title flex flex-col justify-center items-center">
                 <h5 class="text-xl font-medium text-[var(--fish-red)] mb-2">The Fish Company</h5>
                 <h2 class="text-6xl font-medium mb-5">Mutfak Akademi</h2>
                 <p class="text-2xl font-light">Deniz ürünleri ve denizcilikle ilgili aradığın tüm bilgiler burada.</p>
             </div>
-            <div class="academy-sss flex">
-                <div class="figures bg-[#C4DAE7] w-1/2 rounded-full aspect-square mr-30 ml-20 overflow-hidden flex justify-center items-center bg-cover">
-                    <figure><img class="bg-cover -scale-x-100 rotate-10" src="assets/npc1.png" alt=""></figure>
+            <div class="academy-sss flex relative">
+                <div class="figures  w-1/2  pr-30 pt-20 flex justify-center items-center relative">
+                    <figure class="bg-[#C4DAE7] w-full overflow-hidden rounded-full aspect-square bg-cover">
+                        <img class="bg-cover -scale-x-100 rotate-10" src="assets/npc1.png" alt="">
+                    </figure>
+                    <img class="absolute h-20 right-10 top-50 -scale-x-100 -rotate-45" src="assets/arrow2.png" alt="">
+                    <img class="absolute h-50 left-0 bottom-0" src="assets/dumen.png" alt="">
+                    <img class="absolute h-40 top-12 left-15 -rotate-18" src="assets/cap2.png" alt="">
+                    <a href="" class="absolute fish-button size-fit mt-5 right-50 bottom-10">
+                        <div class="fish-image w-30 relative inline-block">
+                            <img src="assets/fish.png" alt="">
+                            <div class="absolute inset-0 flex flex-col w-fit items-center justify-center text-lg font-normal text-white pl-12">
+                                <span class="w-fit">İncele</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div class="sss w-1/2 flex items-center">
                     <div class="sss-container flex flex-col gap-8 w-full">
@@ -918,6 +969,87 @@
             </div>
         </div>
     </section>
+    <section class="cargo-service py-20">
+        <div class="cargo-service-top w-full py-20">
+            <div class="pink h-60 w-2/3 bg-red-100 relative">
+                <figure class="absolute z-29 -right-100 -top-10"><img class="h-90" src="assets/service-car.webp" alt=""></figure>
+                <figure class="absolute right-50 -top-10"><img class="h-90 -rotate-35 -scale-x-100" src="assets/path.png" alt=""></figure>
+                <i class="absolute left-167 top-18 text-6xl fa-solid fa-location-dot"></i>
+                <h2 class="absolute left-120 -top-10 text-4xl font-semibold leading-13">Siparişlerin <span class="text-6xl text-red-400">soğuk zincirle</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; işletmende</h2>
+            </div>
+        </div>
+        <div class="cargo-service-bottom py-20 flex justify-center">
+            <div class="container flex">
+                <article class="flex flex-col w-1/5">
+                    <div class="article-icons flex w-full">
+                        <div class="w-fit text-9xl font-semibold text-neutral-200">
+                            01
+                        </div>
+                        <div class="content-img w-fit flex items-center">
+                            <img class="w-20" src="assets/img1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="article-desription text-2xl font-bold text-neutral-700 uppercase pr-25">
+                        Yüzlerce Deniz Ürünü
+                    </div>
+                </article>
+                <article class="flex flex-col w-1/5">
+                    <div class="article-icons flex w-full">
+                        <div class="w-fit text-9xl font-semibold text-neutral-200">
+                            02
+                        </div>
+                        <div class="content-img w-fit flex items-center">
+                            <img class="w-20" src="assets/img8.svg" alt="">
+                        </div>
+                    </div>
+                    
+                    <div class="article-desription text-2xl font-bold text-neutral-700 uppercase pr-25">
+                        Sürekli Stok Güvencesiyle
+                    </div>
+                </article>
+                <article class="flex flex-col w-1/5">
+                    <div class="article-icons flex w-full">
+                        <div class="w-fit text-9xl font-semibold text-neutral-200">
+                            03
+                        </div>
+                        <div class="content-img w-fit flex items-center">
+                            <img class="w-20" src="assets/img7.png" alt="">
+                        </div>
+                    </div>
+                    
+                    <div class="article-desription text-2xl font-bold text-neutral-700 uppercase pr-25">
+                        En Uygun Fiyatla
+                    </div>
+                </article>
+                <article class="flex flex-col w-1/5">
+                    <div class="article-icons flex w-full">
+                        <div class="w-fit text-9xl font-semibold text-neutral-200">
+                            04
+                        </div>
+                        <div class="content-img w-fit flex items-center">
+                            <img class="w-22" src="assets/img9.png" alt="">
+                        </div>
+                    </div>
+                    <div class="article-desription text-2xl font-bold text-neutral-700 uppercase pr-25">
+                        Güvenli Ödeme Sistemi İle
+                    </div>
+                </article>
+                <article class="flex flex-col w-1/5 ">
+                    <div class="article-icons flex w-full">
+                        <div class="w-fit text-9xl font-semibold text-neutral-200">
+                            05
+                        </div>
+                        <div class="content-img w-fit flex items-center">
+                            <img class="w-40" src="assets/img3.png" alt="">
+                        </div>
+                    </div>
+                    <div class="article-desription text-2xl font-bold text-neutral-700 uppercase pr-25">
+                        Hızlı Teslimat ile kapında
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
     <footer class="flex justify-center text-white p-15">
         <div class="container flex flex-col w-full">
             <div class="footer-top w-full flex justify-between border-b border-white">
@@ -928,11 +1060,11 @@
                     <span class="text-2xl">E-Bültene Üye Olun!</span>
                     <div class="flex h-20 items-center mb-15">
                         <input class="p-5 h-14 w-80 bg-white rounded-xl text-black" type="email" name="email" id="email" placeholder="E-postanızı yazın.">
-                        <a href="" class="fish-button size-fit -ml-20">
-                            <div class="fish-image w-30 relative inline-block">
-                                <img src="assets/fishble.png" alt="">
-                                <span class="absolute inset-0 flex items-center justify-end text-lg font-normal text-white pr-6 pt-1">
-                                    İncele
+                        <a href="" class="fish-button h-15 -ml-20 relative inline-block">
+                            <div class="fish-image w-29 relative inline-block">
+                                <img src="assets/fish.png" alt="">
+                                <span class="absolute inset-0 flex items-center justify-end text-lg font-normal text-white pr-4">
+                                    Üye Ol
                                 </span>
                             </div>
                         </a>

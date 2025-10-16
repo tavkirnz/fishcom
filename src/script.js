@@ -34,6 +34,27 @@ if(navbarList){
     });
   });
 }
+const openHeader = document.querySelector('.open-header-nav');
+const headerNav = document.querySelector('.header-nav');
+document.querySelectorAll('.hamburger-menu').forEach(function(menu){
+  menu.addEventListener('click', function(){
+    const isOpen = openHeader.classList.contains("open")
+    if(isOpen){
+      openHeader.classList.remove('open');
+    }
+    else{
+      openHeader.classList.add('open');
+    }
+  });
+});
+
+document.body.addEventListener('click', e => {
+  // Eğer tıklanan yer openHeader veya içindeyse hiçbir şey yapma
+  if (!openHeader.contains(e.target)&&!headerNav.contains(e.target)) {
+    openHeader.classList.remove('open');
+  }
+});
+
 document.querySelectorAll('.sss-card').forEach(function(card){
   card.addEventListener('click', function(){
     const icon = card.querySelector('.sss-list');
