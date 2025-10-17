@@ -14,6 +14,7 @@
   --fish-green: #2CB673;
   --line-color: #d2d2d2;
 }
+
 @font-face {
     font-family: 'Biro';
     src: url('assets/biro-script-plus.ttf') format('truetype');
@@ -82,8 +83,6 @@ header{
 .user-account a, .user-favorites a, .user-cart a{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  font-weight: 500;
 }
 /*----------------endHeader----------------*/
 /*----------------Nav----------------*/
@@ -112,7 +111,7 @@ header{
   opacity: 1;
 }
 .open-header-nav.open{
-  height: 400px;
+  height: 500px;
   visibility: visible;
   opacity: 1;
 }
@@ -208,10 +207,15 @@ section.hero{
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  cursor: pointer;
 }
 .feature-box span{
   font-size: 20px;
   font-weight: 500;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.feature-box:hover span{
+  color: var(--fish-red);
 }
 .feature-cycle{
   display: flex;
@@ -382,19 +386,34 @@ section.hero{
 }
 /*----------------endProducts----------------*/
 /*----------------Whyus----------------*/
-.whyus-container{
-  background-image: url("assets/whyusbg.jpg");
+.whyus-container {
+  position: relative;
+  background-image: url("assets/whyusbg.jpg"); /* fallback resim */
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
   width: 100%;
   height: 738px;
+  overflow: hidden;
 }
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* video container’a tam sığsın */
+  object-position: bottom;
+  z-index: 0;
+}
+
 .whyus-title{
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  z-index: 1;
 }
 .whyus-container article{
   width: 33.3333%;
@@ -405,12 +424,14 @@ section.hero{
   justify-content: center;
   align-items: center;
   color: white;
+  z-index: 1;
 }
 .whyus-container article .article-content{
   display: flex;
   align-items: start;
   gap:20px;
   text-align: end;
+  z-index: 1;
 }
 .whyus-container article .article-content .content-title{
   display: flex;
@@ -695,7 +716,7 @@ footer a{
 .sss-title-bottom {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease, margin 0.1s;
+  transition: max-height 0.5s ease, margin 0.5s;
   font-weight: 300;
   font-size: large;
 }
@@ -731,15 +752,27 @@ footer a{
   height: 8px;
   animation-delay: 0.1s;
 }
-.fish-button:hover{
+
+.fish-button.animate {
   animation: porpoising 1s ease-in-out forwards;
 }
 
-.fish-button:hover::before {
+.fish-button.animate::before {
   animation: bubble-up 1s ease-out forwards;
 }
 
-.fish-button:hover::after {
+.fish-button.animate::after {
   animation: bubble-up 1s ease-out 0.2s forwards;
 }
+
 /*--------------------------------------------------------*/
+
+.dumen{
+  animation: rotateAround 30s linear infinite;
+}
+
+
+@keyframes rotateAround {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}

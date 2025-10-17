@@ -35,6 +35,7 @@ if(navbarList){
   });
 }
 const openHeader = document.querySelector('.open-header-nav');
+const openNav = document.querySelector('.open-nav');
 const headerNav = document.querySelector('.header-nav');
 document.querySelectorAll('.hamburger-menu').forEach(function(menu){
   menu.addEventListener('click', function(){
@@ -50,7 +51,7 @@ document.querySelectorAll('.hamburger-menu').forEach(function(menu){
 
 document.body.addEventListener('click', e => {
   // Eğer tıklanan yer openHeader veya içindeyse hiçbir şey yapma
-  if (!openHeader.contains(e.target)&&!headerNav.contains(e.target)) {
+  if (!openNav.contains(e.target)&&!headerNav.contains(e.target)) {
     openHeader.classList.remove('open');
   }
 });
@@ -176,4 +177,119 @@ document.querySelectorAll('.recipe-card').forEach(function(card){
       toggleFav();
     }
   });
+});
+
+const fishButtons = document.querySelectorAll('.fish-button');
+
+fishButtons.forEach(btn => {
+  btn.addEventListener('mouseenter', () => {
+    if (!btn.classList.contains('animate')) {
+      btn.classList.add('animate');
+
+      btn.addEventListener('animationend', () => {
+        btn.classList.remove('animate');
+      }, { once: true });
+    }
+  });
+});
+
+document.querySelectorAll('.products-card').forEach(card => {
+  card.addEventListener('click', e => {
+    // Eğer buton veya favori ikonuna tıklanırsa yönlendirme yapma
+    if (e.target.closest('button') || e.target.closest('.favorite-icon')) return;
+
+    // data-href değerine yönlendir
+    const url = card.dataset.href;
+    if (url) {
+      window.location.href = url;
+    }
+  });
+});
+
+const input = document.getElementById('searchInput');
+const suggestions = document.getElementById('suggestions');
+
+// Örnek veri
+const data = [
+    {title: 'Tortilla', gr: '200 gr', adet:'Koli İçi Adet: 4', price:'300TL', paket:'1200TL', img: 'yemek1.webp', link:'urun.html',},
+    {title: 'Balık Köftesi', gr: '200 gr', adet:'Koli İçi Adet: 5', price:'400TL', paket:'1600TL', img: 'yemek2.webp'},
+    {title: 'Kalamar', gr: '250 gr', adet:'Koli İçi Adet: 3', price:'450TL', paket:'1350TL', img: 'yemek3.webp'},
+    {title: 'Karides', gr: '200 gr', adet:'Koli İçi Adet: 6', price:'500TL', paket:'3000TL', img: 'yemek4.jpeg'},
+    {title: 'Somon', gr: '300 gr', adet:'Koli İçi Adet: 2', price:'600TL', paket:'1200TL', img: 'yemek5.jpeg'},
+];
+
+input.addEventListener('input', () => {
+    const value = input.value.toLowerCase();
+    suggestions.innerHTML = '';
+
+    if (value) {
+        // 🔹 Arama + sadece ilk 3 sonucu al
+        const filtered = data
+            .filter(item => item.title.toLowerCase().includes(value))
+            .slice(0, 3);
+
+        filtered.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'p-5 hover:bg-neutral-100 cursor-pointer flex justify-between';
+
+            div.innerHTML = `
+                <figure class="w-1/4 flex pr-5 h-35">
+                  <img class="w-full h-full object-cover" src="assets/${item.img}" alt="">
+                </figure>
+                <div class="flex flex-col justify-center w-1/4">
+                  <h3 class="text-xl">${item.title}</h3>
+                  <p class="text-lg font-extralight">${item.gr} &nbsp; ${item.adet}</p>
+                </div>
+                <div class="flex flex-col justify-center w-1/4">
+                  <h4 class="text-xl">${item.price}</h4>
+                  <p class="text-lg font-extralight">${item.paket} / Paket</p>
+                </div>
+                <div class="flex justify-center items-center w-1/4 gap-2">
+                  <p class="text-lg font-semibold">Sepete Ekle</p>
+                  <i class="fa-solid fa-plus text-xl"></i>
+                </div>
+            `;
+
+            div.addEventListener('click', () => {
+                window.location.href = item.link;
+                suggestions.classList.add('hidden');
+                suggestions.classList.remove('flex');
+            });
+
+            suggestions.appendChild(div);
+        });
+
+        // Eğer sonuç varsa göster
+        if (filtered.length > 0) {
+            suggestions.classList.remove('hidden');
+            suggestions.classList.add('flex');
+        } else {
+            suggestions.classList.add('hidden');
+        }
+    } else {
+        suggestions.classList.add('hidden');
+        suggestions.classList.remove('flex');
+    }
+});
+
+// Input dışında tıklayınca gizle
+document.addEventListener('click', (e) => {
+    if (!input.contains(e.target) && !suggestions.contains(e.target)) {
+        suggestions.classList.add('hidden');
+    }
+});
+
+const accountBtn = document.getElementById('accountBtn');
+const accountMenu = document.getElementById('accountMenu');
+
+accountBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  accountMenu.classList.toggle('hidden');
+});
+
+// Dışarı tıklanınca kapansın
+document.addEventListener('click', (e) => {
+  if (!accountMenu.contains(e.target) && !accountBtn.contains(e.target)) {
+    accountMenu.classList.add('hidden');
+  }
 });
