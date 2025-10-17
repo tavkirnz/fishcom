@@ -87,7 +87,7 @@ header{
 /*----------------endHeader----------------*/
 /*----------------Nav----------------*/
 .header-nav{
-  background: linear-gradient(90deg, var(--fish-teal) 0%, var(--fish-blue) 100%);
+  background: var(--fish-blue);
   color: var(--luxury-white);
   height: 55px;
   width: 100%;
@@ -97,6 +97,8 @@ header{
   color: var(--luxury-black);
   overflow: hidden;
   border: 1px solid rgb(0, 0, 0, 0.2);
+  padding: 0px 40px 0 40px;
+  transition: padding 0.5s ease;
 }
 .open-header-nav{
   height: 0;
@@ -107,8 +109,20 @@ header{
   opacity: 0;
    transition: opacity 0.5s ease;
 }
+.open-header-nav ul li a{
+  transition: all 0.2s;
+}
+.open-header-nav ul li a:hover{
+  background-color: var(--fish-blue);
+  color: white;
+  padding-left: 8px;
+  padding-right: 8px;
+}
 .open-header-nav.open ul{
   opacity: 1;
+}
+.open-header-nav.open .open-nav{
+  padding: 40px;
 }
 .open-header-nav.open{
   height: 500px;

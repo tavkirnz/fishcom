@@ -9,9 +9,7 @@
       "Courier New", monospace;
     --color-red-100: oklch(93.6% 0.032 17.717);
     --color-red-400: oklch(70.4% 0.191 22.216);
-    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-red-600: oklch(57.7% 0.245 27.325);
-    --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-neutral-100: oklch(97% 0 0);
     --color-neutral-200: oklch(92.2% 0 0);
     --color-neutral-700: oklch(37.1% 0 0);
@@ -269,8 +267,14 @@
   .bottom-10 {
     bottom: calc(var(--spacing) * 10);
   }
+  .-left-\[25\%\] {
+    left: calc(25% * -1);
+  }
   .-left-\[50\%\] {
     left: calc(50% * -1);
+  }
+  .-left-\[75\%\] {
+    left: calc(75% * -1);
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
@@ -422,6 +426,9 @@
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
+  .h-30 {
+    height: calc(var(--spacing) * 30);
+  }
   .h-35 {
     height: calc(var(--spacing) * 35);
   }
@@ -509,11 +516,8 @@
   .w-85 {
     width: calc(var(--spacing) * 85);
   }
-  .w-90 {
-    width: calc(var(--spacing) * 90);
-  }
-  .w-100 {
-    width: calc(var(--spacing) * 100);
+  .w-\[150\%\] {
+    width: 150%;
   }
   .w-\[200\%\] {
     width: 200%;
@@ -567,9 +571,6 @@
   }
   .flex-col {
     flex-direction: column;
-  }
-  .flex-row {
-    flex-direction: row;
   }
   .flex-row\! {
     flex-direction: row !important;
@@ -711,8 +712,14 @@
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
   .p-5 {
     padding: calc(var(--spacing) * 5);
+  }
+  .p-10 {
+    padding: calc(var(--spacing) * 10);
   }
   .p-15 {
     padding: calc(var(--spacing) * 15);
@@ -725,9 +732,6 @@
   }
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
-  }
-  .px-15 {
-    padding-inline: calc(var(--spacing) * 15);
   }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
@@ -746,9 +750,6 @@
   }
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
-  }
-  .pt-5 {
-    padding-top: calc(var(--spacing) * 5);
   }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
@@ -940,31 +941,10 @@
       }
     }
   }
-  .hover\:text-\[var\(--fish-green\)\] {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--fish-green);
-      }
-    }
-  }
   .hover\:text-\[var\(--fish-red\)\] {
     &:hover {
       @media (hover: hover) {
         color: var(--fish-red);
-      }
-    }
-  }
-  .hover\:text-blue-500 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-blue-500);
-      }
-    }
-  }
-  .hover\:text-red-500 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-red-500);
       }
     }
   }
@@ -1074,7 +1054,7 @@ header {
   flex-direction: column;
 }
 .header-nav {
-  background: linear-gradient(90deg, var(--fish-teal) 0%, var(--fish-blue) 100%);
+  background: var(--fish-blue);
   color: var(--luxury-white);
   height: 55px;
   width: 100%;
@@ -1084,6 +1064,8 @@ header {
   color: var(--luxury-black);
   overflow: hidden;
   border: 1px solid rgb(0, 0, 0, 0.2);
+  padding: 0px 40px 0 40px;
+  transition: padding 0.5s ease;
 }
 .open-header-nav {
   height: 0;
@@ -1094,8 +1076,20 @@ header {
   opacity: 0;
   transition: opacity 0.5s ease;
 }
+.open-header-nav ul li a {
+  transition: all 0.2s;
+}
+.open-header-nav ul li a:hover {
+  background-color: var(--fish-blue);
+  color: white;
+  padding-left: 8px;
+  padding-right: 8px;
+}
 .open-header-nav.open ul {
   opacity: 1;
+}
+.open-header-nav.open .open-nav {
+  padding: 40px;
 }
 .open-header-nav.open {
   height: 500px;

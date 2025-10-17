@@ -226,23 +226,23 @@ input.addEventListener('input', () => {
         // 🔹 Arama + sadece ilk 3 sonucu al
         const filtered = data
             .filter(item => item.title.toLowerCase().includes(value))
-            .slice(0, 3);
+            .slice(0, 5);
 
         filtered.forEach(item => {
             const div = document.createElement('div');
-            div.className = 'p-5 hover:bg-neutral-100 cursor-pointer flex justify-between';
+            div.className = ' hover:bg-neutral-100 cursor-pointer flex justify-between';
 
             div.innerHTML = `
-                <figure class="w-1/4 flex pr-5 h-35">
+                <figure class="w-1/4 flex h-30 p-3">
                   <img class="w-full h-full object-cover" src="assets/${item.img}" alt="">
                 </figure>
-                <div class="flex flex-col justify-center w-1/4">
-                  <h3 class="text-xl">${item.title}</h3>
-                  <p class="text-lg font-extralight">${item.gr} &nbsp; ${item.adet}</p>
+                <div class="flex flex-col justify-center w-1/4 px-5">
+                  <h3 class="text-lg">${item.title}</h3>
+                  <p class="text-md font-extralight">${item.gr}<br>${item.adet}</p>
                 </div>
-                <div class="flex flex-col justify-center w-1/4">
-                  <h4 class="text-xl">${item.price}</h4>
-                  <p class="text-lg font-extralight">${item.paket} / Paket</p>
+                <div class="flex flex-col justify-center w-1/4 px-5">
+                  <h4 class="text-lg">${item.price}</h4>
+                  <p class="text-md font-extralight">${item.paket} / Paket</p>
                 </div>
                 <div class="flex justify-center items-center w-1/4 gap-2">
                   <p class="text-lg font-semibold">Sepete Ekle</p>
