@@ -11,23 +11,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!------------------------------------Links/Components------------------------------------>
     <title>Fish.com</title>
     <!---------------------------------------Components/-------------------------------------->
+    <!----
+    f  = flex
+    jc = justify-center
+    jb = justify-between
+    ic = items-center
+    r  = relative
+    ----->
 </head>
 <body>
-    <div class="topbar flex justify-center text-white font-light tracking-wider text-sm">
-        <div class="container flex justify-between">
-            <div class="location-area flex items-center">
-                <a href="" class="flex gap-2">
+    <div class="topbar f jc">
+        <div class="container f jb">
+            <div class="f ic">
+                <a href="#" class="f gap-2">
                     <i class="fa-solid fa-location-dot text-xl"></i>
                     <span>The Fish Company</span>
                 </a>
             </div>
-            <div class="information-area flex items-center">
+            <div class="f ic">
                 <span>3000TL ve üzeri siparişlerde kargo ücretsiz!</span>
             </div>
-            <div class="social-area text-2xl flex items-center gap-3">
+            <div class="social-area f ic">
                 <a href=""><i class="fa-brands fa-instagram"></i></a>
                 <a href=""><i class="fa-brands fa-facebook"></i></a>
                 <a href=""><i class="fa-brands fa-whatsapp"></i></a>
@@ -35,69 +43,68 @@
             </div>
         </div>
     </div>
-    <header class="flex justify-center bg-white p-2">
-        <div class="container flex justify-between items-center">
-            <div class="logo w-fit h-full">
-                <img class="w-fit h-full" src="assets/logo.svg" alt="">
+    <header class="f jc">
+        <div class="container f jb ic">
+            <div>
+                <img src="assets/logo.svg">
             </div>
-            <div class="search-area relative">
+            <div class="search-area r">
                 <form action="/submit">
-                    <div class="search-btn relative">
-                        <input id="searchInput" type="text" class="header-search-input rounded-3xl border border-[var(--line-color)] focus:outline-none">
-                        <i class="fa-solid fa-magnifying-glass absolute top-1/2 right-3 -translate-y-1/2 text-[var(--line-color)] text-2xl cursor-pointer"></i>
+                    <div class="search-btn r">
+                        <input class="header-search-input" id="searchInput" type="text" >
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                 </form>
-                <div id="suggestions" class="absolute top-full -left-[25%] w-[150%] bg-white border border-[var(--line-color)] mt-1 hidden z-51 p-5 flex-col gap-5">
-                </div>
+                <div class="hidden" id="suggestions" ></div>
             </div>
-            <div class="user-area flex items-center gap-6 relative">
-                <div class="user-account relative">
-                    <a id="accountBtn" class="cursor-pointer items-center">
+            <div class="user-area f ic r">
+                <div class="user-account r">
+                    <a class="ic" id="accountBtn" >
                         <i class="fa-regular fa-user"></i>
                         <span>Engin Tasarım</span>
                     </a>
-                     <div id="accountMenu" class="absolute top-full w-85 bg-white border border-[var(--line-color)] shadow-lg hidden flex-col p-5 z-51">
-                        <h4 class="font-semibold text-xl pb-2 mb-2 text-[var(--fish-blue)]">Engin Tasarım ve Elektronik San. Tic. Ltd. Şti</h4>
-                        <ul class="flex flex-col gap-2 text-lg font-light">
-                            <li class="flex gap-4 items-center hover:text-[var(--fish-red)]">
-                                <i class="fa-solid fa-boxes-stacked text-xl w-6 text-center"></i>
-                                <a href="#" class=" flex">Önceki Siparişlerim</a>
+                     <div id="accountMenu" class="hidden">
+                        <h4>Engin Tasarım ve Elektronik San. Tic. Ltd. Şti</h4>
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                                <a href="#">Önceki Siparişlerim</a>
                             </li>
-                            <li class="flex gap-4 items-center hover:text-[var(--fish-red)]">
-                                <i class="fa-solid fa-star text-xl w-6 text-center"></i>
-                                <a href="#" class=" flex">Favorilerim</a>
+                            <li>
+                                <i class="fa-solid fa-star"></i>
+                                <a href="#">Favorilerim</a>
                             </li>
-                            <li class="flex gap-4 items-center hover:text-[var(--fish-red)]">
-                                <i class="fa-regular fa-user text-xl w-6 text-center"></i>
-                                <a href="#" class=" flex">Kullanıcı Bilgilerim</a>
+                            <li>
+                                <i class="fa-regular fa-user"></i>
+                                <a href="#">Kullanıcı Bilgilerim</a>
                             </li>
-                            <li class="flex gap-4 items-center hover:text-[var(--fish-red)]">
-                                <i class="fa-solid fa-location-dot text-xl w-6 text-center"></i>
-                                <a href="#" class=" flex">Adreslerim</a>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <a href="#">Adreslerim</a>
                             </li>
-                            <li class="flex gap-4 items-center hover:text-[var(--fish-red)]">
-                                <i class="fa-regular fa-heart text-xl w-6 text-center"></i>
-                                <a href="#" class=" flex">Favorilerim</a>
+                            <li>
+                                <i class="fa-regular fa-heart"></i>
+                                <a href="#">Favorilerim</a>
                             </li>
-                            <li class="flex gap-4 items-center hover:text-[var(--fish-blue)]">
-                                <i class="fa-regular fa-circle-question text-xl w-6 text-center"></i>
-                                <a href="#" class=" flex">Yardım</a>
+                            <li class="hover:text-[var(--fish-blue)]!">
+                                <i class="fa-regular fa-circle-question"></i>
+                                <a href="#">Yardım</a>
                             </li>
-                            <li class="flex gap-4 items-center hover:text-red-600">
-                                <i class="fa-solid fa-arrow-right-from-bracket text-xl w-6 text-center"></i>
+                            <li class="hover:text-red-600!">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
                                 <a href="#" class="flex">Çıkış Yap</a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="user-favorites">
-                    <a href="" class="items-center">
+                    <a href="" class="ic">
                         <i class="fa-regular fa-heart"></i>
                         <span>Favorilerim</span>
                     </a>
                 </div>
                 <div class="user-cart">
-                    <a href="" class="items-center">
+                    <a href="" class="ic">
                         <i class="fa-brands fa-opencart"></i>
                         <span>Sepetim</span>
                     </a>
@@ -105,25 +112,25 @@
             </div>
         </div>
     </header>
-    <nav class="ext-nav sticky top-0 z-50">
-        <nav class="header-nav flex justify-center sticky top-0 z-50">
-            <div class="container flex justify-between">
-                <div class="features-nav flex items-center gap-4">
+    <nav class="ext-nav">
+        <nav class="header-nav f jc">
+            <div class="container f jb ">
+                <div class="features-nav f ic">
                     <i class="fa-solid fa-bars text-2xl hamburger-menu cursor-pointer"></i>
-                    <ul class="flex items-center gap-8 font-medium text-lg mobile-menu">
+                    <ul class="f ic gap-8 font-medium text-lg mobile-menu">
                         <li><a href="">Ürünler</a></li>
                         <li><a href="">Yeni Gelenler</a></li>
                         <li><a href="">Kampanyalar</a></li>
                         <li><a href="">Birlikte Al Kazan</a></li>
                     </ul>
                 </div>
-                <div class="user-nav flex items-center">
-                    <ul class="flex items-center gap-8 font-medium text-lg">
-                        <li><a class="flex gap-2 items-center" href="">
+                <div class="user-nav f ic">
+                    <ul class="f ic gap-8 font-medium text-lg">
+                        <li><a class="flex gap-2 ic" href="">
                             <i class="fa-solid fa-clock-rotate-left text-[22px]"></i>
                             Önceki Siparişlerim
                         </a></li>
-                        <li><a class="flex gap-2 items-center" href="">
+                        <li><a class="flex gap-2 ic" href="">
                             <i class="fa-solid fa-star text-[22px]"></i>
                             Yeni Ürünlerim
                         </a></li>
@@ -131,11 +138,11 @@
                 </div>
             </div>
         </nav>
-        <nav class="open-header-nav w-full flex justify-center absolute top-[55px] z-9">
+        <nav class="open-header-nav w-full f jc absolute top-[55px] z-9">
             <div class="container">
                 <div class="open-nav flex w-fit h-full p-10 gap-8">
                     <ul class="flex flex-col text-lg font-normal gap-2 mobile-menu h-fit w-75">
-                        <h5 class="text-lg mb-3 font-semibold uppercase text-[var(--fish-blue)] border-b-2 border-[var(--fish-blue)] py-1 w-full">Balık Grupları</h5>
+                        <h6 class="mb-3 font-semibold uppercase text-[var(--fish-blue)] border-b-2 border-[var(--fish-blue)] py-1 w-full">Balık Grupları</h6>
                         <li><a href="">Horeca Serisi</a></li>
                         <li><a href="">Çiğ ürünler Serisi</a></li>
                         <li><a href="">Füme Serisi</a></li>
@@ -149,13 +156,13 @@
                     </ul>
                     <div class="flex flex-col gap-10">
                         <ul class="flex flex-col text-lg font-normal gap-2 mobile-menu h-fit w-50">
-                            <h5 class="text-lg mb-3 font-semibold uppercase text-[var(--fish-blue)] border-b-2 border-[var(--fish-blue)] py-1 w-full">Deniz Ürünleri</h5>
+                            <h6 class=" mb-3 font-semibold uppercase text-[var(--fish-blue)] border-b-2 border-[var(--fish-blue)] py-1 w-full">Deniz Ürünleri</h6>
                             <li><a href="">Somon</a></li>
                             <li><a href="">Ahtapot</a></li>
                             <li><a href="">Karides</a></li>
                         </ul>
                         <ul class="flex flex-col text-lg font-normal gap-2 mobile-menu h-fit w-50">
-                            <h5 class="text-lg mb-3 font-semibold uppercase text-[var(--fish-blue)] border-b-2 border-[var(--fish-blue)] py-1">Sushi</h5>
+                            <h6 class=" mb-3 font-semibold uppercase text-[var(--fish-blue)] border-b-2 border-[var(--fish-blue)] py-1">Sushi</h6>
                             <li><a href="">Somon</a></li>
                             <li><a href="">Ahtapot</a></li>
                             <li><a href="">Karides</a></li>
@@ -163,7 +170,7 @@
                     </div>
                     <div class="flex flex-col gap-10">
                         <ul class="flex flex-col text-lg font-normal gap-2 mobile-menu h-fit w-50">
-                            <h5 class="text-lg mb-3 font-semibold uppercase text-[var(--fish-blue)] border-b-2 border-[var(--fish-blue)] py-1">pişirme türleri</h5>
+                            <h6 class=" mb-3 font-semibold uppercase text-[var(--fish-blue)] border-b-2 border-[var(--fish-blue)] py-1">pişirme türleri</h6>
                             <li><a href="">Izgara</a></li>
                             <li><a href="">Tava</a></li>
                             <li><a href="">Fırın</a></li>
@@ -174,26 +181,26 @@
             </div>
         </nav>
     </nav>
-    <section class="hero flex justify-center relative">
-        <div class="container flex justify-between items-center relative">
+    <section class="hero f jc r">
+        <div class="container f jb ic r">
             <div class="hero-title w-5/12 flex flex-col gap-4">
                 <h1 class="text-5xl font-extrabold leading-15">Gurme Serisi Pesto Soslu Dil Balığı Dolmasını Denediniz mi ?</h1>
                 <p class="text-2xl font-medium">Menünüze yeni tatlar katmak için ürünü hemen sipariş edin.</p>
-                <a href="#" class="fish-button size-fit mt-5 relative inline-block">
-                    <div class="fish-image w-30 relative inline-block">
+                <a href="#" class="fish-button size-fit mt-5 r inline-block">
+                    <div class="fish-image w-30 r inline-block">
                         <img src="assets/fish.png" alt="">
-                        <span class="absolute inset-0 flex items-center justify-end text-lg font-medium text-white pr-3">
+                        <span class="absolute inset-0 f ic justify-end text-lg font-medium text-white pr-3">
                             Satın Al
                         </span>
                     </div>
                 </a>
             </div>
-            <div class="hero-product flex flex-col items-end justify-end h-full relative">
-                <div class="price-area h-fit w-60 relative top-30 right-10 flex items-center justify-center">
+            <div class="hero-product flex flex-col items-end justify-end h-full r">
+                <div class="price-area h-fit w-60 r top-30 right-10 f jcic">
 
                     <img class="size-full block" src="assets/price-bg.svg">
                     <img class="absolute top-0 right-0 size-13 -mt-5 -mr-5" src="assets/effect.png" >
-                    <span class="absolute inset-0 flex items-center justify-start ml-15 text-3xl font-bold text-white pointer-events-none text-shadow-lg">400 TL</span>
+                    <span class="absolute inset-0 f ic justify-start ml-15 text-3xl font-bold text-white pointer-events-none text-shadow-lg">400 TL</span>
                 </div>
                 <img class="h-150 w-auto" src="assets/urun.webp" alt="">
             </div>
@@ -217,8 +224,8 @@
             </a>
         </div>
     </section>
-    <section class="features flex justify-center">
-        <div class="container flex justify-between py-10">
+    <section class="features f jc">
+        <div class="container f jb  py-10">
            <div class="feature-box">
                 <div class="feature-cycle border-[var(--fish-red)]">
                     <img src="assets/balik.jpg" alt="">
@@ -257,14 +264,14 @@
            </div>
         </div>
     </section>
-    <section class="products flex justify-center">
-        <div class="container flex flex-col items-center gap-5 py-10">
+    <section class="products f jc">
+        <div class="container flex flex-col ic gap-5 py-10">
             <div class="products-title">
                 <h2 class="text-4xl font-medium">Balık Gruplarımız</h2>
                 <hr class="my-2 border-t-2 border-2 border-[var(--fish-red)] w-1/2 mx-auto">
             </div>
             <div class="products-navbar">
-                <ul class="flex items-center gap-8 font-medium text-2xl" id="products-navbar-list">
+                <ul class="f ic gap-8 font-medium text-2xl" id="products-navbar-list">
                     <li class="active"><a href="">Klasik</a></li>
                     <li><a href="">Retail</a></li>
                     <li><a href="">Marinat</a></li>
@@ -278,7 +285,7 @@
             <div class="products-area flex flex-wrap w-full">
                 <div class="products-box group">
                     <div class="products-card cursor-pointer" data-href="#">
-                        <div class="image-area relative">
+                        <div class="image-area r">
                             <span class="guluten-free"></span>
                             <img src="assets/yemek1.webp" alt="">
                             <div class="fast-buttons">
@@ -291,13 +298,13 @@
                             </div>
                         </div>
                         <div class="title-area">
-                            <div class="flex justify-between items-center">
+                            <div class="f jb ic">
                                 <span>Balık Köftesi</span>
                                 <i class="fa-regular fa-heart favorite-icon cursor-pointer"></i>
                             </div>
                             <span class="text-xs font-extralight">200gr, 4 adet</span>
                             <span class="my-5 font-medium">300 TL</span>
-                            <div class="flex justify-between items-center text-xs font-extralight">
+                            <div class="f jb ic text-xs font-extralight">
                                 <span>1200 TL / Paket</span>
                                 <span>Koli İçi Adet: 20</span>
                             </div>
@@ -306,7 +313,7 @@
                 </div>
                 <div class="products-box group">
                     <div class="products-card cursor-pointer" data-href="#">
-                        <div class="image-area relative">
+                        <div class="image-area r">
                             <span class="nothing"></span>
                             <img src="assets/yemek2.webp" alt="">
                             <div class="fast-buttons">
@@ -319,13 +326,13 @@
                             </div>
                         </div>
                         <div class="title-area">
-                            <div class="flex justify-between items-center">
+                            <div class="f jb ic">
                                 <span>Balık Köftesi</span>
                                 <i class="fa-regular fa-heart favorite-icon cursor-pointer"></i>
                             </div>
                             <span class="text-xs font-extralight">200gr, 4 adet</span>
                             <span class="my-5 font-medium">300 TL</span>
-                            <div class="flex justify-between items-center text-xs font-extralight">
+                            <div class="f jb ic text-xs font-extralight">
                                 <span>1200 TL / Paket</span>
                                 <span>Koli İçi Adet: 20</span>
                             </div>
@@ -334,7 +341,7 @@
                 </div>
                 <div class="products-box group">
                     <div class="products-card cursor-pointer" data-href="#">
-                        <div class="image-area relative">
+                        <div class="image-area r">
                             <span class="offsale"></span>
                             <img src="assets/yemek3.webp" alt="">
                             <div class="fast-buttons">
@@ -347,18 +354,18 @@
                             </div>
                         </div>
                         <div class="title-area">
-                            <div class="flex justify-between items-center">
+                            <div class="f jb ic">
                                 <span>Balık Köftesi</span>
                                 <i class="fa-regular fa-heart favorite-icon cursor-pointer"></i>
                             </div>
                             <span class="text-xs font-extralight">200gr, 4 adet</span>
-                            <div class="offsale my-5 flex items-center">
+                            <div class="offsale my-5 f ic">
                                 <i class="fa-solid fa-caret-down text-[var(--fish-red)] text-4xl"></i>
                                 <span class="ml-1">%25</span>
                                 <span class="line-through opacity-60 ml-2">500 TL</span>
                                 <span class="font-medium text-[var(--fish-red)] ml-2">376 TL</span>
                             </div>
-                            <div class="flex justify-between items-center text-xs font-extralight">
+                            <div class="f jb ic text-xs font-extralight">
                                 <span>1200 TL / Paket</span>
                                 <span>Koli İçi Adet: 20</span>
                             </div>
@@ -367,7 +374,7 @@
                 </div>
                 <div class="products-box group">
                     <div class="products-card cursor-pointer" data-href="#">
-                        <div class="image-area relative">
+                        <div class="image-area r">
                             <span class="offsale"></span>
                             <img src="assets/yemek3.webp" alt="">
                             <div class="fast-buttons">
@@ -380,18 +387,18 @@
                             </div>
                         </div>
                         <div class="title-area">
-                            <div class="flex justify-between items-center">
+                            <div class="f jb ic">
                                 <span>Balık Köftesi</span>
                                 <i class="fa-regular fa-heart favorite-icon cursor-pointer"></i>
                             </div>
                             <span class="text-xs font-extralight">200gr, 4 adet</span>
-                            <div class="offsale my-5 flex items-center">
+                            <div class="offsale my-5 f ic">
                                 <i class="fa-solid fa-caret-down text-[var(--fish-red)] text-4xl"></i>
                                 <span class="ml-1">%25</span>
                                 <span class="line-through opacity-60 ml-2">500 TL</span>
                                 <span class="font-medium text-[var(--fish-red)] ml-2">376 TL</span>
                             </div>
-                            <div class="flex justify-between items-center text-xs font-extralight">
+                            <div class="f jb ic text-xs font-extralight">
                                 <span>1200 TL / Paket</span>
                                 <span>Koli İçi Adet: 20</span>
                             </div>
@@ -400,7 +407,7 @@
                 </div>
                 <div class="products-box group">
                     <div class="products-card cursor-pointer" data-href="#">
-                        <div class="image-area relative">
+                        <div class="image-area r">
                             <span class="guluten-free"></span>
                             <img src="assets/yemek1.webp" alt="">
                             <div class="fast-buttons">
@@ -413,13 +420,13 @@
                             </div>
                         </div>
                         <div class="title-area">
-                            <div class="flex justify-between items-center">
+                            <div class="f jb ic">
                                 <span>Balık Köftesi</span>
                                 <i class="fa-regular fa-heart favorite-icon cursor-pointer"></i>
                             </div>
                             <span class="text-xs font-extralight">200gr, 4 adet</span>
                             <span class="my-5 font-medium">300 TL</span>
-                            <div class="flex justify-between items-center text-xs font-extralight">
+                            <div class="f jb ic text-xs font-extralight">
                                 <span>1200 TL / Paket</span>
                                 <span>Koli İçi Adet: 20</span>
                             </div>
@@ -428,7 +435,7 @@
                 </div>
                 <div class="products-box group">
                     <div class="products-card cursor-pointer" data-href="#">
-                        <div class="image-area relative">
+                        <div class="image-area r">
                             <span class="nothing"></span>
                             <img src="assets/yemek2.webp" alt="">
                             <div class="fast-buttons">
@@ -441,13 +448,13 @@
                             </div>
                         </div>
                         <div class="title-area">
-                            <div class="flex justify-between items-center">
+                            <div class="f jb ic">
                                 <span>Balık Köftesi</span>
                                 <i class="fa-regular fa-heart favorite-icon cursor-pointer"></i>
                             </div>
                             <span class="text-xs font-extralight">200gr, 4 adet</span>
                             <span class="my-5 font-medium">300 TL</span>
-                            <div class="flex justify-between items-center text-xs font-extralight">
+                            <div class="f jb ic text-xs font-extralight">
                                 <span>1200 TL / Paket</span>
                                 <span>Koli İçi Adet: 20</span>
                             </div>
@@ -456,7 +463,7 @@
                 </div>
                 <div class="products-box group">
                     <div class="products-card cursor-pointer" data-href="#">
-                        <div class="image-area relative">
+                        <div class="image-area r">
                             <span class="offsale"></span>
                             <img src="assets/yemek3.webp" alt="">
                             <div class="fast-buttons">
@@ -469,18 +476,18 @@
                             </div>
                         </div>
                         <div class="title-area">
-                            <div class="flex justify-between items-center">
+                            <div class="f jb ic">
                                 <span>Balık Köftesi</span>
                                 <i class="fa-regular fa-heart favorite-icon cursor-pointer"></i>
                             </div>
                             <span class="text-xs font-extralight">200gr, 4 adet</span>
-                            <div class="offsale my-5 flex items-center">
+                            <div class="offsale my-5 f ic">
                                 <i class="fa-solid fa-caret-down text-[var(--fish-red)] text-4xl"></i>
                                 <span class="ml-1">%25</span>
                                 <span class="line-through opacity-60 ml-2">500 TL</span>
                                 <span class="font-medium text-[var(--fish-red)] ml-2">376 TL</span>
                             </div>
-                            <div class="flex justify-between items-center text-xs font-extralight">
+                            <div class="f jb ic text-xs font-extralight">
                                 <span>1200 TL / Paket</span>
                                 <span>Koli İçi Adet: 20</span>
                             </div>
@@ -489,7 +496,7 @@
                 </div>
                 <div class="products-box group">
                     <div class="products-card cursor-pointer" data-href="#">
-                        <div class="image-area relative">
+                        <div class="image-area r">
                             <span class="offsale"></span>
                             <img src="assets/yemek3.webp" alt="">
                             <div class="fast-buttons">
@@ -502,18 +509,18 @@
                             </div>
                         </div>
                         <div class="title-area">
-                            <div class="flex justify-between items-center">
+                            <div class="f jb ic">
                                 <span>Balık Köftesi</span>
                                 <i class="fa-regular fa-heart favorite-icon cursor-pointer"></i>
                             </div>
                             <span class="text-xs font-extralight">200gr, 4 adet</span>
-                            <div class="offsale my-5 flex items-center">
+                            <div class="offsale my-5 f ic">
                                 <i class="fa-solid fa-caret-down text-[var(--fish-red)] text-4xl"></i>
                                 <span class="ml-1">%25</span>
                                 <span class="line-through opacity-60 ml-2">500 TL</span>
                                 <span class="font-medium text-[var(--fish-red)] ml-2">376 TL</span>
                             </div>
-                            <div class="flex justify-between items-center text-xs font-extralight">
+                            <div class="f jb ic text-xs font-extralight">
                                 <span>1200 TL / Paket</span>
                                 <span>Koli İçi Adet: 20</span>
                             </div>
@@ -523,18 +530,18 @@
             </div>
         </div>
     </section>
-    <section class="whyus flex justify-center items-center flex-col">
-        <div class="container flex flex-col items-center gap-5 py-10">
+    <section class="whyus f jc ic flex-col">
+        <div class="container flex flex-col ic gap-5 py-10">
             <div class="whyus-title">
                 <h5 class="text-xl font-medium text-[var(--fish-red)]">The Fish Company</h5>
                 <h2 class="text-4xl font-medium">Ürünlerimizi Neden Seçmelisiniz?</h2>
             </div>
         </div>
-        <div class="whyus-container flex justify-center items-center">
+        <div class="whyus-container f jc ic">
             <video id="whyusVideo" autoplay loop muted playsinline class="background-video">
                 <source src="assets/whyusbg.mp4" type="video/mp4">
             </video>
-            <div class="container flex justify-between items-center h-full">
+            <div class="container f jb ic h-full">
                 <article>
                     <div class="article-content">
                         <div class="content-title">
@@ -601,16 +608,16 @@
             </div>
         </div>
     </section>
-    <section class="specials flex justify-center">
-        <div class="container flex flex-col items-center gap-5 py-20">
-            <div class="specials-title flex justify-between items-end w-full px-5">
+    <section class="specials f jc">
+        <div class="container flex flex-col ic gap-5 py-20">
+            <div class="specials-title f jb  items-end w-full px-5">
                 <div class="specials-text flex flex-col gap-3">
                     <h2 class="text-3xl font-medium">Mutfak Şeflerinin Tercihleri</h2>
                     <p class="text-xl font-light">Cafe, Restoran, Otel vb. Horeca sektörünün tercih ettiği en güzel lezzetleri sizin için getiriyoruz.</p>
                 </div>
                 <div class="specials-button">
-                    <button class="specials-btn py-3 px-6 border-2 font-medium rounded-lg text-lg relative overflow-hidden hover:text-white border-black cursor-pointer duration-300" type="submit">
-                        <span class="relative z-10">Tümünü Görüntüle</span>
+                    <button class="specials-btn py-3 px-6 border-2 font-medium rounded-lg text-lg r overflow-hidden hover:text-white border-black cursor-pointer duration-300" type="submit">
+                        <span class="r z-10">Tümünü Görüntüle</span>
                         <span class="specials-btn-bg absolute left-0 top-0 h-full w-0 bg-[var(--fish-red)] transition-all duration-300 z-0"></span>
                     </button>
                 </div>
@@ -618,7 +625,7 @@
             <div class="specials-products flex flex-wrap w-full">
                 <div class="products-box group">
                     <div class="products-card cursor-pointer" data-href="#">
-                        <div class="image-area relative">
+                        <div class="image-area r">
                             <span class="nothing"></span>
                             <img src="assets/yemek7.jpeg" alt="">
                             <div class="fast-buttons">
@@ -631,13 +638,13 @@
                             </div>
                         </div>
                         <div class="title-area">
-                            <div class="flex justify-between items-center">
+                            <div class="f jb ic">
                                 <span>Hardal Soslu Pane Somon Fileto</span>
                                 <i class="fa-regular fa-heart favorite-icon cursor-pointer"></i>
                             </div>
                             <span class="text-xs font-extralight">200gr, 4 adet</span>
                             <span class="my-5 font-medium">300 TL</span>
-                            <div class="flex justify-between items-center text-xs font-extralight">
+                            <div class="f jb ic text-xs font-extralight">
                                 <span>1200 TL / Paket</span>
                                 <span>Koli İçi Adet: 20</span>
                             </div>
@@ -646,7 +653,7 @@
                 </div>
                 <div class="products-box group">
                     <div class="products-card cursor-pointer" data-href="#">
-                        <div class="image-area relative">
+                        <div class="image-area r">
                             <span class="nothing"></span>
                             <img src="assets/yemek6.webp" alt="">
                             <div class="fast-buttons">
@@ -659,19 +666,19 @@
                             </div>
                         </div>
                         <div class="title-area">
-                            <div class="flex justify-between items-center">
+                            <div class="f jb ic">
                                 <span>Balık Köftesi</span>
                                 <i class="fa-regular fa-heart favorite-icon cursor-pointer"></i>
                             </div>
                             <span class="text-xs font-extralight">200gr, 4 adet</span>
                             
-                            <div class="offsale my-5 flex items-center">
+                            <div class="offsale my-5 f ic">
                                 <i class="fa-solid fa-caret-down text-[var(--fish-red)] text-4xl"></i>
                                 <span class="ml-1">%25</span>
                                 <span class="line-through opacity-60 ml-2">500 TL</span>
                                 <span class="font-medium text-[var(--fish-red)] ml-2">375 TL</span>
                             </div>
-                            <div class="flex justify-between items-center text-xs font-extralight">
+                            <div class="f jb ic text-xs font-extralight">
                                 <span>1200 TL / Paket</span>
                                 <span>Koli İçi Adet: 20</span>
                             </div>
@@ -680,7 +687,7 @@
                 </div>
                 <div class="products-box group">
                     <div class="products-card cursor-pointer" data-href="#">
-                        <div class="image-area relative">
+                        <div class="image-area r">
                             <span class="new"></span>
                             <img src="assets/yemek5.jpeg" alt="">
                             <div class="fast-buttons">
@@ -693,13 +700,13 @@
                             </div>
                         </div>
                         <div class="title-area">
-                            <div class="flex justify-between items-center">
+                            <div class="f jb ic">
                                 <span>Balık Köftesi</span>
                                 <i class="fa-regular fa-heart favorite-icon cursor-pointer"></i>
                             </div>
                             <span class="text-xs font-extralight">200gr, 4 adet</span>
                             <span class="my-5 font-medium">300 TL</span>
-                            <div class="flex justify-between items-center text-xs font-extralight">
+                            <div class="f jb ic text-xs font-extralight">
                                 <span>1200 TL / Paket</span>
                                 <span>Koli İçi Adet: 20</span>
                             </div>
@@ -708,7 +715,7 @@
                 </div>
                 <div class="products-box group">
                     <div class="products-card cursor-pointer" data-href="#">
-                        <div class="image-area relative">
+                        <div class="image-area r">
                             <span class="nothing"></span>
                             <img src="assets/yemek4.jpeg" alt="">
                             <div class="fast-buttons">
@@ -721,13 +728,13 @@
                             </div>
                         </div>
                         <div class="title-area">
-                            <div class="flex justify-between items-center">
+                            <div class="f jb ic">
                                 <span>Balık Köftesi</span>
                                 <i class="fa-regular fa-heart favorite-icon cursor-pointer"></i>
                             </div>
                             <span class="text-xs font-extralight">200gr, 4 adet</span>
                             <span class="my-5 font-medium">300 TL</span>
-                            <div class="flex justify-between items-center text-xs font-extralight">
+                            <div class="f jb ic text-xs font-extralight">
                                 <span>1200 TL / Paket</span>
                                 <span>Koli İçi Adet: 20</span>
                             </div>
@@ -737,23 +744,23 @@
             </div>
         </div>
     </section>
-    <section class="special-recipes flex justify-center">
-        <div class="container flex items-center justify-between py-20 px-5">
+    <section class="special-recipes f jc">
+        <div class="container f jb ic py-20 px-5">
             <div class="special-title flex flex-col gap-2 w-2/5 pr-20 pt-20">
                 <figure>
                     <img class="h-15 -scale-x-100 rotate-10" src="assets/cap.png" alt="">
                 </figure>
-                <div class="flex items-center gap-2">
+                <div class="f ic gap-2">
                     <h3 class="text-xl text-[var(--fish-red)]">The Fish Company</h3>
                     <img class="h-1.5" src="assets/tail.png" alt="">
                 </div>
                 <h2 class="text-4xl">ŞEFLER İÇİN ÖZEL TARİFLER</h2>
                 <span class="biro text-3xl pt-10">Farklı tarifler, farklı tatlar...</span>
                 <p class="text-xl font-extralight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac iaculis ex. Suspendisse lacinia nibh sed metus dictum pellentesque. Mauris ut sem ut elit tristique maximus. Nunc in tortor nulla. Etiam tortor risus, pellentesque vitae pharetra.</p>
-                <a href="#" class="fish-button size-fit my-10 relative inline-block">
-                    <div class="fish-image w-30 relative inline-block">
+                <a href="#" class="fish-button size-fit my-10 r inline-block">
+                    <div class="fish-image w-30 r inline-block">
                         <img src="assets/fish.png" alt="">
-                        <span class="absolute inset-0 flex items-center justify-end text-lg font-normal text-white pr-5">
+                        <span class="absolute inset-0 f ic justify-end text-lg font-normal text-white pr-5">
                             İncele
                         </span>
                     </div>
@@ -825,16 +832,16 @@
             </div>
         </div>
     </section>
-    <section class="newest flex justify-center">
-        <div class="container flex flex-col items-center gap-5 py-20">
-            <div class="specials-title flex justify-between items-end w-full px-5">
+    <section class="newest f jc">
+        <div class="container flex flex-col ic gap-5 py-20">
+            <div class="specials-title f jb  items-end w-full px-5">
                 <div class="specials-text flex flex-col gap-3">
                     <h2 class="text-3xl font-medium">Yeni Gelenler</h2>
                     <div class="bg-[#0691d6] h-1.5 w-2/3"></div>
                 </div>
                 <div class="specials-button">
-                    <button class="specials-btn py-3 px-6 border-2 font-medium rounded-lg text-lg relative overflow-hidden hover:text-white border-black cursor-pointer duration-300" type="submit">
-                        <span class="relative z-10">Tümünü Görüntüle</span>
+                    <button class="specials-btn py-3 px-6 border-2 font-medium rounded-lg text-lg r overflow-hidden hover:text-white border-black cursor-pointer duration-300" type="submit">
+                        <span class="r z-10">Tümünü Görüntüle</span>
                         <span class="specials-btn-bg absolute left-0 top-0 h-full w-0 bg-[var(--fish-red)] transition-all duration-300 z-0"></span>
                     </button>
                 </div>
@@ -842,7 +849,7 @@
             <div class="specials-products flex flex-wrap w-full">
                 <div class="products-box group">
                     <div class="products-card cursor-pointer" data-href="#">
-                        <div class="image-area relative">
+                        <div class="image-area r">
                             <span class="new"></span>
                             <img src="assets/urun.webp" alt="">
                             <div class="fast-buttons">
@@ -855,13 +862,13 @@
                             </div>
                         </div>
                         <div class="title-area">
-                            <div class="flex justify-between items-center">
+                            <div class="f jb ic">
                                 <span>Hardal Soslu Pane Somon Fileto</span>
                                 <i class="fa-regular fa-heart favorite-icon cursor-pointer"></i>
                             </div>
                             <span class="text-xs font-extralight">200gr, 4 adet</span>
                             <span class="my-5 font-medium">300 TL</span>
-                            <div class="flex justify-between items-center text-xs font-extralight">
+                            <div class="f jb ic text-xs font-extralight">
                                 <span>1200 TL / Paket</span>
                                 <span>Koli İçi Adet: 20</span>
                             </div>
@@ -870,7 +877,7 @@
                 </div>
                 <div class="products-box group">
                     <div class="products-card cursor-pointer" data-href="#">
-                        <div class="image-area relative">
+                        <div class="image-area r">
                             <span class="new"></span>
                             <img src="assets/urun.webp" alt="">
                             <div class="fast-buttons">
@@ -883,19 +890,19 @@
                             </div>
                         </div>
                         <div class="title-area">
-                            <div class="flex justify-between items-center">
+                            <div class="f jb ic">
                                 <span>Balık Köftesi</span>
                                 <i class="fa-regular fa-heart favorite-icon cursor-pointer"></i>
                             </div>
                             <span class="text-xs font-extralight">200gr, 6 adet</span>
                             
-                            <div class="offsale my-5 flex items-center">
+                            <div class="offsale my-5 f ic">
                                 <i class="fa-solid fa-caret-down text-[var(--fish-red)] text-4xl"></i>
                                 <span class="ml-1">%25</span>
                                 <span class="line-through opacity-60 ml-2">500 TL</span>
                                 <span class="font-medium text-[var(--fish-red)] ml-2">375 TL</span>
                             </div>
-                            <div class="flex justify-between items-center text-xs font-extralight">
+                            <div class="f jb ic text-xs font-extralight">
                                 <span>1200 TL / Paket</span>
                                 <span>Koli İçi Adet: 20</span>
                             </div>
@@ -904,7 +911,7 @@
                 </div>
                 <div class="products-box group">
                     <div class="products-card cursor-pointer" data-href="#">
-                        <div class="image-area relative">
+                        <div class="image-area r">
                             <span class="new"></span>
                             <img src="assets/urun3.webp" alt="">
                             <div class="fast-buttons">
@@ -917,13 +924,13 @@
                             </div>
                         </div>
                         <div class="title-area">
-                            <div class="flex justify-between items-center">
+                            <div class="f jb ic">
                                 <span>Balık Köftesi</span>
                                 <i class="fa-regular fa-heart favorite-icon cursor-pointer"></i>
                             </div>
                             <span class="text-xs font-extralight">200gr, 4 adet</span>
                             <span class="my-5 font-medium">300 TL</span>
-                            <div class="flex justify-between items-center text-xs font-extralight">
+                            <div class="f jb ic text-xs font-extralight">
                                 <span>1200 TL / Paket</span>
                                 <span>Koli İçi Adet: 20</span>
                             </div>
@@ -932,7 +939,7 @@
                 </div>
                 <div class="products-box group">
                     <div class="products-card cursor-pointer" data-href="#">
-                        <div class="image-area relative">
+                        <div class="image-area r">
                             <span class="nothing"></span>
                             <img src="assets/urun3.webp" alt="">
                             <div class="fast-buttons">
@@ -945,13 +952,13 @@
                             </div>
                         </div>
                         <div class="title-area">
-                            <div class="flex justify-between items-center">
+                            <div class="f jb ic">
                                 <span>Balık Köftesi</span>
                                 <i class="fa-regular fa-heart favorite-icon cursor-pointer"></i>
                             </div>
                             <span class="text-xs font-extralight">200gr, 4 adet</span>
                             <span class="my-5 font-medium">300 TL</span>
-                            <div class="flex justify-between items-center text-xs font-extralight">
+                            <div class="f jb ic text-xs font-extralight">
                                 <span>1200 TL / Paket</span>
                                 <span>Koli İçi Adet: 20</span>
                             </div>
@@ -961,15 +968,15 @@
             </div>
         </div>
     </section>
-    <section class="kitchen-academy flex justify-center select-none">
+    <section class="kitchen-academy f jc select-none">
         <div class="container flex flex-col justify-center py-20 ">
-            <div class="academy-title flex flex-col justify-center items-center">
+            <div class="academy-title flex flex-col justify-center ic">
                 <h5 class="text-xl font-medium text-[var(--fish-red)] mb-2">The Fish Company</h5>
                 <h2 class="text-6xl font-medium mb-5">Mutfak Akademi</h2>
                 <p class="text-2xl font-light">Deniz ürünleri ve denizcilikle ilgili aradığın tüm bilgiler burada.</p>
             </div>
-            <div class="academy-sss flex relative">
-                <div class="figures  w-1/2  pr-30 pt-20 flex justify-center items-center relative">
+            <div class="academy-sss flex r">
+                <div class="figures  w-1/2  pr-30 pt-20 f jc ic r">
                     <figure class="bg-[#C4DAE7] w-full overflow-hidden rounded-full aspect-square bg-cover">
                         <img class="bg-cover -scale-x-100 rotate-10" src="assets/npc1.png" alt="">
                     </figure>
@@ -977,46 +984,46 @@
                     <img class="absolute h-50 left-20 -bottom-20 dumen" src="assets/dumen.png" alt="">
                     <img class="absolute h-40 top-12 left-15 -rotate-18" src="assets/cap2.png" alt="">
                     <a href="" class="absolute fish-button size-fit mt-5 right-50 bottom-10">
-                        <div class="fish-image w-30 relative inline-block">
+                        <div class="fish-image w-30 r inline-block">
                             <img src="assets/fish.png" alt="">
-                            <div class="absolute inset-0 flex flex-col w-fit items-center justify-center text-lg font-normal text-white pl-12">
+                            <div class="absolute inset-0 flex flex-col w-fit ic justify-center text-lg font-normal text-white pl-12">
                                 <span class="w-fit">İncele</span>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="sss w-1/2 flex items-center">
+                <div class="sss w-1/2 f ic">
                     <div class="sss-container flex flex-col gap-8 w-full">
                         <div class="sss-card bg-[#F6F6F6] px-10 py-8 rounded-2xl cursor-pointer">
-                            <div class="sss-title w-full flex flex-col justify-between items-center">
-                                <div class="sss-title-top w-full flex justify-between items-center">
+                            <div class="sss-title w-full flex flex-col justify-between ic">
+                                <div class="sss-title-top w-full f jb ic">
                                     <h3 class="text-2xl font-semibold">Donuk Ürünleri nasıl çözdürmeliyim?</h3>
                                     <i class="fa-solid fa-chevron-down sss-list rotate-0"></i>
                                 </div>
                                 <div class="sss-title-bottom">
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, provident officiis autem incidunt quibusdam omnis porro maiores itaque aliquam ut explicabo, commodi, aut tempore velit assumenda unde asperiores modi. </p>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, provident off iciis autem incidunt quibusdam omnis porro maiores itaque aliquam ut explicabo, commodi, aut tempore velit assumenda unde asperiores modi. </p>
                                 </div>
                             </div>
                         </div>
                         <div class="sss-card bg-[#F6F6F6] px-10 py-8 rounded-2xl cursor-pointer">
-                            <div class="sss-title w-full flex flex-col justify-between items-center">
-                                <div class="sss-title-top w-full flex justify-between items-center">
+                            <div class="sss-title w-full flex flex-col justify-between ic">
+                                <div class="sss-title-top w-full f jb ic">
                                     <h3 class="text-2xl font-semibold">Donuk Ürünleri nasıl çözdürmeliyim?</h3>
                                     <i class="fa-solid fa-chevron-down sss-list rotate-0"></i>
                                 </div>
                                 <div class="sss-title-bottom">
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, provident officiis autem incidunt quibusdam omnis porro maiores itaque aliquam ut explicabo, commodi, aut tempore velit assumenda unde asperiores modi. </p>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, provident off iciis autem incidunt quibusdam omnis porro maiores itaque aliquam ut explicabo, commodi, aut tempore velit assumenda unde asperiores modi. </p>
                                 </div>
                             </div>
                         </div>
                         <div class="sss-card bg-[#F6F6F6] px-10 py-8 rounded-2xl  cursor-pointer">
-                            <div class="sss-title w-full flex flex-col justify-between items-center">
-                                <div class="sss-title-top w-full flex justify-between items-center">
+                            <div class="sss-title w-full flex flex-col justify-between ic">
+                                <div class="sss-title-top w-full f jb ic">
                                     <h3 class="text-2xl font-semibold">Donuk Ürünleri nasıl çözdürmeliyim?</h3>
                                     <i class="fa-solid fa-chevron-down sss-list rotate-0"></i>
                                 </div>
                                 <div class="sss-title-bottom">
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, provident officiis autem incidunt quibusdam omnis porro maiores itaque aliquam ut explicabo, commodi, aut tempore velit assumenda unde asperiores modi. </p>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, provident off iciis autem incidunt quibusdam omnis porro maiores itaque aliquam ut explicabo, commodi, aut tempore velit assumenda unde asperiores modi. </p>
                                 </div>
                             </div>
                         </div>
@@ -1027,21 +1034,21 @@
     </section>
     <section class="cargo-service py-20 select-none">
         <div class="cargo-service-top w-full py-20">
-            <div class="pink h-60 w-2/3 bg-red-100 relative">
+            <div class="pink h-60 w-2/3 bg-red-100 r">
                 <figure class="absolute z-29 -right-100 -top-10"><img class="h-90" src="assets/service-car.webp" alt=""></figure>
                 <figure class="absolute right-50 -top-10"><img class="h-90 -rotate-35 -scale-x-100" src="assets/path.png" alt=""></figure>
                 <i class="absolute left-167 top-18 text-6xl fa-solid fa-location-dot"></i>
                 <h2 class="absolute ml-50 left-0 -top-10 text-4xl font-semibold leading-13">Siparişlerin <span class="text-6xl text-red-400">soğuk zincirle</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; işletmende</h2>
             </div>
         </div>
-        <div class="cargo-service-bottom py-20 flex justify-center">
+        <div class="cargo-service-bottom py-20 f jc">
             <div class="container flex">
                 <article class="flex flex-col w-1/5">
                     <div class="article-icons flex w-full">
                         <div class="w-fit text-9xl font-semibold text-neutral-200 hover:text-[var(--fish-blue)] duration-300">
                             01
                         </div>
-                        <div class="content-img w-fit flex items-center">
+                        <div class="content-img w-fit f ic">
                             <img class="w-20" src="assets/img1.png" alt="">
                         </div>
                     </div>
@@ -1054,7 +1061,7 @@
                         <div class="w-fit text-9xl font-semibold text-neutral-200 hover:text-[var(--fish-blue)] duration-300">
                             02
                         </div>
-                        <div class="content-img w-fit flex items-center">
+                        <div class="content-img w-fit f ic">
                             <img class="w-20" src="assets/img8.svg" alt="">
                         </div>
                     </div>
@@ -1068,7 +1075,7 @@
                         <div class="w-fit text-9xl font-semibold text-neutral-200 hover:text-[var(--fish-blue)] duration-300">
                             03
                         </div>
-                        <div class="content-img w-fit flex items-center">
+                        <div class="content-img w-fit f ic">
                             <img class="w-20" src="assets/img7.png" alt="">
                         </div>
                     </div>
@@ -1082,7 +1089,7 @@
                         <div class="w-fit text-9xl font-semibold text-neutral-200 hover:text-[var(--fish-blue)] duration-300">
                             04
                         </div>
-                        <div class="content-img w-fit flex items-center">
+                        <div class="content-img w-fit f ic">
                             <img class="w-22" src="assets/img9.png" alt="">
                         </div>
                     </div>
@@ -1095,7 +1102,7 @@
                         <div class="w-fit text-9xl font-semibold text-neutral-200 hover:text-[var(--fish-blue)] duration-300">
                             05
                         </div>
-                        <div class="content-img w-fit flex items-center">
+                        <div class="content-img w-fit f ic">
                             <img class="w-40" src="assets/img3.png" alt="">
                         </div>
                     </div>
@@ -1106,20 +1113,20 @@
             </div>
         </div>
     </section>
-    <footer class="flex justify-center text-white p-15">
+    <footer class="f jc text-white p-15">
         <div class="container flex flex-col w-full">
-            <div class="footer-top w-full flex justify-between border-b border-white">
+            <div class="footer-top w-full f jb ic border-b border-white">
                 <div class="footer-top-left w-1/3">
                     <div class="logo w-fit h-fit mb-15">
                         <img class="w-50 h-40" src="assets/logo.svg" alt="">
                     </div>
                     <span class="text-2xl">E-Bültene Üye Olun!</span>
-                    <div class="flex h-20 items-center mb-15">
+                    <div class="flex h-20 ic mb-15">
                         <input class="p-5 h-14 w-80 bg-white rounded-xl text-black" type="email" name="email" id="email" placeholder="E-postanızı yazın.">
-                        <a href="" class="fish-button h-15 -ml-20 relative inline-block">
-                            <div class="fish-image w-29 relative inline-block">
+                        <a href="" class="fish-button h-15 -ml-20 r inline-block">
+                            <div class="fish-image w-29 r inline-block">
                                 <img src="assets/fish.png" alt="">
-                                <span class="absolute inset-0 flex items-center justify-end text-lg font-normal text-white pr-4">
+                                <span class="absolute inset-0 f ic justify-end text-lg font-normal text-white pr-4">
                                     Üye Ol
                                 </span>
                             </div>
@@ -1188,13 +1195,13 @@
                     </nav>
                 </div>
             </div>
-            <div class="footer-bottom w-full flex justify-between pt-10">
+            <div class="footer-bottom w-full f jb  pt-10">
                 <div class="footer-bottom-left">
                     The Fish Company @ Tüm Hakları saklıdır. 2025
                     <img class="h-3 my-3" src="assets/tail-2.png" alt="">
                     Engin Tasarım
                 </div>
-                <div class="footer-bottom-right flex gap-3 items-center justify-center">
+                <div class="footer-bottom-right flex gap-3 ic justify-center">
                     Güvenli Ödeme
                     <i class="fa-brands fa-cc-visa text-3xl"></i>
                     <i class="fa-brands fa-cc-mastercard text-3xl"></i>
@@ -1203,6 +1210,49 @@
             </div>
         </div>
     </footer>
+
+    <!-- Ürün Detay Modal -->
+    <div id="productModal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalProductTitle">Ürün Detayı</h2>
+                <button id="closeModal" class="close-btn">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalProductImage" src="" alt="">
+                    <div class="modal-badges">
+                        <span id="modalProductBadge" class="product-badge"></span>
+                    </div>
+                </div>
+                <div class="modal-info">
+                    <div class="modal-title-section">
+                        <h3 id="modalProductName"></h3>
+                        <i class="fa-regular fa-heart favorite-icon cursor-pointer" id="modalFavorite"></i>
+                    </div>
+                    <p id="modalProductDescription" class="modal-description"></p>
+                    <div class="modal-price-section">
+                        <div id="modalPriceContainer">
+                            <span id="modalProductPrice" class="modal-price"></span>
+                        </div>
+                        <div class="modal-package-info">
+                            <span id="modalPackagePrice"></span>
+                            <span id="modalPackageCount"></span>
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <button class="add-to-cart-btn">
+                            <i class="fa-brands fa-opencart"></i>
+                            Sepete Ekle
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

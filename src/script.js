@@ -293,3 +293,143 @@ document.addEventListener('click', (e) => {
     accountMenu.classList.add('hidden');
   }
 });
+
+// Modal fonksiyonları
+const modal = document.getElementById('productModal');
+const closeModalBtn = document.getElementById('closeModal');
+
+// Modal açma fonksiyonu
+function openProductModal(productCard) {
+  const imageArea = productCard.querySelector('.image-area');
+  const titleArea = productCard.querySelector('.title-area');
+  
+  // Ürün bilgilerini al
+  const productImage = imageArea.querySelector('img').src;
+  const productName = titleArea.querySelector('span').textContent;
+  const productDescription = titleArea.querySelector('.text-xs').textContent;
+  const productPrice = titleArea.querySelector('.my-5').textContent;
+  
+  // Paket bilgilerini al
+  const packageInfo = titleArea.querySelectorAll('.text-xs.font-extralight span');
+  const packagePrice = packageInfo[0] ? packageInfo[0].textContent : '';
+  const packageCount = packageInfo[1] ? packageInfo[1].textContent : '';
+  
+  // Badge bilgisini al
+  const badge = imageArea.querySelector('span');
+  let badgeClass = '';
+  let badgeText = '';
+  
+  if (badge) {
+    if (badge.classList.contains('guluten-free')) {
+      badgeClass = 'guluten-free';
+      badgeText = 'Glütensiz';
+    } else if (badge.classList.contains('offsale')) {
+      badgeClass = 'offsale';
+      badgeText = 'İndirimli';
+    } else if (badge.classList.contains('new')) {
+      badgeClass = 'new';
+      badgeText = 'Yeni';
+    }
+  }
+  
+  // İndirimli fiyat kontrolü
+  const offsaleDiv = titleArea.querySelector('.offsale');
+  let finalPrice = productPrice;
+  if (offsaleDiv) {
+    const discountedPrice = offsaleDiv.querySelector('.text-\\[var\\(--fish-red\\)\\]');
+    if (discountedPrice) {
+      finalPrice = discountedPrice.textContent;
+    }
+  }
+  
+  // Modal içeriğini güncelle
+  document.getElementById('modalProductImage').src = productImage;
+  document.getElementById('modalProductName').textContent = productName;
+  document.getElementById('modalProductDescription').textContent = productDescription;
+  document.getElementById('modalProductPrice').textContent = finalPrice;
+  document.getElementById('modalPackagePrice').textContent = packagePrice;
+  document.getElementById('modalPackageCount').textContent = packageCount;
+  
+  // Badge'i güncelle
+  const modalBadge = document.getElementById('modalProductBadge');
+  if (badgeText) {
+    modalBadge.textContent = badgeText;
+    modalBadge.className = `product-badge ${badgeClass}`;
+    modalBadge.style.display = 'block';
+  } else {
+    modalBadge.style.display = 'none';
+  }
+  
+  // Modal'ı göster
+  modal.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+// Modal kapatma fonksiyonu
+function closeProductModal() {
+  modal.classList.add('hidden');
+  document.body.style.overflow = 'auto';
+}
+
+// Modal kapatma eventleri
+closeModalBtn.addEventListener('click', closeProductModal);
+
+// Modal overlay'e tıklayınca kapat
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    closeProductModal();
+  }
+});
+
+// ESC tuşu ile kapat
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeProductModal();
+  }
+});
+
+// Göz ikonu butonlarına event listener ekle
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.products-card .fast-buttons button:first-child').forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.stopPropagation(); // Kart tıklama eventini engelle
+      const productCard = this.closest('.products-card');
+      openProductModal(productCard);
+    });
+  });
+});
+
+// Modal içindeki favori butonuna event listener ekle
+document.getElementById('modalFavorite').addEventListener('click', function() {
+  if(this.classList.contains('fa-regular')){
+    this.classList.remove('fa-regular');
+    this.classList.add('fa-solid');
+    this.style.color = 'var(--fish-red)';
+  } else {
+    this.classList.remove('fa-solid');
+    this.classList.add('fa-regular');
+    this.style.color = '';
+  }
+});
+
+// Modal içindeki sepete ekle butonuna event listener ekle
+document.querySelector('.add-to-cart-btn').addEventListener('click', function() {
+  const icon = this.querySelector('i');
+  if(icon.classList.contains('fa-opencart')){
+    icon.classList.remove('fa-opencart','fa-brands');
+    icon.classList.add('fa-check','fa-solid','animate-bounce');
+    icon.style.color = 'var(--fish-green)';
+    this.innerHTML = '<i class="fa-check fa-solid animate-bounce"></i> Sepete Eklendi!';
+    this.style.background = 'var(--fish-green)';
+    
+    setTimeout(function(){
+      icon.classList.remove('animate-bounce');
+    }, 600);
+    
+    // 2 saniye sonra eski haline döndür
+    setTimeout(() => {
+      this.innerHTML = '<i class="fa-brands fa-opencart"></i> Sepete Ekle';
+      this.style.background = 'linear-gradient(135deg, var(--fish-blue), var(--fish-teal))';
+    }, 2000);
+  }
+});
