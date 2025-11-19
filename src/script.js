@@ -37,7 +37,7 @@ if(navbarList){
 const openHeader = document.querySelector('.open-header-nav');
 const openNav = document.querySelector('.open-nav');
 const headerNav = document.querySelector('.header-nav');
-document.querySelectorAll('.hamburger-menu').forEach(function(menu){
+document.querySelectorAll('#hamburger-menu').forEach(function(menu){
   menu.addEventListener('click', function(){
     const isOpen = openHeader.classList.contains("open")
     if(isOpen){
@@ -56,14 +56,26 @@ document.body.addEventListener('click', e => {
   }
 });
 
+// Measure actual heights on load
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.sss-title-bottom').forEach(function(bottom) {
+    // Temporarily open to measure height
+    bottom.classList.add('open');
+    const height = bottom.scrollHeight;
+    bottom.setAttribute('data-height', height + 'px');
+    bottom.classList.remove('open');
+  });
+});
+
 document.querySelectorAll('.sss-card').forEach(function(card){
   card.addEventListener('click', function(){
     const icon = card.querySelector('.sss-list');
     const metin = card.querySelector('.sss-title-bottom');
     const isOpen = metin.classList.contains('open');
-    
+
     // If this card is already open, close it
     if (isOpen) {
+      metin.style.maxHeight = '0';
       metin.classList.remove('open');
       icon.classList.remove('rotate-180');
       icon.classList.add('rotate-0');
@@ -74,6 +86,8 @@ document.querySelectorAll('.sss-card').forEach(function(card){
         const otherIcon = otherCard.querySelector('.sss-list');
         if (otherCard === card) {
           // Open this one
+          const height = otherMetin.getAttribute('data-height');
+          otherMetin.style.maxHeight = height;
           if (otherMetin) otherMetin.classList.add('open');
           if (otherIcon) {
             otherIcon.classList.remove('rotate-0');
@@ -81,7 +95,10 @@ document.querySelectorAll('.sss-card').forEach(function(card){
           }
         } else {
           // Close others
-          if (otherMetin) otherMetin.classList.remove('open');
+          if (otherMetin) {
+            otherMetin.style.maxHeight = '0';
+            otherMetin.classList.remove('open');
+          }
           if (otherIcon) {
             otherIcon.classList.remove('rotate-180');
             otherIcon.classList.add('rotate-0');
@@ -433,3 +450,5 @@ document.querySelector('.add-to-cart-btn').addEventListener('click', function() 
     }, 2000);
   }
 });
+
+
