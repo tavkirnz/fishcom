@@ -26,7 +26,7 @@
 .frow {
   flex-direction: row;
 }
-.fwrap{
+.fwrap {
   flex-wrap: wrap;
 }
 .jc {
@@ -38,13 +38,16 @@
 .ic {
   align-items: center;
 }
+.ie{
+  align-items: flex-end;
+}
 .r {
   position: relative;
 }
 .a {
   position: absolute;
 }
-.c-s{
+.c-s {
   padding: 40px 0 40px 0;
 }
 /* #endregion */
@@ -61,6 +64,10 @@ h2 {
 
 h3 {
   font-size: 24px;
+  font-weight: 500;
+}
+h5 {
+  font-size: 20px;
   font-weight: 500;
 }
 /* #endregion */
@@ -356,7 +363,7 @@ section.hero {
 .hero-title h1 {
   line-height: 60px;
 }
-.hero-title p{
+.hero-title p {
   font-size: 24px;
   font-weight: 500;
 }
@@ -521,10 +528,10 @@ section.hero {
 /* #endregion */
 
 /* #region Products */
-.products .container{
+.products .container {
   gap: 20px;
 }
-.products .products-title hr{
+.products .products-title hr {
   margin: 0 8px 0 8px;
   border-top: 4px solid var(--fish-red);
   width: 50%;
@@ -565,7 +572,7 @@ section.hero {
 .products-navbar ul li.active a::before {
   width: 100%;
 }
-.products-area{
+.products-area {
   width: 100%;
 }
 .products-box {
@@ -669,19 +676,22 @@ section.hero {
 .title-area i:active {
   transform: scale(0.95);
 }
-.title-area .favorite-icon{
+.title-area .favorite-icon {
   cursor: pointer;
 }
-.title-area .quantity{
+.title-area .quantity {
   font-size: 12px;
   font-weight: 200;
 }
-.title-area .offsale{
+.title-area .offsale {
   margin: 20px 0 20px 0;
 }
 /* #endregion */
 
 /* #region Whyus */
+.whyus .whyus-title h5 {
+  color: var(--fish-red);
+}
 .whyus-container {
   position: relative;
   background-image: url("assets/whyusbg.jpg"); /* fallback resim */
@@ -692,7 +702,9 @@ section.hero {
   height: 738px;
   overflow: hidden;
 }
-
+.whyus-container .container{
+  height: 100%;
+}
 .background-video {
   position: absolute;
   top: 0;
@@ -734,9 +746,6 @@ section.hero {
   flex-direction: column;
   gap: 8px;
 }
-.whyus-container article .article-content .content-title h3 {
-  font-size: 24px;
-}
 .whyus-container article .article-content .content-title p {
   font-size: 22px;
   font-weight: 200;
@@ -752,6 +761,10 @@ section.hero {
   align-items: center;
   position: relative;
 }
+.whyus-container article .article-content .content-img img{
+  position: absolute;
+  width: 48px;
+}
 /* #endregion */
 
 /* #region Specials */
@@ -759,9 +772,17 @@ section.hero {
   background-color: var(--luxury-white);
   width: 100%;
 }
+.specials .specials-title{
+  width: 100%;
+  padding: 0 20px 0 20px;
+}
+.specials .specials-title .specials-text{
+  gap: 12px;
+}
 /* #endregion */
 
 /* #region Special Recipes */
+
 .special-title .biro {
   font-family: "Biro";
 }

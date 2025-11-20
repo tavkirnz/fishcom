@@ -23,6 +23,7 @@
     jc    = justify-center
     jb    = justify-between
     ic    = items-center
+    ie    = items-end
     r     = relative
     a     = absolute
     c-s   = py-10
@@ -539,10 +540,10 @@
             </div>
         </div>
     </section>
-    <section class="whyus f jc ic flex-col">
-        <div class="container flex flex-col ic gap-5 py-10">
+    <section class="whyus f jc ic fcol">
+        <div class="container f fcol ic c-s">
             <div class="whyus-title">
-                <h5 class="text-xl font-medium text-[var(--fish-red)]">The Fish Company</h5>
+                <h5>The Fish Company</h5>
                 <h2>Ürünlerimizi Neden Seçmelisiniz?</h2>
             </div>
         </div>
@@ -550,7 +551,7 @@
             <video id="whyusVideo" autoplay loop muted playsinline class="background-video">
                 <source src="assets/whyusbg.mp4" type="video/mp4">
             </video>
-            <div class="container f jb ic h-full">
+            <div class="container f jb ic">
                 <article>
                     <div class="article-content">
                         <div class="content-title">
@@ -558,25 +559,25 @@
                             <p>Balıklarımız tutulduktan sadece 17 dk sonra dondurup paketleniyor.</p>
                         </div>
                         <div class="content-img">
-                            <img class="absolute w-12" src="assets/img1.png" alt="">
+                            <img src="assets/img1.png" alt="">
                         </div>
                     </div>
                     <div class="article-content ">
                         <div class="content-title">
                             <h3>Zengin Ürün Çeşidi</h3>
-                            <p class="text-xl font-light">Dünyanın bir çok bölgesinden getirdiğimiz farklı balık türleri sizinle buluşuyor.</p>
+                            <p>Dünyanın bir çok bölgesinden getirdiğimiz farklı balık türleri sizinle buluşuyor.</p>
                         </div>
                         <div class="content-img">
-                            <img class="absolute w-12" src="assets/img2.png" alt="">
+                            <img src="assets/img2.png" alt="">
                         </div>
                     </div>
                     <div class="article-content ">
                         <div class="content-title">
                             <h3>QR Destekli İzlenebilirlik</h3>
-                            <p class="text-xl font-light">Ürünlerimizin QR kodunu okutarak tutulduğu andan itibaren tüm süreci izleyebilirsiniz.</p>
+                            <p>Ürünlerimizin QR kodunu okutarak tutulduğu andan itibaren tüm süreci izleyebilirsiniz.</p>
                         </div>
                         <div class="content-img">
-                            <img class="absolute w-12" src="assets/img5.png" alt="">
+                            <img src="assets/img5.png" alt="">
                         </div>
                     </div>
                 </article>
@@ -588,29 +589,29 @@
                 <article>
                     <div class="article-content  !text-start">
                         <div class="content-img">
-                            <img class="absolute w-12" src="assets/img4.png" alt="">
+                            <img src="assets/img4.png" alt="">
                         </div>
                         <div class="content-title ">
                             <h3>Yüksek Kalite / Uygun Fİyat</h3>
-                            <p class="text-xl font-light">Onlarca taze balık türünü en uygun fiyatlarla sizlerle buluşturuyoruz.</p>
+                            <p>Onlarca taze balık türünü en uygun fiyatlarla sizlerle buluşturuyoruz.</p>
                         </div>
                     </div>
                     <div class="article-content  !text-start">
                         <div class="content-img">
-                            <img class="absolute w-12" src="assets/img6.png" alt="">
+                            <img src="assets/img6.png" alt="">
                         </div>
                         <div class="content-title">
                             <h3>-18 C‘de Soğuk Zincir</h3>
-                            <p class="text-xl font-light">Tüm ürünlerimiz -18 C’de muhafaza edilerek soğuk zincir araçlarımızla sizinle buluşuyor.</p>
+                            <p>Tüm ürünlerimiz -18 C’de muhafaza edilerek soğuk zincir araçlarımızla sizinle buluşuyor.</p>
                         </div>
                     </div>
                     <div class="article-content  !text-start">
                         <div class="content-img">
-                            <img class="absolute w-12" src="assets/img3.png" alt="">
+                            <img src="assets/img3.png" alt="">
                         </div>
                         <div class="content-title">
                             <h3>1 Günde Teslimat Garantisi</h3>
-                            <p class="text-xl font-light">Ürünlerimizi sipariş verdikten 1 gün sonra firmanıza teslim ediyoruz.</p>
+                            <p>Ürünlerimizi sipariş verdikten 1 gün sonra firmanıza teslim ediyoruz.</p>
                         </div>
                     </div>
                 </article>
@@ -618,11 +619,11 @@
         </div>
     </section>
     <section class="specials f jc">
-        <div class="container flex flex-col ic gap-5 py-20">
-            <div class="specials-title f jb  items-end w-full px-5">
-                <div class="specials-text flex flex-col gap-3">
+        <div class="container f fcol ic gap-5 c-s">
+            <div class="specials-title f jb ie">
+                <div class="specials-text f fcol">
                     <h2>Mutfak Şeflerinin Tercihleri</h2>
-                    <p class="text-xl font-light">Cafe, Restoran, Otel vb. Horeca sektörünün tercih ettiği en güzel lezzetleri sizin için getiriyoruz.</p>
+                    <p>Cafe, Restoran, Otel vb. Horeca sektörünün tercih ettiği en güzel lezzetleri sizin için getiriyoruz.</p>
                 </div>
                 <div class="specials-button">
                     <button class="specials-btn py-3 px-6 border-2 font-medium rounded-lg text-lg r overflow-hidden hover:text-white border-black cursor-pointer duration-300" type="submit">
@@ -986,12 +987,9 @@
             </div>
             <div class="academy-sss flex r">
                 <div class="figures  w-1/2  pr-30 pt-20 f jc ic r">
-                    <figure class="bg-[#C4DAE7] w-full overflow-hidden rounded-full aspect-square bg-cover">
-                        <img class="bg-cover -scale-x-100 rotate-10" src="assets/npc1.png" alt="">
-                    </figure>
-                    <img class="absolute h-20 right-10 top-50 -scale-x-100 -rotate-45" src="assets/arrow2.png" alt="">
+                    <img src="assets/academy.png" alt="">
+                    <img class="absolute h-20 right-20 top-50 -scale-x-100 -rotate-45" src="assets/arrow2.png" alt="">
                     <img class="absolute h-50 left-20 -bottom-20 dumen" src="assets/dumen.png" alt="">
-                    <img class="absolute h-40 top-12 left-15 -rotate-18" src="assets/cap2.png" alt="">
                     <a href="" class="absolute fish-button size-fit mt-5 right-50 bottom-10">
                         <div class="fish-image w-30 r inline-block">
                             <img src="assets/fish.png" alt="">
