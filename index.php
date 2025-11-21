@@ -92,7 +92,7 @@
                                 <i class="fa-regular fa-heart"></i>
                                 <a href="#">Favorilerim</a>
                             </li>
-                            <li class="hover:text-[var(--fish-blue)]!">
+                            <li class="hover:text-(--fish-blue)!">
                                 <i class="fa-regular fa-circle-question"></i>
                                 <a href="#">Yardım</a>
                             </li>
@@ -237,37 +237,37 @@
     <section class="features f jc">
         <div class="container f jb c-s">
            <div class="feature-box">
-                <div class="feature-cycle border-[var(--fish-red)]">
+                <div class="feature-cycle border-(--fish-red)">
                     <img src="assets/balik.jpg" alt="">
                 </div>
                 <span>Kampanyalar</span>
            </div>
            <div class="feature-box">
-                <div class="feature-cycle border-[var(--fish-pink)]">
+                <div class="feature-cycle border-(--fish-pink)">
                     <img src="assets/balik.jpg" alt="">
                 </div>
                 <span>Yeni Gelenler</span>
            </div>
            <div class="feature-box">
-                <div class="feature-cycle border-[var(--fish-yellow)]">
+                <div class="feature-cycle border-(--fish-yellow)">
                     <img src="assets/balik.jpg" alt="">
                 </div>
                 <span>Bu Ayı Birincileri</span>
            </div>
            <div class="feature-box">
-                <div class="feature-cycle border-[var(--fish-pink)]">
+                <div class="feature-cycle border-(--fish-pink)">
                     <img src="assets/balik.jpg" alt="">
                 </div>
                 <span>Haftanın Ürünü</span>
            </div>
            <div class="feature-box">
-                <div class="feature-cycle border-[var(--fish-red)]">
+                <div class="feature-cycle border-(--fish-red)">
                     <img src="assets/balik.jpg" alt="">
                 </div>
                 <span>Avantajlı Ürünler</span>
            </div>
            <div class="feature-box">
-                <div class="feature-cycle border-[var(--fish-brown)]">
+                <div class="feature-cycle border-(--fish-brown)">
                     <img src="assets/balik.jpg" alt="">
                 </div>
                 <span>Birlikte Al Kazan</span>
@@ -370,10 +370,10 @@
                             </div>
                             <span class="quantity">200gr, 4 adet</span>
                             <div class="offsale f ic">
-                                <i class="fa-solid fa-caret-down text-[var(--fish-red)] text-4xl"></i>
+                                <i class="fa-solid fa-caret-down text-(--fish-red) text-4xl"></i>
                                 <span class="ml-1">%25</span>
                                 <span class="line-through opacity-60 ml-2">500 TL</span>
-                                <span class="font-medium text-[var(--fish-red)] ml-2">376 TL</span>
+                                <span class="font-medium text-(--fish-red) ml-2">376 TL</span>
                             </div>
                             <div class="f jb ic quantity">
                                 <span>1200 TL / Paket</span>
@@ -403,10 +403,10 @@
                             </div>
                             <span class="quantity">200gr, 4 adet</span>
                             <div class="offsale my-5 f ic">
-                                <i class="fa-solid fa-caret-down text-[var(--fish-red)] text-4xl"></i>
+                                <i class="fa-solid fa-caret-down text-(--fish-red) text-4xl"></i>
                                 <span class="ml-1">%25</span>
                                 <span class="line-through opacity-60 ml-2">500 TL</span>
-                                <span class="font-medium text-[var(--fish-red)] ml-2">376 TL</span>
+                                <span class="font-medium text-(--fish-red) ml-2">376 TL</span>
                             </div>
                             <div class="f jb ic quantity">
                                 <span>1200 TL / Paket</span>
@@ -492,10 +492,10 @@
                             </div>
                             <span class="quantity">200gr, 4 adet</span>
                             <div class="offsale my-5 f ic">
-                                <i class="fa-solid fa-caret-down text-[var(--fish-red)] text-4xl"></i>
+                                <i class="fa-solid fa-caret-down text-(--fish-red) text-4xl"></i>
                                 <span class="ml-1">%25</span>
                                 <span class="line-through opacity-60 ml-2">500 TL</span>
-                                <span class="font-medium text-[var(--fish-red)] ml-2">376 TL</span>
+                                <span class="font-medium text-(--fish-red) ml-2">376 TL</span>
                             </div>
                             <div class="f jb ic quantity">
                                 <span>1200 TL / Paket</span>
@@ -525,10 +525,10 @@
                             </div>
                             <span class="quantity">200gr, 4 adet</span>
                             <div class="offsale my-5 f ic">
-                                <i class="fa-solid fa-caret-down text-[var(--fish-red)] text-4xl"></i>
+                                <i class="fa-solid fa-caret-down text-(--fish-red) text-4xl"></i>
                                 <span class="ml-1">%25</span>
                                 <span class="line-through opacity-60 ml-2">500 TL</span>
-                                <span class="font-medium text-[var(--fish-red)] ml-2">376 TL</span>
+                                <span class="font-medium text-(--fish-red) ml-2">376 TL</span>
                             </div>
                             <div class="f jb ic quantity">
                                 <span>1200 TL / Paket</span>
@@ -587,7 +587,7 @@
                     </figure>
                 </article>
                 <article>
-                    <div class="article-content  !text-start">
+                    <div class="article-content text-start!">
                         <div class="content-img">
                             <img src="assets/img4.png" alt="">
                         </div>
@@ -596,7 +596,7 @@
                             <p>Onlarca taze balık türünü en uygun fiyatlarla sizlerle buluşturuyoruz.</p>
                         </div>
                     </div>
-                    <div class="article-content  !text-start">
+                    <div class="article-content text-start!">
                         <div class="content-img">
                             <img src="assets/img6.png" alt="">
                         </div>
@@ -605,7 +605,7 @@
                             <p>Tüm ürünlerimiz -18 C’de muhafaza edilerek soğuk zincir araçlarımızla sizinle buluşuyor.</p>
                         </div>
                     </div>
-                    <div class="article-content  !text-start">
+                    <div class="article-content text-start!">
                         <div class="content-img">
                             <img src="assets/img3.png" alt="">
                         </div>
@@ -628,7 +628,7 @@
                 <div class="specials-button">
                     <button class="specials-btn py-3 px-6 border-2 font-medium rounded-lg text-lg r overflow-hidden hover:text-white border-black cursor-pointer duration-300" type="submit">
                         <span class="r z-10">Tümünü Görüntüle</span>
-                        <span class="specials-btn-bg absolute left-0 top-0 h-full w-0 bg-[var(--fish-red)] transition-all duration-300 z-0"></span>
+                        <span class="specials-btn-bg absolute left-0 top-0 h-full w-0 bg-(--fish-red) transition-all duration-300 z-0"></span>
                     </button>
                 </div>
             </div>
@@ -683,10 +683,10 @@
                             <span class="quantity">200gr, 4 adet</span>
                             
                             <div class="offsale my-5 f ic">
-                                <i class="fa-solid fa-caret-down text-[var(--fish-red)] text-4xl"></i>
+                                <i class="fa-solid fa-caret-down text-(--fish-red) text-4xl"></i>
                                 <span class="ml-1">%25</span>
                                 <span class="line-through opacity-60 ml-2">500 TL</span>
-                                <span class="font-medium text-[var(--fish-red)] ml-2">375 TL</span>
+                                <span class="font-medium text-(--fish-red) ml-2">375 TL</span>
                             </div>
                             <div class="f jb ic quantity">
                                 <span>1200 TL / Paket</span>
@@ -761,7 +761,7 @@
                     <img class="h-15 -scale-x-100 rotate-10" src="assets/cap.png" alt="">
                 </figure>
                 <div class="f ic gap-2">
-                    <h3 class="text-xl text-[var(--fish-red)]">The Fish Company</h3>
+                    <h3 class="text-xl text-(--fish-red)">The Fish Company</h3>
                     <img class="h-1.5" src="assets/tail.png" alt="">
                 </div>
                 <h2>ŞEFLER İÇİN ÖZEL TARİFLER</h2>
@@ -852,7 +852,7 @@
                 <div class="specials-button">
                     <button class="specials-btn py-3 px-6 border-2 font-medium rounded-lg text-lg r overflow-hidden hover:text-white border-black cursor-pointer duration-300" type="submit">
                         <span class="r z-10">Tümünü Görüntüle</span>
-                        <span class="specials-btn-bg absolute left-0 top-0 h-full w-0 bg-[var(--fish-red)] transition-all duration-300 z-0"></span>
+                        <span class="specials-btn-bg absolute left-0 top-0 h-full w-0 bg-(--fish-red) transition-all duration-300 z-0"></span>
                     </button>
                 </div>
             </div>
@@ -907,10 +907,10 @@
                             <span class="quantity">200gr, 6 adet</span>
                             
                             <div class="offsale my-5 f ic">
-                                <i class="fa-solid fa-caret-down text-[var(--fish-red)] text-4xl"></i>
+                                <i class="fa-solid fa-caret-down text-(--fish-red) text-4xl"></i>
                                 <span class="ml-1">%25</span>
                                 <span class="line-through opacity-60 ml-2">500 TL</span>
-                                <span class="font-medium text-[var(--fish-red)] ml-2">375 TL</span>
+                                <span class="font-medium text-(--fish-red) ml-2">375 TL</span>
                             </div>
                             <div class="f jb ic quantity">
                                 <span>1200 TL / Paket</span>
@@ -981,7 +981,7 @@
     <section class="kitchen-academy f jc select-none">
         <div class="container flex flex-col justify-center py-20 ">
             <div class="academy-title flex flex-col justify-center ic">
-                <h5 class="text-xl font-medium text-[var(--fish-red)] mb-2">The Fish Company</h5>
+                <h5 class="text-xl font-medium text-(--fish-red) mb-2">The Fish Company</h5>
                 <h2 class="text-6xl! mb-5">Mutfak Akademi</h2>
                 <p class="text-2xl font-light">Deniz ürünleri ve denizcilikle ilgili aradığın tüm bilgiler burada.</p>
             </div>
