@@ -1,19 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!------------------------------------------Meta------------------------------------------>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!---------------------------------------Meta/Links--------------------------------------->
-    <link href="input.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!------------------------------------Links/Components------------------------------------>
-    <title>Fish.com</title>
+    <?php include "includes/head-links.php" ?>
+    <title>Denizev | Anasayfa</title>
     <!---------------------------------------Components/-------------------------------------->
     <!----
     f     = flex
@@ -29,181 +19,20 @@
     c-s   = py-10
     ----->
 </head>
+
 <body>
-    <div class="topbar f jc">
-        <div class="container f jb">
-            <div class="f ic">
-                <a href="#" class="f gap-2">
-                    <i class="fa-solid fa-location-dot text-xl"></i>
-                    <span>The Fish Company</span>
-                </a>
-            </div>
-            <div class="f ic">
-                <span>3000TL ve üzeri siparişlerde kargo ücretsiz!</span>
-            </div>
-            <div class="social-area f ic">
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-                <a href=""><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-        </div>
-    </div>
-    <header class="f jc">
-        <div class="container f jb ic">
-            <div>
-                <img src="assets/logo.svg">
-            </div>
-            <div class="search-area r">
-                <form action="/submit">
-                    <div class="search-btn r">
-                        <input class="header-search-input" id="searchInput" type="text" >
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                </form>
-                <div class="hidden" id="suggestions" ></div>
-            </div>
-            <div class="user-area f ic r">
-                <div class="user-account r">
-                    <a class="ic" id="accountBtn" >
-                        <i class="fa-regular fa-user"></i>
-                        <span>Engin Tasarım</span>
-                    </a>
-                     <div id="accountMenu" class="hidden">
-                        <h4>Engin Tasarım ve Elektronik San. Tic. Ltd. Şti</h4>
-                        <ul>
-                            <li>
-                                <i class="fa-solid fa-boxes-stacked"></i>
-                                <a href="#">Önceki Siparişlerim</a>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-star"></i>
-                                <a href="#">Favorilerim</a>
-                            </li>
-                            <li>
-                                <i class="fa-regular fa-user"></i>
-                                <a href="#">Kullanıcı Bilgilerim</a>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-location-dot"></i>
-                                <a href="#">Adreslerim</a>
-                            </li>
-                            <li>
-                                <i class="fa-regular fa-heart"></i>
-                                <a href="#">Favorilerim</a>
-                            </li>
-                            <li class="hover:text-(--fish-blue)!">
-                                <i class="fa-regular fa-circle-question"></i>
-                                <a href="#">Yardım</a>
-                            </li>
-                            <li class="hover:text-red-600!">
-                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                                <a href="#" class="flex">Çıkış Yap</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="user-favorites">
-                    <a href="" class="ic">
-                        <i class="fa-regular fa-heart"></i>
-                        <span>Favorilerim</span>
-                    </a>
-                </div>
-                <div class="user-cart">
-                    <a href="" class="ic">
-                        <i class="fa-brands fa-opencart"></i>
-                        <span>Sepetim</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
-    <nav class="ext-nav">
-        <nav class="header-nav f jc">
-            <div class="container f jb ">
-                <div class="features-nav f ic">
-                    <i id="hamburger-menu" class="fa-solid fa-bars"></i>
-                    <ul class="f ic">
-                        <li><a href="">Ürünler</a></li>
-                        <li><a href="">Yeni Gelenler</a></li>
-                        <li><a href="">Kampanyalar</a></li>
-                        <li><a href="">Birlikte Al Kazan</a></li>
-                    </ul>
-                </div>
-                <div class="user-nav f ic">
-                    <ul class="f ic">
-                        <li>
-                            <a class="f ic" href="">
-                                <i class="fa-solid fa-clock-rotate-left"></i>
-                                Önceki Siparişlerim
-                            </a>
-                        </li>
-                        <li>
-                            <a class="f ic" href="">
-                                <i class="fa-solid fa-star"></i>
-                                Yeni Ürünlerim
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <nav class="open-header-nav f jc a">
-            <div class="container">
-                <div class="open-nav f">
-                    <ul class="f fcol w-75">
-                        <h6>Balık Grupları</h6>
-                        <li><a href="">Horeca Serisi</a></li>
-                        <li><a href="">Çiğ ürünler Serisi</a></li>
-                        <li><a href="">Füme Serisi</a></li>
-                        <li><a href="">Gurme Serisi</a></li>
-                        <li><a href="">Hamurlular Serisi</a></li>
-                        <li><a href="">Klasik Retail Serisi</a></li>
-                        <li><a href="">Konserve Ürünler Serisi</a></li>
-                        <li><a href="">Marinat Serisi</a></li>
-                        <li><a href="">Skinpack Serisi</a></li>
-                        <li><a href="">Skinpack Serisi Bilezikli Ürünler</a></li>
-                    </ul>
-                    <div class="f fcol gap-10">
-                        <ul class="f fcol w-50">
-                            <h6>Deniz Ürünleri</h6>
-                            <li><a href="">Somon</a></li>
-                            <li><a href="">Ahtapot</a></li>
-                            <li><a href="">Karides</a></li>
-                        </ul>
-                        <ul class="f fcol w-50">
-                            <h6>Sushi</h6>
-                            <li><a href="">Somon</a></li>
-                            <li><a href="">Ahtapot</a></li>
-                            <li><a href="">Karides</a></li>
-                        </ul>
-                    </div>
-                    <div class="f fcol gap-10">
-                        <ul class="flex flex-col w-50">
-                            <h6>pişirme türleri</h6>
-                            <li><a href="">Izgara</a></li>
-                            <li><a href="">Tava</a></li>
-                            <li><a href="">Fırın</a></li>
-                            <li><a href="">Çiğ</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </nav>
+    <?php include "includes/header.php" ?>
+
     <section class="hero f jc r">
         <div class="container f jb ic r">
             <div class="hero-title f fcol">
                 <h1>Gurme Serisi Pesto Soslu Dil Balığı Dolmasını Denediniz mi ?</h1>
                 <p>Menünüze yeni tatlar katmak için ürünü hemen sipariş edin.</p>
-                <a href="#" class="fish-button">
-                    <div class="fish-image">
-                        <img src="assets/fish.png" alt="">
-                        <span class="mr-3">
-                            Satın Al
-                        </span>
-                    </div>
-                </a>
+                <?php
+                $label = "Satın al";
+                $right = "12";
+                include "includes/fish-button.php"
+                    ?>
             </div>
             <div class="hero-product f fcol r">
                 <div class="price-area r f jcic">
@@ -236,42 +65,42 @@
     </section>
     <section class="features f jc">
         <div class="container f jb c-s">
-           <div class="feature-box">
+            <div class="feature-box">
                 <div class="feature-cycle border-(--fish-red)">
                     <img src="assets/balik.jpg" alt="">
                 </div>
                 <span>Kampanyalar</span>
-           </div>
-           <div class="feature-box">
+            </div>
+            <div class="feature-box">
                 <div class="feature-cycle border-(--fish-pink)">
                     <img src="assets/balik.jpg" alt="">
                 </div>
                 <span>Yeni Gelenler</span>
-           </div>
-           <div class="feature-box">
+            </div>
+            <div class="feature-box">
                 <div class="feature-cycle border-(--fish-yellow)">
                     <img src="assets/balik.jpg" alt="">
                 </div>
                 <span>Bu Ayı Birincileri</span>
-           </div>
-           <div class="feature-box">
+            </div>
+            <div class="feature-box">
                 <div class="feature-cycle border-(--fish-pink)">
                     <img src="assets/balik.jpg" alt="">
                 </div>
                 <span>Haftanın Ürünü</span>
-           </div>
-           <div class="feature-box">
+            </div>
+            <div class="feature-box">
                 <div class="feature-cycle border-(--fish-red)">
                     <img src="assets/balik.jpg" alt="">
                 </div>
                 <span>Avantajlı Ürünler</span>
-           </div>
-           <div class="feature-box">
+            </div>
+            <div class="feature-box">
                 <div class="feature-cycle border-(--fish-brown)">
                     <img src="assets/balik.jpg" alt="">
                 </div>
                 <span>Birlikte Al Kazan</span>
-           </div>
+            </div>
         </div>
     </section>
     <section class="products f jc">
@@ -574,7 +403,8 @@
                     <div class="article-content ">
                         <div class="content-title">
                             <h3>QR Destekli İzlenebilirlik</h3>
-                            <p>Ürünlerimizin QR kodunu okutarak tutulduğu andan itibaren tüm süreci izleyebilirsiniz.</p>
+                            <p>Ürünlerimizin QR kodunu okutarak tutulduğu andan itibaren tüm süreci izleyebilirsiniz.
+                            </p>
                         </div>
                         <div class="content-img">
                             <img src="assets/img5.png" alt="">
@@ -602,7 +432,8 @@
                         </div>
                         <div class="content-title">
                             <h3>-18 C‘de Soğuk Zincir</h3>
-                            <p>Tüm ürünlerimiz -18 C’de muhafaza edilerek soğuk zincir araçlarımızla sizinle buluşuyor.</p>
+                            <p>Tüm ürünlerimiz -18 C’de muhafaza edilerek soğuk zincir araçlarımızla sizinle buluşuyor.
+                            </p>
                         </div>
                     </div>
                     <div class="article-content text-start!">
@@ -623,16 +454,17 @@
             <div class="specials-title f jb ie">
                 <div class="specials-text f fcol">
                     <h2>Mutfak Şeflerinin Tercihleri</h2>
-                    <p>Cafe, Restoran, Otel vb. Horeca sektörünün tercih ettiği en güzel lezzetleri sizin için getiriyoruz.</p>
+                    <p>Cafe, Restoran, Otel vb. Horeca sektörünün tercih ettiği en güzel lezzetleri sizin için
+                        getiriyoruz.</p>
                 </div>
                 <div class="specials-button">
-                    <button class="specials-btn py-3 px-6 border-2 font-medium rounded-lg text-lg r overflow-hidden hover:text-white border-black cursor-pointer duration-300" type="submit">
+                    <button class="specials-btn" type="submit">
                         <span class="r z-10">Tümünü Görüntüle</span>
-                        <span class="specials-btn-bg absolute left-0 top-0 h-full w-0 bg-(--fish-red) transition-all duration-300 z-0"></span>
+                        <span class="specials-btn-bg"></span>
                     </button>
                 </div>
             </div>
-            <div class="specials-products flex flex-wrap w-full">
+            <div class="specials-products f fwrap">
                 <div class="products-box group">
                     <div class="products-card" data-href="#">
                         <div class="image-area r">
@@ -681,7 +513,7 @@
                                 <i class="fa-regular fa-heart favorite-icon"></i>
                             </div>
                             <span class="quantity">200gr, 4 adet</span>
-                            
+
                             <div class="offsale my-5 f ic">
                                 <i class="fa-solid fa-caret-down text-(--fish-red) text-4xl"></i>
                                 <span class="ml-1">%25</span>
@@ -755,10 +587,10 @@
         </div>
     </section>
     <section class="special-recipes f jc">
-        <div class="container f jb ic py-20 px-5">
-            <div class="special-title flex flex-col gap-2 w-2/5 pr-20 pt-20">
+        <div class="container f jb ic c-s">
+            <div class="special-title f fcol">
                 <figure>
-                    <img class="h-15 -scale-x-100 rotate-10" src="assets/cap.png" alt="">
+                    <img src="assets/cap.png" alt="">
                 </figure>
                 <div class="f ic gap-2">
                     <h3 class="text-xl text-(--fish-red)">The Fish Company</h3>
@@ -766,18 +598,18 @@
                 </div>
                 <h2>ŞEFLER İÇİN ÖZEL TARİFLER</h2>
                 <span class="biro text-3xl pt-10">Farklı tarifler, farklı tatlar...</span>
-                <p class="text-xl font-extralight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac iaculis ex. Suspendisse lacinia nibh sed metus dictum pellentesque. Mauris ut sem ut elit tristique maximus. Nunc in tortor nulla. Etiam tortor risus, pellentesque vitae pharetra.</p>
-                <a href="#" class="fish-button size-fit my-10 r inline-block">
-                    <div class="fish-image w-30 r inline-block">
-                        <img src="assets/fish.png" alt="">
-                        <span class="absolute inset-0 f ic justify-end text-lg text-white pr-4">
-                            İncele
-                        </span>
-                    </div>
-                </a>
-                
+                <p class="text-xl font-extralight mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vivamus ac
+                    iaculis ex. Suspendisse lacinia nibh sed metus dictum pellentesque. Mauris ut sem ut elit tristique
+                    maximus. Nunc in tortor nulla. Etiam tortor risus, pellentesque vitae pharetra.</p>
+
+                <?php
+                $label = "İncele";
+                $right = "17";
+                include "includes/fish-button.php"
+                    ?>
             </div>
-            <div class="recipes w-3/5 h-full flex flex-wrap justify-end items-end text-white">
+            <div class="recipes f fwrap je ie">
                 <div class="recipe-box">
                     <div class="recipe-card">
                         <div class="over">
@@ -793,7 +625,7 @@
                 <div class="recipe-box">
                     <div class="recipe-card">
                         <div class="over">
-                            <img src="assets/yemek9.webp" alt="Yemek" class="recipe-bg-img"/>
+                            <img src="assets/yemek9.webp" alt="Yemek" class="recipe-bg-img" />
                         </div>
                         <a href="" class="play-btn-text cursor-pointer">
                             <div class="play-circle-text" aria-hidden="true">
@@ -803,7 +635,7 @@
                                         <path id="recipeCirclePath" d="M60,15 a45,45 0 1,1 -0.1,0" />
                                     </defs>
                                     <text>
-                                        <textPath href="#recipeCirclePath" startOffset="0%" >
+                                        <textPath href="#recipeCirclePath" startOffset="0%">
                                             PLAY VİDEO • PLAY VİDEO • PLAY VİDEO •
                                         </textPath>
                                     </text>
@@ -843,20 +675,20 @@
         </div>
     </section>
     <section class="newest f jc">
-        <div class="container flex flex-col ic gap-5 py-20">
-            <div class="specials-title f jb  items-end w-full px-5">
-                <div class="specials-text flex flex-col gap-3">
+        <div class="container f fcol ic gap-5 c-s">
+            <div class="specials-title f jb ie">
+                <div class="specials-text f fcol">
                     <h2>Yeni Gelenler</h2>
                     <div class="bg-[#0691d6] h-1.5 w-2/3"></div>
                 </div>
                 <div class="specials-button">
-                    <button class="specials-btn py-3 px-6 border-2 font-medium rounded-lg text-lg r overflow-hidden hover:text-white border-black cursor-pointer duration-300" type="submit">
+                    <button class="specials-btn" type="submit">
                         <span class="r z-10">Tümünü Görüntüle</span>
-                        <span class="specials-btn-bg absolute left-0 top-0 h-full w-0 bg-(--fish-red) transition-all duration-300 z-0"></span>
+                        <span class="specials-btn-bg"></span>
                     </button>
                 </div>
             </div>
-            <div class="specials-products flex flex-wrap w-full">
+            <div class="specials-products f fwrap">
                 <div class="products-box group">
                     <div class="products-card" data-href="#">
                         <div class="image-area r">
@@ -905,7 +737,7 @@
                                 <i class="fa-regular fa-heart favorite-icon"></i>
                             </div>
                             <span class="quantity">200gr, 6 adet</span>
-                            
+
                             <div class="offsale my-5 f ic">
                                 <i class="fa-solid fa-caret-down text-(--fish-red) text-4xl"></i>
                                 <span class="ml-1">%25</span>
@@ -978,59 +810,65 @@
             </div>
         </div>
     </section>
-    <section class="kitchen-academy f jc select-none">
-        <div class="container flex flex-col justify-center py-20 ">
-            <div class="academy-title flex flex-col justify-center ic">
-                <h5 class="text-xl font-medium text-(--fish-red) mb-2">The Fish Company</h5>
-                <h2 class="text-6xl! mb-5">Mutfak Akademi</h2>
-                <p class="text-2xl font-light">Deniz ürünleri ve denizcilikle ilgili aradığın tüm bilgiler burada.</p>
+    <section class="kitchen-academy f jc">
+        <div class="container f fcol jc c-s">
+            <div class="academy-title f fcol jc ic">
+                <h5>The Fish Company</h5>
+                <h2>Mutfak Akademi</h2>
+                <p>Deniz ürünleri ve denizcilikle ilgili aradığın tüm bilgiler burada.</p>
             </div>
-            <div class="academy-sss flex r">
-                <div class="figures  w-1/2  pr-30 pt-20 f jc ic r">
+            <div class="academy-sss f r">
+                <div class="figures f jc ic r">
                     <img src="assets/academy.png" alt="">
-                    <img class="absolute h-20 right-20 top-50 -scale-x-100 -rotate-45" src="assets/arrow2.png" alt="">
-                    <img class="absolute h-50 left-20 -bottom-20 dumen" src="assets/dumen.png" alt="">
-                    <a href="" class="absolute fish-button size-fit mt-5 right-50 bottom-10">
-                        <div class="fish-image w-30 r inline-block">
-                            <img src="assets/fish.png" alt="">
-                            <div class="absolute inset-0 flex flex-col w-fit ic justify-center text-lg font-normal text-white pl-12">
-                                İncele
-                            </div>
-                        </div>
-                    </a>
+                    <img class="arrow" src="assets/arrow2.png" alt="">
+                    <img class="dumen" src="assets/dumen.png" alt="">
+                    <?php
+                    $label = "İncele";
+                    $right = "17";
+                    include "includes/fish-button.php"
+                        ?>
                 </div>
                 <div class="sss w-1/2 f ic">
-                    <div class="sss-container flex flex-col gap-8 w-full">
+                    <div class="sss-container f fcol gap-8 w-full">
                         <div class="sss-card bg-[#F6F6F6] px-10 py-8 rounded-2xl cursor-pointer">
-                            <div class="sss-title w-full flex flex-col justify-between ic">
+                            <div class="sss-title w-full f fcol jb ic">
                                 <div class="sss-title-top w-full f jb ic">
                                     <h3 class="text-2xl font-semibold">Donuk Ürünleri nasıl çözdürmeliyim?</h3>
                                     <i class="fa-solid fa-chevron-down sss-list rotate-0"></i>
                                 </div>
                                 <div class="sss-title-bottom">
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, provident off iciis autem incidunt quibusdam omnis porro maiores itaque aliquam ut explicabo, commodi, aut tempore velit assumenda unde asperiores modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus necessitatibus possimus enim iure? Voluptas nihil esse natus recusandae iure, repellendus similique veritatis in. Eius debitis aspernatur suscipit, ipsa dolorum similique! </p>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, provident off
+                                        iciis autem incidunt quibusdam omnis porro maiores itaque aliquam ut explicabo,
+                                        commodi, aut tempore velit assumenda unde asperiores modi. Lorem ipsum dolor sit
+                                        amet consectetur adipisicing elit. Repellendus necessitatibus possimus enim
+                                        iure? Voluptas nihil esse natus recusandae iure, repellendus similique veritatis
+                                        in. Eius debitis aspernatur suscipit, ipsa dolorum similique! </p>
                                 </div>
                             </div>
                         </div>
                         <div class="sss-card bg-[#F6F6F6] px-10 py-8 rounded-2xl cursor-pointer">
-                            <div class="sss-title w-full flex flex-col justify-between ic">
+                            <div class="sss-title w-full f fcol jb ic">
                                 <div class="sss-title-top w-full f jb ic">
                                     <h3 class="text-2xl font-semibold">Donuk Ürünleri nasıl çözdürmeliyim?</h3>
                                     <i class="fa-solid fa-chevron-down sss-list rotate-0"></i>
                                 </div>
                                 <div class="sss-title-bottom">
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, provident off iciis autem incidunt quibusdam omnis porro maiores itaque aliquam ut explicabo, commodi, aut tempore velit assumenda unde asperiores modi. </p>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, provident off
+                                        iciis autem incidunt quibusdam omnis porro maiores itaque aliquam ut explicabo,
+                                        commodi, aut tempore velit assumenda unde asperiores modi. </p>
                                 </div>
                             </div>
                         </div>
                         <div class="sss-card bg-[#F6F6F6] px-10 py-8 rounded-2xl  cursor-pointer">
-                            <div class="sss-title w-full flex flex-col justify-between ic">
+                            <div class="sss-title w-full f fcol justify-between ic">
                                 <div class="sss-title-top w-full f jb ic">
                                     <h3 class="text-2xl font-semibold">Donuk Ürünleri nasıl çözdürmeliyim?</h3>
                                     <i class="fa-solid fa-chevron-down sss-list rotate-0"></i>
                                 </div>
                                 <div class="sss-title-bottom">
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, provident off iciis autem incidunt quibusdam omnis porro maiores itaque aliquam ut explicabo, commodi, aut tempore velit assumenda unde asperiores modi. </p>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, provident off
+                                        iciis autem incidunt quibusdam omnis porro maiores itaque aliquam ut explicabo,
+                                        commodi, aut tempore velit assumenda unde asperiores modi. </p>
                                 </div>
                             </div>
                         </div>
@@ -1042,14 +880,17 @@
     <section class="cargo-service py-20 select-none">
         <div class="cargo-service-top w-full py-20">
             <div class="pink h-60 w-2/3 bg-red-100 r">
-                <figure class="absolute z-29 -right-100 -top-50"><img class="h-150" src="assets/cargo.png" alt=""></figure>
-                <h2 class="absolute left-30 -top-10 leading-13">Siparişlerin <span class="text-6xl text-red-400">soğuk zincirle</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; işletmende</h2>
+                <figure class="absolute z-29 -right-100 -top-50"><img class="h-150" src="assets/cargo.png" alt="">
+                </figure>
+                <h2 class="absolute left-30 -top-10 leading-13">Siparişlerin <span class="text-6xl text-red-400">soğuk
+                        zincirle</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; işletmende
+                </h2>
             </div>
         </div>
         <div class="cargo-service-bottom py-20 f jc">
-            <div class="container flex">
-                <article class="flex flex-col w-1/5">
-                    <div class="article-icons flex w-full">
+            <div class="container f">
+                <article class="f fcol w-1/5">
+                    <div class="article-icons f w-full">
                         <div class="numbers">
                             01
                         </div>
@@ -1061,8 +902,8 @@
                         Yüzlerce Deniz Ürünü
                     </div>
                 </article>
-                <article class="flex flex-col w-1/5">
-                    <div class="article-icons flex w-full">
+                <article class="f fcol w-1/5">
+                    <div class="article-icons f w-full">
                         <div class="numbers">
                             02
                         </div>
@@ -1070,13 +911,13 @@
                             <img class="w-20" src="assets/img8.svg" alt="">
                         </div>
                     </div>
-                    
+
                     <div class="article-desription text-2xl font-bold text-neutral-700 uppercase pr-25">
                         Sürekli Stok Güvencesiyle
                     </div>
                 </article>
-                <article class="flex flex-col w-1/5">
-                    <div class="article-icons flex w-full">
+                <article class="f fcol w-1/5">
+                    <div class="article-icons f w-full">
                         <div class="numbers">
                             03
                         </div>
@@ -1084,13 +925,13 @@
                             <img class="w-20" src="assets/img7.png" alt="">
                         </div>
                     </div>
-                    
+
                     <div class="article-desription text-2xl font-bold text-neutral-700 uppercase pr-25">
                         En Uygun Fiyatla
                     </div>
                 </article>
-                <article class="flex flex-col w-1/5">
-                    <div class="article-icons flex w-full">
+                <article class="f fcol w-1/5">
+                    <div class="article-icons f w-full">
                         <div class="numbers">
                             04
                         </div>
@@ -1102,8 +943,8 @@
                         Güvenli Ödeme Sistemi İle
                     </div>
                 </article>
-                <article class="flex flex-col w-1/5 ">
-                    <div class="article-icons flex w-full">
+                <article class="f fcol w-1/5 ">
+                    <div class="article-icons f w-full">
                         <div class="numbers">
                             05
                         </div>
@@ -1118,146 +959,9 @@
             </div>
         </div>
     </section>
-    <footer class="f jc text-white p-15">
-        <div class="container flex flex-col w-full">
-            <div class="footer-top w-full f jb ic border-b border-white">
-                <div class="footer-top-left w-1/3">
-                    <div class="logo w-fit h-fit mb-15">
-                        <img class="w-50 h-40" src="assets/logo.svg" alt="">
-                    </div>
-                    <span class="text-2xl">E-Bültene Üye Olun!</span>
-                    <div class="flex h-20 ic mb-15">
-                        <input class="p-5 h-14 w-80 bg-white rounded-xl text-black" type="email" name="email" id="email" placeholder="E-postanızı yazın.">
-                        <a href="" class="fish-button h-15 -ml-20 r inline-block">
-                            <div class="fish-image w-29 r inline-block">
-                                <img src="assets/fish.png" alt="">
-                                <span class="absolute inset-0 f ic justify-end text-lg font-normal text-white pr-4">
-                                    Üye Ol
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-top-right w-2/3">
-                    <nav class="footer-nav flex gap-20 mt-5 ">
-                        <ul>
-                            <div>
-                                <span>Kurumsal</span>
-                            </div>
-                            <li><a href="">Hakkımızda</a></li>
-                            <li><a href="">Hikâyemiz</a></li>
-                            <li><a href="">Sertifikalar</a></li>
-                            <li><a href="">Blog</a></li>
-                            <li><a href="">İletişim</a></li>
-                        </ul>
-                        <ul>
-                            <div>
-                                <span>Hızlı Menü</span>
-                            </div>
-                            <li><a href="">Ürün Grupları</a></li>
-                            <li><a href="">Balık Türleri</a></li>
-                            <li><a href="">Yemek Tarfileri</a></li>
-                            <li><a href="">Mutfak Akademi</a></li>
-                            <li><a href="">Kampanyalar</a></li>
-                            <li><a href="">Yeni Gelenler</a></li>
-                        </ul>
-                        <ul>
-                            <div>
-                                <span>Müşteri Hizmetleri</span>
-                            </div>
-                            <li><a href="">SSS</a></li>
-                            <li><a href="">Hesap Numaraları</a></li>
-                            <li><a href="">İptal & İade Koşulları</a></li>
-                            <li><a href="">KVKK</a></li>
-                            <li><a href="">Mesafeli Satış Sözleşmesi</a></li>
-                            <li><a href="">Çerez Politikası</a></li>
-                        </ul>
-                        <div>
-                            <div class="mb-20!">
-                                <div>
-                                    <span>İletişim</span>
-                                </div>
-                                <ul>
-                                    <li><a href="">+90 212 555 55 55</a></li>
-                                    <li><a href="">info@thefishcompany.com</a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <div>
-                                    <span>Follow Us</span>
-                                </div>
-                                <ul class="social flex flex-row! gap-4!">
-                                    <li><a href=""><i class="fa-brands fa-square-facebook text-4xl"></i></a></li>
-                                    <li><a href=""><i class="fa-brands fa-square-instagram text-4xl"></i></a></li>
-                                    <li><a href=""><i class="fa-brands fa-linkedin text-4xl"></i></a></li>
-                                    <li><a href=""><i class="fa-brands fa-square-whatsapp text-4xl"></i></a></li>
-                                </ul>
-                            </div>
-                            <figure>
-                                <img class="-rotate-70 h-20 ml-5" src="assets/arrow.svg" alt="">
-                            </figure>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-            <div class="footer-bottom w-full f jb  pt-10">
-                <div class="footer-bottom-left">
-                    The Fish Company @ Tüm Hakları saklıdır. 2025
-                    <img class="h-3 my-3" src="assets/tail-2.png" alt="">
-                    Engin Tasarım
-                </div>
-                <div class="footer-bottom-right flex gap-3 ic justify-center">
-                    Güvenli Ödeme
-                    <i class="fa-brands fa-cc-visa text-3xl"></i>
-                    <i class="fa-brands fa-cc-mastercard text-3xl"></i>
-                    <i class="fa-brands fa-expeditedssl text-3xl"></i>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Ürün Detay Modal -->
-    <div id="productModal" class="modal-overlay hidden">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modalProductTitle">Ürün Detayı</h2>
-                <button id="closeModal" class="close-btn">
-                    <i class="fa-solid fa-times"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="modal-image">
-                    <img id="modalProductImage" src="" alt="">
-                    <div class="modal-badges">
-                        <span id="modalProductBadge" class="product-badge"></span>
-                    </div>
-                </div>
-                <div class="modal-info">
-                    <div class="modal-title-section">
-                        <h3 id="modalProductName"></h3>
-                        <i class="fa-regular fa-heart favorite-icon" id="modalFavorite"></i>
-                    </div>
-                    <p id="modalProductDescription" class="modal-description"></p>
-                    <div class="modal-price-section">
-                        <div id="modalPriceContainer">
-                            <span id="modalProductPrice" class="modal-price"></span>
-                        </div>
-                        <div class="modal-package-info">
-                            <span id="modalPackagePrice"></span>
-                            <span id="modalPackageCount"></span>
-                        </div>
-                    </div>
-                    <div class="modal-actions">
-                        <button class="add-to-cart-btn">
-                            <i class="fa-brands fa-opencart"></i>
-                            Sepete Ekle
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <?php include "includes/footer.php" ?>
+    <?php include "includes/product-info-modal.php" ?>
     <script src="script.js"></script>
 </body>
+
 </html>
