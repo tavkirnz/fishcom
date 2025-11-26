@@ -4,7 +4,7 @@
 <head>
     <?php include 'includes/head-links.php' ?>
     <title>Denizev | Ürün Detay</title>
-    <link rel="stylesheet" href="urundetay.css">
+    <link rel="stylesheet" href="assets/css/urundetay.css">
     <!---------------------------------------Components/-------------------------------------->
     <!----
     f     = flex
@@ -479,8 +479,8 @@
     </section>
     <?php include 'includes/footer.php'; ?>
     <?php include 'includes/product-info-modal.php'; ?>
-    <script src="../script.js"></script>
-    <!----<script>
+    <script src="assets/scripts/script.js"></script>
+    <script>
         const modal = document.getElementById('modal');
         const modalImg = document.getElementById('modal-img');
         const closeBtn = document.getElementById('close');
@@ -544,7 +544,7 @@
             }, 400);
         }
 
-        const data = {
+        const tabData = {
             aciklama: {
                 baslik: "Ürün Açıklaması",
                 yazi: "Buraya ürün açıklaması gelecek."
@@ -587,11 +587,11 @@
             }
         };
 
-        Object.keys(data).forEach(id => {
+        Object.keys(tabData).forEach(id => {
             const buton = document.getElementById(id);
             if (buton) {
                 buton.addEventListener("click", function () {
-                    changeText(data[id].baslik, data[id].yazi);
+                    changeText(tabData[id].baslik, tabData[id].yazi);
                 });
             }
         });
@@ -665,7 +665,6 @@
         });
 
     </script>
-    --->
 </body>
 
 </html>

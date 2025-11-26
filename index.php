@@ -963,7 +963,7 @@
     </section>
     <?php include "includes/footer.php" ?>
     <?php include "includes/product-info-modal.php" ?>
-    <script src="../script.js"></script>
+    <script src="assets/scripts/script.js"></script>
 </body>
 
 </html>
