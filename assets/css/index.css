@@ -1,7 +1,7 @@
 /* #region Hero */
 section.hero {
   background-color: var(--fish-sky-blue);
-  background-image: url("assets/images/bgg.png");
+  background-image: url("../images/bgg.png");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
@@ -189,7 +189,7 @@ section.hero {
 }
 .whyus-container {
   position: relative;
-  background-image: url("assets/images/whyusbg.jpg"); /* fallback resim */
+  background-image: url("../images/whyusbg.jpg"); /* fallback resim */
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;

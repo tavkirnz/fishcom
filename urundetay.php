@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <?php include 'includes/head-links.php' ?>
     <title>Denizev | Ürün Detay</title>
@@ -20,7 +19,6 @@
     c-s   = py-10
     ----->
 </head>
-
 <body>
     <?php include 'includes/header.php'; ?>
     <section class="flex justify-center urundetay-tag">
@@ -480,6 +478,7 @@
     <?php include 'includes/footer.php'; ?>
     <?php include 'includes/product-info-modal.php'; ?>
     <script src="assets/scripts/script.js"></script>
+    
     <script>
         const modal = document.getElementById('modal');
         const modalImg = document.getElementById('modal-img');
@@ -666,5 +665,4 @@
 
     </script>
 </body>
-
 </html>

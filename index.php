@@ -4,7 +4,7 @@
 <head>
     <?php include "includes/head-links.php" ?>
     <title>Denizev | Anasayfa</title>
-    <link href="index.css" rel="stylesheet">
+    <link href="assets/css/index.css" rel="stylesheet">
     <!---------------------------------------Components/-------------------------------------->
     <!----
     f     = flex
