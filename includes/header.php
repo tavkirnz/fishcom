@@ -20,7 +20,7 @@
 <header class="f jc">
     <div class="container f jb ic">
         <div>
-            <img src="assets/logo.svg">
+            <img src="assets/images/logo.svg">
         </div>
         <div class="search-area r">
             <form action="/submit">

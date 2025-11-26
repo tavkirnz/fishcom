@@ -1,7 +1,7 @@
-<a href="#" class="fish-button">
+<a href="#" class="fish-button" style="<?= isset($style) ? htmlspecialchars($style) : "" ?>">
     <div class="fish-image">
-        <img src="assets/fish.png" alt="">
-        <span style="margin-right: <?= isset($right) ? htmlspecialchars($right) : "" ?>px; <?= isset($style) ? htmlspecialchars($style) : "" ?>">
+        <img src="assets/images/fish.png" alt="">
+        <span style="margin-right: <?= isset($right) ? htmlspecialchars($right) : "" ?>px; ">
             <?= isset($label) ? htmlspecialchars($label) : "Fish" ?>
         </span>
     </div>

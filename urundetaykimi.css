@@ -1,0 +1,201 @@
+.urundetay-tag{
+    background-color: #f6f6f6;
+}
+.urundetay-ucretsiz{
+    background-color: #f6c500;
+}
+.urundetay-genelbilgiler{
+    border: 1px black solid;
+    width: auto;
+    height: auto;
+}
+.urundetay-yazilar{
+    border: 1px black solid;
+    width: auto;
+    height: auto;
+}
+.urundetay-genelbilgiler li{
+    padding: 8px 0px;
+}
+.urundetay-genelbilgilerlist{
+    padding: 30px;
+}
+.urundetay-kocamanyazi{
+    font-size: 24px;
+    font-weight: 500;
+}
+.urundetay-cizgi{
+    border: 2px solid red;
+    width: 100%;
+}
+.urundetay-hovers {
+    position: relative; 
+    display: inline-block; 
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding-left: 10px; 
+}
+.urundetay-hovers::before {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: 0;
+    height: 100%;
+    width: 0; 
+    background-color: red;
+    transition: width 0.3s ease;
+}
+.urundetay-hovers:hover {
+    color: red;
+    cursor: pointer;
+}
+.urundetay-hovers:hover::before {
+    width: 4px; 
+}
+.urundetay-hovers.active {
+    color: red;
+    cursor: default;
+    pointer-events: none;
+}
+.urundetay-hovers.active::before {
+    width: 4px;
+}
+.urunbilgi{
+    margin-left: 15px;
+}
+.urundetay-bilgitablosu{
+    padding: 30px;
+    width: 1197px;
+    height: 532px;
+}
+.urunbilgi-cizgi{
+    border: 2px solid gray;
+}
+.urunbilgi-kucuk{
+    width: 150px;
+}
+.urunbilgi-kucukresimler{
+    margin-bottom: 15px;
+}
+.urunbilgi-kocaman{
+    
+}
+.urunbilgi-resim{
+    height: 700px;
+    width: 500px;
+    background-color: #EFEFEF;
+}
+.urunbilgi-islemler{
+    height: 700px;
+    width: 790px;
+}
+.fav{
+    height: 30px;
+    width: 30px;
+}
+.urunisim{
+    font-weight: 500;
+    font-size: 28px;
+}
+.urunisim-2{
+    font-weight: 500;
+    font-size: 18px;
+}
+.urunkod{
+    font-size: 14px;
+}
+.islemler-cizgi{
+    border-top: 1px solid black;
+}
+.urundetay-sepetekle{
+    background-color: #ff4c4c;
+    width: 500px;
+    height: 60px;
+    color: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 20px;
+}
+.havale{
+    color: #ff4c4c;
+    font-weight: 500;
+}
+.aciklamayazi{
+    font-weight: 500;
+}
+.urundetay-toplacikar{
+    background-color: #efefef;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.margin-margin{
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    padding: 10px 0;
+    user-select: none;
+}
+.urunbilgi-kucukresimler ul li{
+    margin-bottom: 20px;
+}
+.fade {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .show {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Buton stilleri */
+    .btnimg {
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    .btnimg img {
+        width: 50px;
+        height: 50px;
+        transition: transform 0.2s ease;
+    }
+
+    /* Modal */
+    .modal {
+        display: none;
+        /* başlangıçta gizli */
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content {
+        max-width: 80%;
+        max-height: 80%;
+        transition: transform 0.3s ease;
+        border-radius: 8px;
+    }
+
+    /* Kapatma butonu */
+    #close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+    }

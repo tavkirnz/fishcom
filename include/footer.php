@@ -1,26 +1,25 @@
-    <footer class="f jc text-white p-15">
-        <div class="container f fcol">
-            <div class="footer-top w-full f jb ic border-b border-white">
-                <div class="footer-top-left w-1/3">
-                    <div class="logo w-fit h-fit mb-15">
-                        <img class="w-50 h-40" src="assets/images/logo.svg" alt="">
+<footer class="flex justify-center footer-main">
+        <div class="container flex flex-col">
+            <div class="footer-cizgi flex justify-between">
+                <div class="">
+                    <div class="footer-logo">
+                        <img class="" src="assets/logo.svg" alt="">
                     </div>
-                    <span class="text-2xl">E-Bültene Üye Olun!</span>
-                    <div class="f h-20 ic mb-15">
-                        <input class="p-5 h-14 w-80 bg-white rounded-xl text-black" type="email" name="email" id="email"
-                            placeholder="E-postanızı yazın.">
-                        <a href="" class="fish-button h-15 -ml-20 r inline-block">
-                            <div class="fish-image w-29 r inline-block">
-                                <img src="assets/images/fish.png" alt="">
-                                <span class="absolute inset-0 f ic justify-end text-lg font-normal text-white pr-4">
+                    <span class="footer-ebulten">E-Bültene Üye Olun!</span>
+                    <div class="flex footer-eposta">
+                        <input class="" type="email" name="email" id="email" placeholder="E-postanızı yazın.">
+                        <a href="" class="fish-button footer-btn relative inline-block">
+                            <div class="relative inline-block">
+                                <img src="assets/fish.png" alt="">
+                                <span class="inset-0 flex items-center justify-end">
                                     Üye Ol
                                 </span>
                             </div>
                         </a>
                     </div>
                 </div>
-                <div class="footer-top-right w-2/3">
-                    <nav class="footer-nav f gap-20 mt-5 ">
+                <div class="w-2/3">
+                    <nav class="footer-nav flex">
                         <ul>
                             <div>
                                 <span>Kurumsal</span>
@@ -67,32 +66,34 @@
                                 <div>
                                     <span>Follow Us</span>
                                 </div>
-                                <ul class="social f flex-row! gap-4!">
-                                    <li><a href=""><i class="fa-brands fa-square-facebook text-4xl"></i></a></li>
-                                    <li><a href=""><i class="fa-brands fa-square-instagram text-4xl"></i></a></li>
-                                    <li><a href=""><i class="fa-brands fa-linkedin text-4xl"></i></a></li>
-                                    <li><a href=""><i class="fa-brands fa-square-whatsapp text-4xl"></i></a></li>
+                                <ul class="footer-social flex flex-row!">
+                                    <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
+                                    <li><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
+                                    <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                                    <li><a href=""><i class="fa-brands fa-square-whatsapp"></i></a></li>
                                 </ul>
                             </div>
                             <figure>
-                                <img class="-rotate-70 h-20 ml-5" src="assets/images/arrow.svg" alt="">
+                                <img class="footer-ok-image" src="assets/arrow.svg" alt="">
                             </figure>
                         </div>
                     </nav>
                 </div>
             </div>
-            <div class="footer-bottom w-full f jb  pt-10">
-                <div class="footer-bottom-left">
+            <div class="footer-alt flex justify-between">
+                <div class="">
                     The Fish Company @ Tüm Hakları saklıdır. 2025
-                    <img class="h-3 my-3" src="assets/images/tail-2.png" alt="">
+                    <img class="h-3 my-3" src="assets/tail-2.png" alt="">
                     Engin Tasarım
                 </div>
-                <div class="footer-bottom-right f gap-3 ic justify-center">
+                <div class="flex footer-guvenli">
                     Güvenli Ödeme
-                    <i class="fa-brands fa-cc-visa text-3xl"></i>
-                    <i class="fa-brands fa-cc-mastercard text-3xl"></i>
-                    <i class="fa-brands fa-expeditedssl text-3xl"></i>
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-expeditedssl"></i>
                 </div>
             </div>
         </div>
-    </footer>
+</footer>
+
+   

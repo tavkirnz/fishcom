@@ -251,7 +251,7 @@ input.addEventListener('input', () => {
 
             div.innerHTML = `
                 <figure class="w-1/4 flex h-30 p-3">
-                  <img class="w-full h-full object-cover" src="assets/${item.img}" alt="">
+                  <img class="w-full h-full object-cover" src="assets/images/${item.img}" alt="">
                 </figure>
                 <div class="flex flex-col justify-center w-1/4 px-5">
                   <h3 class="text-lg">${item.title}</h3>
@@ -311,8 +311,37 @@ document.addEventListener('click', (e) => {
   }
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Modal fonksiyonları
-const modal = document.getElementById('productModal');
+const productModal = document.getElementById('productModal');
 const closeModalBtn = document.getElementById('closeModal');
 
 // Modal açma fonksiyonu
@@ -320,23 +349,36 @@ function openProductModal(productCard) {
   const imageArea = productCard.querySelector('.image-area');
   const titleArea = productCard.querySelector('.title-area');
   
-  // Ürün bilgilerini al
-  const productImage = imageArea.querySelector('img').src;
-  const productName = titleArea.querySelector('span').textContent;
-  const productDescription = titleArea.querySelector('.text-xs').textContent;
-  const productPrice = titleArea.querySelector('.my-5').textContent;
+  if (!imageArea || !titleArea) {
+    console.error('Ürün kartı yapısı hatalı');
+    return;
+  }
   
-  // Paket bilgilerini al
-  const packageInfo = titleArea.querySelectorAll('.text-xs.font-extralight span');
+  // Ürün bilgilerini al
+  const productImage = imageArea.querySelector('img')?.src || '';
+  
+  // Ürün adını al (ilk div içindeki ilk span)
+  const productName = titleArea.querySelector('.f.jb.ic span')?.textContent || 'Ürün Adı';
+  
+  // Açıklamayı al (.quantity class'ı olan span)
+  const productDescription = titleArea.querySelector('.quantity')?.textContent || '';
+  
+  // Fiyatı al (.my-5 class'ı olan span - normal fiyat veya indirimli olabilir)
+  let productPrice = titleArea.querySelector('.my-5:not(.f)')?.textContent || '';
+  
+  // Paket bilgilerini al (son .quantity div'indeki spanlar)
+  const quantityDivs = titleArea.querySelectorAll('.quantity');
+  const lastQuantityDiv = quantityDivs[quantityDivs.length - 1];
+  const packageInfo = lastQuantityDiv ? lastQuantityDiv.querySelectorAll('span') : [];
   const packagePrice = packageInfo[0] ? packageInfo[0].textContent : '';
   const packageCount = packageInfo[1] ? packageInfo[1].textContent : '';
   
-  // Badge bilgisini al
-  const badge = imageArea.querySelector('span');
+  // Badge bilgisini al (image-area'daki ilk span - guluten-free, offsale, new)
+  const badge = imageArea.querySelector('span:not(.nothing)');
   let badgeClass = '';
   let badgeText = '';
   
-  if (badge) {
+  if (badge && !badge.classList.contains('nothing')) {
     if (badge.classList.contains('guluten-free')) {
       badgeClass = 'guluten-free';
       badgeText = 'Glütensiz';
@@ -353,38 +395,50 @@ function openProductModal(productCard) {
   const offsaleDiv = titleArea.querySelector('.offsale');
   let finalPrice = productPrice;
   if (offsaleDiv) {
-    const discountedPrice = offsaleDiv.querySelector('.text-\\[var\\(--fish-red\\)\\]');
+    // İndirimli fiyat son span'da (font-medium text-(--fish-red))
+    const discountedPrice = offsaleDiv.querySelector('span.font-medium');
     if (discountedPrice) {
       finalPrice = discountedPrice.textContent;
     }
   }
   
   // Modal içeriğini güncelle
-  document.getElementById('modalProductImage').src = productImage;
-  document.getElementById('modalProductName').textContent = productName;
-  document.getElementById('modalProductDescription').textContent = productDescription;
-  document.getElementById('modalProductPrice').textContent = finalPrice;
-  document.getElementById('modalPackagePrice').textContent = packagePrice;
-  document.getElementById('modalPackageCount').textContent = packageCount;
+  const modalImage = document.getElementById('modalProductImage');
+  const modalName = document.getElementById('modalProductName');
+  const modalDesc = document.getElementById('modalProductDescription');
+  const modalPrice = document.getElementById('modalProductPrice');
+  const modalPackagePrice = document.getElementById('modalPackagePrice');
+  const modalPackageCount = document.getElementById('modalPackageCount');
+  
+  if (modalImage) modalImage.src = productImage;
+  if (modalName) modalName.textContent = productName;
+  if (modalDesc) modalDesc.textContent = productDescription;
+  if (modalPrice) modalPrice.textContent = finalPrice;
+  if (modalPackagePrice) modalPackagePrice.textContent = packagePrice;
+  if (modalPackageCount) modalPackageCount.textContent = packageCount;
   
   // Badge'i güncelle
   const modalBadge = document.getElementById('modalProductBadge');
-  if (badgeText) {
-    modalBadge.textContent = badgeText;
-    modalBadge.className = `product-badge ${badgeClass}`;
-    modalBadge.style.display = 'block';
-  } else {
-    modalBadge.style.display = 'none';
+  if (modalBadge) {
+    if (badgeText) {
+      modalBadge.textContent = badgeText;
+      modalBadge.className = `product-badge ${badgeClass}`;
+      modalBadge.style.display = 'block';
+    } else {
+      modalBadge.style.display = 'none';
+    }
   }
   
   // Modal'ı göster
-  modal.classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
+  if (productModal) {
+    productModal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
 }
 
 // Modal kapatma fonksiyonu
 function closeProductModal() {
-  modal.classList.add('hidden');
+  productModal.classList.add('hidden');
   document.body.style.overflow = 'auto';
 }
 
@@ -392,28 +446,40 @@ function closeProductModal() {
 closeModalBtn.addEventListener('click', closeProductModal);
 
 // Modal overlay'e tıklayınca kapat
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
+productModal.addEventListener('click', (e) => {
+  if (e.target === productModal) {
     closeProductModal();
   }
 });
 
 // ESC tuşu ile kapat
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+  if (e.key === 'Escape' && !productModal.classList.contains('hidden')) {
     closeProductModal();
   }
 });
 
 // Göz ikonu butonlarına event listener ekle
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.products-card .fast-buttons button:first-child').forEach(button => {
-    button.addEventListener('click', function(e) {
-      e.stopPropagation(); // Kart tıklama eventini engelle
-      const productCard = this.closest('.products-card');
-      openProductModal(productCard);
-    });
+// (Not: DOMContentLoaded'dan çıkarıldı, modal her zaman DOM'da olacak)
+function attachEyeButtonListeners() {
+  document.querySelectorAll('.eye-button').forEach(button => {
+    button.removeEventListener('click', handleEyeButtonClick); // eski listener'ı temizle
+    button.addEventListener('click', handleEyeButtonClick);
   });
+}
+
+function handleEyeButtonClick(e) {
+  e.stopPropagation(); // Kart tıklama eventini engelle
+  const productCard = this.closest('.products-card');
+  openProductModal(productCard);
+}
+
+// İlk yüklemede ve dinamik olarak eklenen kartlara listener ekle
+attachEyeButtonListeners();
+
+// Sayfa yüklendiğinde de bir kez daha ekle (güvenlik için)
+document.addEventListener('DOMContentLoaded', function() {
+  attachEyeButtonListeners();
 });
 
 // Modal içindeki favori butonuna event listener ekle
@@ -450,5 +516,4 @@ document.querySelector('.add-to-cart-btn').addEventListener('click', function() 
     }, 2000);
   }
 });
-
 
