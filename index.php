@@ -23,7 +23,6 @@
 
 <body>
     <?php include "includes/header.php" ?>
-
     <section class="hero f jc r">
         <div class="container f jb ic r">
             <div class="hero-title f fcol">
@@ -963,6 +962,7 @@
     </section>
     <?php include "includes/footer.php" ?>
     <?php include "includes/product-info-modal.php" ?>
+    <?php include "includes/sepet-modal.php" ?>
     <script src="assets/scripts/script.js"></script>
 </body>
 

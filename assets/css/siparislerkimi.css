@@ -33,3 +33,44 @@ table tbody tr td{
   user-select: none;
   touch-action: manipulation;
 }
+/*----------------------Leftmenu----------------------*/
+.leftmenu-padding{
+    padding:20px;
+}
+.leftmenu-border{
+    border:2px solid rgba(44, 44, 44, 0.425);
+    border-radius: 20px;
+}
+.leftmenu-nav{
+    width:31%;
+    height: fit-content;
+}
+.leftmenu-nav-header{
+    font-size: 20px;
+    font-weight: bold;
+    color:#0081c9;
+}
+.leftmenu-img{
+    width: 30px;
+    height: 30px;
+}
+/*----------------------Pages----------------------*/
+.pages-border{
+    border:2px solid rgba(44, 44, 44, 0.425);
+    border-radius: 20px;
+}
+.pages-content{
+    margin: 10px 0 80px 0;
+}
+.pages-padding{
+    padding:20px;
+}
+.pages-right{
+    height:fit-content;
+    font-size: 18px;
+}
+.pages-right-header{
+    padding: 40px 0 25px 0;
+    font-size: 20px;
+    font-weight: light;
+}

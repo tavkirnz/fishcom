@@ -14,7 +14,7 @@
   --line-color: #d2d2d2;
 }
 
-/* #region Tanımlar */
+/* #region ---------------Tanımlar */
 .f {
   display: flex;
 }
@@ -53,7 +53,7 @@
 }
 /* #endregion */
 
-/* #region H! */
+/* #region ---------------H */
 h1 {
   font-size: 48px;
   font-weight: 800;
@@ -73,7 +73,7 @@ h5 {
 }
 /* #endregion */
 
-/* #region Fonts */
+/* #region ---------------Fonts */
 @font-face {
   font-family: "Biro";
   src: url("assets/fonts/biro-script-plus.ttf") format("truetype");
@@ -82,8 +82,7 @@ h5 {
 }
 /* #endregion */
 
-/* #region Animations */
-
+/* #region ---------------Animations */
 @keyframes porpoising {
   0% {
     rotate: 0deg;
@@ -134,7 +133,7 @@ h5 {
 }
 /* #endregion */
 
-/* #region Base */
+/* #region ---------------Base */
 html {
   scroll-behavior: smooth;
 }
@@ -145,7 +144,7 @@ body {
 
 /* #endregion */
 
-/* #region Topbar */
+/* #region ---------------Topbar */
 .topbar {
   background-color: var(--fish-red);
   color: white;
@@ -161,7 +160,7 @@ body {
 }
 /* #endregion */
 
-/* #region Header */
+/* #region ---------------Header */
 header {
   background-color: white;
   padding: 8px;
@@ -252,7 +251,7 @@ header {
 }
 /* #endregion */
 
-/* #region Nav */
+/* #region ---------------Nav */
 .ext-nav {
   top: 0;
   z-index: 50;
@@ -349,8 +348,7 @@ header {
 }
 /* #endregion */
 
-/* #region Footer */
-
+/* #region ---------------Footer */
 footer {
   background: linear-gradient(
     90deg,
@@ -386,7 +384,7 @@ footer a {
 }
 /* #endregion */
 
-/* #region Fish Button */
+/* #region ---------------Fish Button */
 .fish-button {
   width: fit-content;
   display: inline-block;
@@ -441,7 +439,7 @@ footer a {
 }
 /* #endregion */
 
-/* #region Products-box and cards */
+/* #region ---------------Products-box and cards */
 .products .container {
   gap: 20px;
 }
@@ -602,9 +600,7 @@ footer a {
 }
 /* #endregion */
 
-
-
-/* #region Modal */
+/* #region ---------------Modal */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -792,52 +788,140 @@ footer a {
 
 /* #endregion */
 
+/* #region ---------------BreadCrumb */
+.breadcrumb{
+  background-color: rgb(235, 235, 235);
+}
+/* #endregion */
 
+/* #region Cart Modal */
+.cart-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  visibility: hidden;
+  transition: visibility 0.3s ease;
+}
 
+.cart-modal-overlay:not(.hidden) {
+  visibility: visible;
+}
 
+.cart-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
 
+.cart-modal-overlay:not(.hidden) .cart-modal {
+  transform: translateX(0);
+}
 
+.cart-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  background: var(--fish-sky-blue);
+  color: white;
+}
 
+.cart-modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
 
+.cart-close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
 
-/*----------------------Leftmenu----------------------*/
-.leftmenu-padding{
-    padding:20px;
+.cart-close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
-.leftmenu-border{
-    border:2px solid rgba(44, 44, 44, 0.425);
-    border-radius: 20px;
+
+.cart-modal-body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-.leftmenu-nav{
-    width:31%;
-    height: fit-content;
+
+.cart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
-.leftmenu-nav-header{
-    font-size: 20px;
-    font-weight: bold;
-    color:#0081c9;
+
+.cart-empty i {
+  font-size: 4rem;
+  color: #e0e0e0;
 }
-.leftmenu-img{
-    width: 30px;
-    height: 30px;
+
+.cart-empty p {
+  margin: 0;
+  color: #666;
 }
-/*----------------------Pages----------------------*/
-.pages-border{
-    border:2px solid rgba(44, 44, 44, 0.425);
-    border-radius: 20px;
+
+.cart-modal-footer {
+  padding: 20px;
+  border-top: 1px solid #e0e0e0;
+  background: #f9f9f9;
 }
-.pages-content{
-    margin: 10px 0 80px 0;
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
 }
-.pages-padding{
-    padding:20px;
+
+.cart-total-amount {
+  color: var(--fish-red);
 }
-.pages-right{
-    height:fit-content;
-    font-size: 18px;
+
+.cart-checkout-btn {
+  width: 100%;
+  background: var(--fish-red);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-.pages-right-header{
-    padding: 40px 0 25px 0;
-    font-size: 20px;
-    font-weight: light;
+
+.cart-checkout-btn:hover {
+  background: #d32f2f;
 }
+
+/* #endregion */

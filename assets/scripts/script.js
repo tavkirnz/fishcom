@@ -254,7 +254,7 @@ input.addEventListener('input', () => {
                   <img class="w-full h-full object-cover" src="assets/images/${item.img}" alt="">
                 </figure>
                 <div class="flex flex-col justify-center w-1/4 px-5">
-                  <h3 class="text-lg">${item.title}</h3>
+                  <h5 class="text-lg">${item.title}</h5>
                   <p class="text-md font-extralight">${item.gr}<br>${item.adet}</p>
                 </div>
                 <div class="flex flex-col justify-center w-1/4 px-5">
@@ -324,6 +324,30 @@ closeModalBtn.addEventListener('click', () => {
 productModal.addEventListener('click', (e) => {
   if (e.target === productModal) {
     productModal.classList.add('hidden');
+  }
+});
+
+// Cart modal functionality
+const cartModal = document.getElementById('cartModal');
+const closeCartModalBtn = document.getElementById('closeCartModal');
+
+// Open cart modal
+document.querySelectorAll('.user-cart a').forEach(cartLink => {
+  cartLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    cartModal.classList.remove('hidden');
+  });
+});
+
+// Close cart modal on button click
+closeCartModalBtn.addEventListener('click', () => {
+  cartModal.classList.add('hidden');
+});
+
+// Close cart modal on overlay click
+cartModal.addEventListener('click', (e) => {
+  if (e.target === cartModal) {
+    cartModal.classList.add('hidden');
   }
 });
 

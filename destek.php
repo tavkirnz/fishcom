@@ -23,18 +23,11 @@
 
 <body>
     <?php include "includes/header.php" ?>
-    <section class="flex justify-center leftupmenu-anasayfadestek">
-        <div class="container">
-            <div class="flex justify-between items-center py-3">
-                <div class="flex flex-col leftupmenu-title-header">
-                    <span class="">Destek</span>
-                </div>
-                <div class="flex flex-col">
-                    <span class="">Anasayfa / Destek</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    <?php 
+    $title = "Destek";
+    $crumb = "Anasayfa / Destek";
+    include "includes/breadcrumb.php" 
+    ?>
     <section class="flex justify-center pages-content">
         <div class="container">
             <div class="flex gap-10">
@@ -68,6 +61,7 @@
         </div>
     </section>
     <?php include "includes/footer.php" ?>
+        <?php include "includes/sepet-modal.php" ?>
     <script src="assets/scripts/script.js"></script>
 </body>
 

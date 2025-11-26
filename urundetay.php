@@ -21,18 +21,11 @@
 </head>
 <body>
     <?php include 'includes/header.php'; ?>
-    <section class="flex justify-center urundetay-tag">
-        <div class="container">
-            <div class="flex justify-between items-center py-3">
-                <div class="flex flex-col leftupmenu-title-header">
-                    <span class="">Füme Serisi</span>
-                </div>
-                <div class="flex flex-col">
-                    <span class="">Anasayfa / Balık Grupları / Füme Serisi</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    <?php 
+    $title = "Füme Serisi";
+    $crumb = "Anasayfa / Ürünler / Füme Serisi";
+    include "includes/breadcrumb.php" 
+    ?>
     <section class="flex justify-center urundetay-ucretsiz">
         <div class="container">
             <div id="uyariKapsayici" class="flex justify-between items-center py-3">
@@ -477,6 +470,7 @@
     </section>
     <?php include 'includes/footer.php'; ?>
     <?php include 'includes/product-info-modal.php'; ?>
+    <?php include 'includes/sepet-modal.php'; ?>
     <script src="assets/scripts/script.js"></script>
     
     <script>
