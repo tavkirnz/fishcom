@@ -311,209 +311,85 @@ document.addEventListener('click', (e) => {
   }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Modal fonksiyonları
+// Modal functionality
 const productModal = document.getElementById('productModal');
 const closeModalBtn = document.getElementById('closeModal');
 
-// Modal açma fonksiyonu
-function openProductModal(productCard) {
-  const imageArea = productCard.querySelector('.image-area');
-  const titleArea = productCard.querySelector('.title-area');
-  
-  if (!imageArea || !titleArea) {
-    console.error('Ürün kartı yapısı hatalı');
-    return;
-  }
-  
-  // Ürün bilgilerini al
-  const productImage = imageArea.querySelector('img')?.src || '';
-  
-  // Ürün adını al (ilk div içindeki ilk span)
-  const productName = titleArea.querySelector('.f.jb.ic span')?.textContent || 'Ürün Adı';
-  
-  // Açıklamayı al (.quantity class'ı olan span)
-  const productDescription = titleArea.querySelector('.quantity')?.textContent || '';
-  
-  // Fiyatı al (.my-5 class'ı olan span - normal fiyat veya indirimli olabilir)
-  let productPrice = titleArea.querySelector('.my-5:not(.f)')?.textContent || '';
-  
-  // Paket bilgilerini al (son .quantity div'indeki spanlar)
-  const quantityDivs = titleArea.querySelectorAll('.quantity');
-  const lastQuantityDiv = quantityDivs[quantityDivs.length - 1];
-  const packageInfo = lastQuantityDiv ? lastQuantityDiv.querySelectorAll('span') : [];
-  const packagePrice = packageInfo[0] ? packageInfo[0].textContent : '';
-  const packageCount = packageInfo[1] ? packageInfo[1].textContent : '';
-  
-  // Badge bilgisini al (image-area'daki ilk span - guluten-free, offsale, new)
-  const badge = imageArea.querySelector('span:not(.nothing)');
-  let badgeClass = '';
-  let badgeText = '';
-  
-  if (badge && !badge.classList.contains('nothing')) {
-    if (badge.classList.contains('guluten-free')) {
-      badgeClass = 'guluten-free';
-      badgeText = 'Glütensiz';
-    } else if (badge.classList.contains('offsale')) {
-      badgeClass = 'offsale';
-      badgeText = 'İndirimli';
-    } else if (badge.classList.contains('new')) {
-      badgeClass = 'new';
-      badgeText = 'Yeni';
-    }
-  }
-  
-  // İndirimli fiyat kontrolü
-  const offsaleDiv = titleArea.querySelector('.offsale');
-  let finalPrice = productPrice;
-  if (offsaleDiv) {
-    // İndirimli fiyat son span'da (font-medium text-(--fish-red))
-    const discountedPrice = offsaleDiv.querySelector('span.font-medium');
-    if (discountedPrice) {
-      finalPrice = discountedPrice.textContent;
-    }
-  }
-  
-  // Modal içeriğini güncelle
-  const modalImage = document.getElementById('modalProductImage');
-  const modalName = document.getElementById('modalProductName');
-  const modalDesc = document.getElementById('modalProductDescription');
-  const modalPrice = document.getElementById('modalProductPrice');
-  const modalPackagePrice = document.getElementById('modalPackagePrice');
-  const modalPackageCount = document.getElementById('modalPackageCount');
-  
-  if (modalImage) modalImage.src = productImage;
-  if (modalName) modalName.textContent = productName;
-  if (modalDesc) modalDesc.textContent = productDescription;
-  if (modalPrice) modalPrice.textContent = finalPrice;
-  if (modalPackagePrice) modalPackagePrice.textContent = packagePrice;
-  if (modalPackageCount) modalPackageCount.textContent = packageCount;
-  
-  // Badge'i güncelle
-  const modalBadge = document.getElementById('modalProductBadge');
-  if (modalBadge) {
-    if (badgeText) {
-      modalBadge.textContent = badgeText;
-      modalBadge.className = `product-badge ${badgeClass}`;
-      modalBadge.style.display = 'block';
-    } else {
-      modalBadge.style.display = 'none';
-    }
-  }
-  
-  // Modal'ı göster
-  if (productModal) {
-    productModal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-  }
-}
-
-// Modal kapatma fonksiyonu
-function closeProductModal() {
+// Close modal on button click
+closeModalBtn.addEventListener('click', () => {
   productModal.classList.add('hidden');
-  document.body.style.overflow = 'auto';
-}
+});
 
-// Modal kapatma eventleri
-closeModalBtn.addEventListener('click', closeProductModal);
-
-// Modal overlay'e tıklayınca kapat
+// Close modal on overlay click
 productModal.addEventListener('click', (e) => {
   if (e.target === productModal) {
-    closeProductModal();
+    productModal.classList.add('hidden');
   }
 });
 
-// ESC tuşu ile kapat
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && !productModal.classList.contains('hidden')) {
-    closeProductModal();
-  }
-});
+// Open modal on fa-eye button click
+document.querySelectorAll('.fast-buttons button:first-child').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent card click
 
-// Göz ikonu butonlarına event listener ekle
-// (Not: DOMContentLoaded'dan çıkarıldı, modal her zaman DOM'da olacak)
-function attachEyeButtonListeners() {
-  document.querySelectorAll('.eye-button').forEach(button => {
-    button.removeEventListener('click', handleEyeButtonClick); // eski listener'ı temizle
-    button.addEventListener('click', handleEyeButtonClick);
+    const card = btn.closest('.products-card');
+    if (!card) return;
+
+    // Extract product data
+    const img = card.querySelector('.image-area img');
+    const imageSrc = img ? img.src : '';
+
+    const badgeSpan = card.querySelector('.image-area span:not(.fast-buttons)');
+    let badgeText = '';
+    if (badgeSpan) {
+      const classes = badgeSpan.className.split(' ');
+      if (classes.includes('guluten-free')) badgeText = 'Gluten Free';
+      else if (classes.includes('offsale')) badgeText = 'İndirim';
+      else if (classes.includes('new')) badgeText = 'Yeni';
+      // else nothing
+    }
+
+    const titleSpan = card.querySelector('.title-area span');
+    const productName = titleSpan ? titleSpan.textContent.trim() : '';
+
+    const quantitySpan = card.querySelector('.title-area .quantity');
+    const quantity = quantitySpan ? quantitySpan.textContent.trim() : '';
+
+    // Price: either .my-5 or in .offsale
+    let price = '';
+    const priceSpan = card.querySelector('.title-area .my-5');
+    if (priceSpan) {
+      price = priceSpan.textContent.trim();
+    } else {
+      const offsalePrice = card.querySelector('.offsale .font-medium');
+      if (offsalePrice) {
+        price = offsalePrice.textContent.trim();
+      }
+    }
+
+    // Package info
+    const packageDiv = card.querySelector('.title-area .quantity:last-of-type');
+    let packagePrice = '';
+    let packageCount = '';
+    if (packageDiv) {
+      const spans = packageDiv.querySelectorAll('span');
+      if (spans.length >= 2) {
+        packagePrice = spans[0].textContent.trim();
+        packageCount = spans[1].textContent.trim();
+      }
+    }
+
+    // Populate modal
+    document.getElementById('modalProductImage').src = imageSrc;
+    document.getElementById('modalProductBadge').textContent = badgeText;
+    document.getElementById('modalProductName').textContent = productName;
+    document.getElementById('modalProductDescription').textContent = quantity; // Using quantity as description
+    document.getElementById('modalProductPrice').textContent = price;
+    document.getElementById('modalPackagePrice').textContent = packagePrice;
+    document.getElementById('modalPackageCount').textContent = packageCount;
+
+    // Show modal
+    productModal.classList.remove('hidden');
   });
-}
-
-function handleEyeButtonClick(e) {
-  e.stopPropagation(); // Kart tıklama eventini engelle
-  const productCard = this.closest('.products-card');
-  openProductModal(productCard);
-}
-
-// İlk yüklemede ve dinamik olarak eklenen kartlara listener ekle
-attachEyeButtonListeners();
-
-// Sayfa yüklendiğinde de bir kez daha ekle (güvenlik için)
-document.addEventListener('DOMContentLoaded', function() {
-  attachEyeButtonListeners();
-});
-
-// Modal içindeki favori butonuna event listener ekle
-document.getElementById('modalFavorite').addEventListener('click', function() {
-  if(this.classList.contains('fa-regular')){
-    this.classList.remove('fa-regular');
-    this.classList.add('fa-solid');
-    this.style.color = 'var(--fish-red)';
-  } else {
-    this.classList.remove('fa-solid');
-    this.classList.add('fa-regular');
-    this.style.color = '';
-  }
-});
-
-// Modal içindeki sepete ekle butonuna event listener ekle
-document.querySelector('.add-to-cart-btn').addEventListener('click', function() {
-  const icon = this.querySelector('i');
-  if(icon.classList.contains('fa-opencart')){
-    icon.classList.remove('fa-opencart','fa-brands');
-    icon.classList.add('fa-check','fa-solid','animate-bounce');
-    icon.style.color = 'var(--fish-green)';
-    this.innerHTML = '<i class="fa-check fa-solid animate-bounce"></i> Sepete Eklendi!';
-    this.style.background = 'var(--fish-green)';
-    
-    setTimeout(function(){
-      icon.classList.remove('animate-bounce');
-    }, 600);
-    
-    // 2 saniye sonra eski haline döndür
-    setTimeout(() => {
-      this.innerHTML = '<i class="fa-brands fa-opencart"></i> Sepete Ekle';
-      this.style.background = 'linear-gradient(135deg, var(--fish-blue), var(--fish-teal))';
-    }, 2000);
-  }
 });
 

@@ -4,7 +4,7 @@
 <head>
     <?php include 'includes/head-links.php' ?>
     <title>Denizev | Ürün Detay</title>
-    <link rel="stylesheet" href="urundetaykimi.css">
+    <link rel="stylesheet" href="urundetay.css">
     <!---------------------------------------Components/-------------------------------------->
     <!----
     f     = flex
@@ -479,7 +479,7 @@
     </section>
     <?php include 'includes/footer.php'; ?>
     <?php include 'includes/product-info-modal.php'; ?>
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
     <!----<script>
         const modal = document.getElementById('modal');
         const modalImg = document.getElementById('modal-img');
