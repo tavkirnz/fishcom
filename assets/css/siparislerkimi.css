@@ -1,75 +1,50 @@
 /*----------------------Table----------------------*/
-table{
+table {
     width: 100%;
-    margin: auto;
-    text-align: left;
 }
-table thead tr th{
-    border-bottom: 1px solid black;
+
+table tbody tr {
+    height: 60px;
 }
-table tbody tr td{
-    padding: 30px 0;
-    border-bottom: 1px solid gray;
+
+table tbody tr td {
+    text-align: center;
 }
+
 .button-1 {
-  background-color: #EA4C89;
-  border-radius: 8px;
-  border-style: none;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 500;
-  height: 40px;
-  line-height: 20px;
-  list-style: none;
-  margin: 0;
-  outline: none;
-  padding: 0px 6px;
-  position: relative;
-  text-align: center;
-  vertical-align: baseline;
-  user-select: none;
-  touch-action: manipulation;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    padding: 0px 6px;
+    text-align: center;
 }
+
 /*----------------------Leftmenu----------------------*/
-.leftmenu-padding{
-    padding:20px;
-}
-.leftmenu-border{
-    border:2px solid rgba(44, 44, 44, 0.425);
-    border-radius: 20px;
-}
-.leftmenu-nav{
-    width:31%;
-    height: fit-content;
-}
-.leftmenu-nav-header{
-    font-size: 20px;
-    font-weight: bold;
-    color:#0081c9;
-}
-.leftmenu-img{
-    width: 30px;
-    height: 30px;
-}
+
+
 /*----------------------Pages----------------------*/
-.pages-border{
-    border:2px solid rgba(44, 44, 44, 0.425);
+.pages-border {
+    border: 1px solid #d1d1d1;
     border-radius: 20px;
 }
-.pages-content{
+
+.pages-content {
     margin: 10px 0 80px 0;
 }
-.pages-padding{
-    padding:20px;
+
+.pages-padding {
+    padding: 20px;
 }
-.pages-right{
-    height:fit-content;
+
+.pages-right {
+    height: fit-content;
     font-size: 18px;
 }
-.pages-right-header{
+
+.pages-right-header {
     padding: 40px 0 25px 0;
     font-size: 20px;
     font-weight: light;

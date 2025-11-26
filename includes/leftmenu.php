@@ -1,59 +1,33 @@
-<div class="flex flex-col gap-2 leftmenu leftmenu-border leftmenu-padding leftmenu-nav">
-    <span class="leftmenu-nav-header">Engin Tasarım ve Elektronik <br> San. Tic. Ltd. Şti</span>
-    <div class="flex justify-start gap-2  items-center">
-        <div class="leftmenu-img">
-            <img src="./assets/siparisler.png" alt="">
-        </div>
-        <div>
-            Önceki Siparişlerim
-        </div>
-    </div>
-    <div class="flex justify-start gap-2 items-center">
-        <div class="leftmenu-img">
-            <img src="./assets/yeni.png" alt="">
-        </div>
-        <div>
-            Yeni Ürünlerim
-        </div>
-    </div>
-    <div class="flex justify-start gap-2 items-center">
-        <div class="leftmenu-img">
-            <img src="./assets/kullanici.png" alt="">
-        </div>
-        <div>
-            Kullanıcı Bilgilerim
-        </div>
-    </div>
-    <div class="flex justify-start gap-2 items-center">
-        <div class="leftmenu-img">
-            <img src="./assets/adreslerim.png" alt="">
-        </div>
-        <div>
-            Adreslerim
-        </div>
-    </div>
-    <div class="flex justify-start gap-2 items-center">
-        <div class="leftmenu-img">
-            <img src="./assets/favoriler.png" alt="">
-        </div>
-        <div>
-            Favorilerim
-        </div>
-    </div>
-    <div class="flex justify-start gap-2 items-center">
-        <div class="leftmenu-img">
-            <img src="./assets/yardim.png" alt="">
-        </div>
-        <div>
-            Destek
-        </div>
-    </div>
-    <div class="flex justify-start gap-2 items-center">
-        <div class="leftmenu-img">
-            <img src="./assets/cikis.png" alt="">
-        </div>
-        <div>
-            Çıkış Yap
-        </div>
-    </div>
+<div class="left-menu f fcol gap-2">
+    <h4>Engin Tasarım ve Elektronik San. Tic. Ltd. Şti</h4>
+    <ul>
+        <li>
+        <img src="assets/images/siparisler.png" alt="">
+            <a href="#">Önceki Siparişlerim</a>
+        </li>
+        <li>
+        <img src="assets/images/yeni.png" alt="">
+            <a href="#">Favorilerim</a>
+        </li>
+        <li>
+        <img src="assets/images/kullanici.png" alt="">
+            <a href="#">Kullanıcı Bilgilerim</a>
+        </li>
+        <li>
+        <img src="assets/images/adreslerim.png" alt="">
+            <a href="#">Adreslerim</a>
+        </li>
+        <li>
+        <img src="assets/images/favoriler.png" alt="">
+            <a href="#">Favorilerim</a>
+        </li>
+        <li class="hover:text-(--fish-blue)!">
+            <img src="assets/images/yardim.png" alt="">
+            <a href="#">Yardım</a>
+        </li>
+        <li class="hover:text-red-600!">
+        <img src="assets/images/cikis.png" alt="">
+            <a href="#" class="flex">Çıkış Yap</a>
+        </li>
+    </ul>
 </div>

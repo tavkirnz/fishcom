@@ -41,31 +41,31 @@
                     <h4>Engin Tasarım ve Elektronik San. Tic. Ltd. Şti</h4>
                     <ul>
                         <li>
-                            <i class="fa-solid fa-boxes-stacked"></i>
+                            <img src="assets/images/siparisler.png" alt="">
                             <a href="#">Önceki Siparişlerim</a>
                         </li>
                         <li>
-                            <i class="fa-solid fa-star"></i>
+                            <img src="assets/images/yeni.png" alt="">
                             <a href="#">Favorilerim</a>
                         </li>
                         <li>
-                            <i class="fa-regular fa-user"></i>
+                            <img src="assets/images/kullanici.png" alt="">
                             <a href="#">Kullanıcı Bilgilerim</a>
                         </li>
                         <li>
-                            <i class="fa-solid fa-location-dot"></i>
+                            <img src="assets/images/adreslerim.png" alt="">
                             <a href="#">Adreslerim</a>
                         </li>
                         <li>
-                            <i class="fa-regular fa-heart"></i>
+                            <img src="assets/images/favoriler.png" alt="">
                             <a href="#">Favorilerim</a>
                         </li>
                         <li class="hover:text-(--fish-blue)!">
-                            <i class="fa-regular fa-circle-question"></i>
+                            <img src="assets/images/yardim.png" alt="">
                             <a href="#">Yardım</a>
                         </li>
                         <li class="hover:text-red-600!">
-                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <img src="assets/images/cikis.png" alt="">
                             <a href="#" class="flex">Çıkış Yap</a>
                         </li>
                     </ul>

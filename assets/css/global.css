@@ -36,6 +36,9 @@
 .je{
   justify-content: flex-end;
 }
+.js{
+  justify-content: start;
+}
 .ic {
   align-items: center;
 }
@@ -232,10 +235,9 @@ header {
 .user-area #accountMenu ul li:hover {
   color: var(--fish-red);
 }
-.user-area #accountMenu ul li i {
-  font-size: 20px;
-  width: 24px;
-  text-align: center;
+.user-area #accountMenu ul li img {
+  width: 20px;
+  height: 20px;
 }
 .user-area #accountMenu ul li a {
   display: flex;
@@ -924,4 +926,49 @@ footer a {
   background: #d32f2f;
 }
 
+/* #endregion */
+
+/* #region left menu*/
+.left-menu {
+    padding: 20px;
+    border: 1px solid #d1d1d1;
+    border-radius: 20px;
+    width: 31%;
+    height: fit-content;
+}
+
+.left-menu h4 {
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0 0 8px 0;
+    margin: 0 0 8px 0;
+    color: var(--fish-blue);
+}
+
+.left-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.left-menu ul li {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.left-menu ul li:hover {
+    color: var(--fish-red);
+}
+
+.left-menu ul li img {
+    width: 20px;
+    height: 20px;
+}
+
+.left-menu ul li a {
+    display: flex;
+}
 /* #endregion */
