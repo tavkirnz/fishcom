@@ -1,8 +1,8 @@
 <!-- Sepet Modal -->
-<div id="cartModal" class="cart-modal-overlay hidden">
-    <div class="cart-modal">
+<div id="cartModal" class="cart-modal-overlay">
+    <div id="cart" class="cart-modal">
         <div class="cart-modal-header">
-            <h2>Sepetim</h2>
+            <h2>Alışveriş Sepeti</h2>
             <button id="closeCartModal" class="cart-close-btn">
                 <i class="fa-solid fa-times"></i>
             </button>
@@ -14,13 +14,39 @@
                 <p class="text-sm text-gray-400">Ürün eklemek için mağazamızı keşfedin</p>
             </div>
             <!-- Cart items would go here when implemented -->
-        </div>
-        <div class="cart-modal-footer">
-            <div class="cart-total">
-                <span>Toplam:</span>
-                <span class="cart-total-amount">0 TL</span>
+            <div class="cart-true">
+
             </div>
-            <button class="cart-checkout-btn">Sipariş Ver</button>
+        </div>
+        <div class="cart-modal-pricing">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="text-start">Ara Toplam</td>
+                        <td class="text-end">11.500TL</td>
+                    </tr>
+                    <tr>
+                        <td class="text-start">KDV</td>
+                        <td class="text-end">500TL</td>
+                    </tr>
+                    <tr>
+                        <td class="text-start">İndirim</td>
+                        <td class="text-end offsale">- 1.000TL</td>
+                    </tr>
+                    <tr>
+                        <td class="text-start">Toplam</td>
+                        <td class="text-end">11.000TL</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="cart-modal-link">
+            <img src="assets/images/siparisler.png" alt="">
+            <span>Bir Günde Teslimat</span>
+        </div>
+        <div class="cart-modal-buttons">
+            <button class="bg-(--fish-red)">Sepetim</button>
+            <button class="bg-(--fish-blue)">Ödeme</button>
         </div>
     </div>
 </div>
