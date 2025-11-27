@@ -3,6 +3,7 @@
 
 <head>
     <?php include "includes/head-links.php" ?>
+    <link rel="stylesheet" href="assets/css/list-page.css">
     <title>Denizev | Ürünler</title>
 </head>
 

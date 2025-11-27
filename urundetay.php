@@ -90,11 +90,6 @@
                     <button id="button-image"><img src="assets/images/butonloggok.png"></button>
                     <button id="button-image"><img src="assets/images/butonloggoy.png"></button>
                 </div>
-                <!-- Lightbox / Modal -->
-                <div id="modal" class="modal">
-                    <span id="close">&times;</span>
-                    <img class="modal-content" id="modal-img">
-                </div>
                 <hr>
                 <div class="f ic jb my-10 gap-5">
                     <div class="content-adet f ic jb">
@@ -447,9 +442,9 @@
         </div>
     </section>
     
-    <?php include 'includes/footer.php'; ?>
-    <?php include 'includes/product-info-modal.php'; ?>
-    <?php include 'includes/sepet-modal.php'; ?>
+    <?php include 'includes/footer.php' ?>
+    <?php include 'includes/product-info-modal.php' ?>
+    <?php include 'includes/sepet-modal.php' ?>
     <script src="assets/scripts/script.js"></script>
 
     <script>
