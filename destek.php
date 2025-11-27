@@ -23,15 +23,18 @@
 
 <body>
     <?php include "includes/header.php" ?>
-    <?php 
-    $title = "Destek";
-    $crumb = "Anasayfa / Destek";
-    include "includes/breadcrumb.php" 
+    <?php
+        $title = "Destek";
+        $crumb = "Anasayfa / Destek";
+        include "includes/breadcrumb.php"
     ?>
     <section class="flex justify-center pages-content">
-        <div class="container">
+        <div class="container c-s">
             <div class="flex gap-10">
-                <?php include "includes/leftmenu.php" ?>
+                <?php
+                    $active = "Yardım";
+                    include "includes/leftmenu.php"
+                ?>
                 <div class="w-full pages-border pages-padding pages-right">
                     <form id="destek-form">
                         <div class="destek-header mb-1.5">
@@ -61,7 +64,7 @@
         </div>
     </section>
     <?php include "includes/footer.php" ?>
-        <?php include "includes/sepet-modal.php" ?>
+    <?php include "includes/sepet-modal.php" ?>
     <script src="assets/scripts/script.js"></script>
 </body>
 

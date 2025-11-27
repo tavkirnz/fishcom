@@ -1,0 +1,71 @@
+/*----------------------Table----------------------*/
+table {
+    width: 100%;
+}
+table tbody tr {
+    height: 90px;
+    border-top: 1px solid #d1d1d1;
+}
+table tbody tr:hover{
+    background-color: #eaeaea;
+}
+table thead tr th{
+    text-align: start;
+    font-weight: 500;
+    min-width: 110px;
+}
+table tbody tr td{
+    font-weight: 300;
+}
+table tbody tr td .banka{
+    font-size: 10px;
+    padding: 1px 3px;
+    width: fit-content;
+    border-radius: 4px;
+    color: white;
+}
+.bekleniyor{
+    color: var(--fish-red);
+    font-weight: 400;
+}
+.teslim-edildi{
+    color: var(--fish-green);
+    font-weight: 400;
+}
+.hazirlaniyor{
+    color: var(--fish-blue);
+    font-weight: 400;
+}
+.odeme{
+    width: 120px;
+}
+.garanti{
+    background-color: #0d663e;
+}
+.vakıf{
+    background-color: #f3b400;
+}
+.buttons{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 90px;
+    gap: 10px;
+}
+.button-1 {
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    height: 40px;
+    padding: 0px 6px;
+    text-align: center;
+}
+.siparisler{
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    border: 1px solid #d1d1d1;
+    border-radius: 20px;
+}
+/*----------------------Leftmenu----------------------*/

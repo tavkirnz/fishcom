@@ -4,7 +4,7 @@
 <head>
     <?php include 'includes/head-links.php' ?>
     <title>Denizev | Sipariş</title>
-    <link rel="stylesheet" href="assets/css/siparislerkimi.css">
+    <link rel="stylesheet" href="assets/css/siparis.css">
     <!---------------------------------------Components/-------------------------------------->
     <!----
     f     = flex
@@ -30,11 +30,14 @@
     ?>
     <section class="f jc">
         <div class="container f c-s gap-10">
-            <?php include "includes/leftmenu.php" ?>
-            <div class="w-full pages-padding pages-border pages-right">
+            <?php 
+                $active = "Önceki Siparişlerim";
+                include "includes/leftmenu.php" 
+            ?>
+            <div class="siparisler">
                 <div>
                     <table>
-                        <thead>
+                        <thead class="mb-10">
                             <tr>
                                 <th>Sipariş Kodu</th>
                                 <th>Sipariş Tarihi</th>
@@ -48,46 +51,47 @@
                             <tr>
                                 <td>45216987</td>
                                 <td>12.05.2024</td>
-                                <td class="text-(--fish-blue)">Hazırlanıyor</td>
+                                <td class="teslim-edildi">Teslim Edildi</td>
                                 <td>3500 TL</td>
                                 <td>
-                                    Kredi Kartı
-                                    <img src="/assets/images/garantibank.png" alt="" style="height:20px;">
+                                    <p>Havale ile ödeme</p>
+                                    <p class="garanti banka">Garanti Bankası</p>
                                 </td>
-                                <td class="f gap-2 jc">
-                                    <button class="button-1 bg-(--fish-blue)">Ödeme Yapıldı</button>
+                                <td class="buttons">
+                                    <button class="button-1 bg-(--fish-blue) odeme">Ödeme Yapıldı</button>
                                     <button class="button-1 bg-black">Detay</button>
                                     <button class="button-1 bg-(--fish-green)">Siparişi Tekrarla</button>
                                     <button class="button-1 border border-black !text-black">E-Fatura</button>
                                 </td>
                             </tr>
+
                             <tr>
                                 <td>45216987</td>
                                 <td>12.05.2024</td>
-                                <td class="text-(--fish-green)">Teslim Edildi</td>
+                                <td class="bekleniyor">Ödeme Bekleniyor</td>
                                 <td>3500 TL</td>
                                 <td>
-                                    Kredi Kartı
-                                    <img src="/assets/images/garantibank.png" alt="" style="height:20px;">
+                                    <p>Havale ile ödeme</p>
+                                    <p class="vakıf banka">Vakıf Bank</p>
                                 </td>
-                                <td class="f gap-2 jc">
-                                    <button class="button-1 bg-(--fish-blue)">Ödeme Yapıldı</button>
+                                <td class="buttons">
+                                    <button class="button-1 bg-(--fish-red) odeme">Ödeme Yap</button>
                                     <button class="button-1 bg-black">Detay</button>
                                     <button class="button-1 bg-(--fish-green)">Siparişi Tekrarla</button>
                                     <button class="button-1 border border-black !text-black">E-Fatura</button>
                                 </td>
                             </tr>
+
                             <tr>
                                 <td>45216987</td>
                                 <td>12.05.2024</td>
-                                <td class="text-(--fish-red)">Ödeme bekleniyor</td>
+                                <td class="hazirlaniyor">Hazırlanıyor</td>
                                 <td>3500 TL</td>
                                 <td>
-                                    <span>Kredi Kartı</span>
-                                    <img src="/assets/images/garantibank.png" alt="" style="height:20px;">
+                                    <p>Kredi Kartı</p>
                                 </td>
-                                <td class="f gap-2 jc">
-                                    <button class="button-1 bg-(--fish-blue)">Ödeme Yapıldı</button>
+                                <td class="buttons">
+                                    <button class="button-1 bg-(--fish-blue) odeme">Ödeme Yapıldı</button>
                                     <button class="button-1 bg-black">Detay</button>
                                     <button class="button-1 bg-(--fish-green)">Siparişi Tekrarla</button>
                                     <button class="button-1 border border-black !text-black">E-Fatura</button>

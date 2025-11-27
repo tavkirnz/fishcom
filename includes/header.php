@@ -42,11 +42,11 @@
                     <ul>
                         <li>
                             <img src="assets/images/siparisler.png" alt="">
-                            <a href="#">Önceki Siparişlerim</a>
+                            <a href="/siparis.php">Önceki Siparişlerim</a>
                         </li>
                         <li>
                             <img src="assets/images/yeni.png" alt="">
-                            <a href="#">Favorilerim</a>
+                            <a href="#">Yeni Ürünlerim</a>
                         </li>
                         <li>
                             <img src="assets/images/kullanici.png" alt="">
@@ -62,7 +62,7 @@
                         </li>
                         <li class="hover:text-(--fish-blue)!">
                             <img src="assets/images/yardim.png" alt="">
-                            <a href="#">Yardım</a>
+                            <a href="/destek.php">Yardım</a>
                         </li>
                         <li class="hover:text-red-600!">
                             <img src="assets/images/cikis.png" alt="">
@@ -79,7 +79,7 @@
             </div>
             <div class="user-cart">
                 <a href="" class="ic">
-                    <i class="fa-brands fa-opencart"></i>
+                    <img src="assets/images/sepet.svg" alt="" style="height: 16px;">
                     <span>Sepetim</span>
                 </a>
             </div>
