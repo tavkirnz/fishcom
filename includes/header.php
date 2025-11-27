@@ -19,9 +19,9 @@
 </div>
 <header class="f jc">
     <div class="container f jb ic">
-        <div>
+        <a href="/">
             <img src="assets/images/logo.svg">
-        </div>
+        </a>
         <div class="search-area r">
             <form action="/submit">
                 <div class="search-btn r">
@@ -62,7 +62,7 @@
                         </li>
                         <li class="hover:text-(--fish-blue)!">
                             <img src="assets/images/yardim.png" alt="">
-                            <a href="/destek.php">Yardım</a>
+                            <a href="/destek.php">Destek</a>
                         </li>
                         <li class="hover:text-red-600!">
                             <img src="assets/images/cikis.png" alt="">

@@ -9,7 +9,7 @@
         </div>
         <div class="cart-modal-body">
             <div class="cart-empty">
-                <i class="fa-brands fa-opencart text-6xl text-gray-300"></i>
+                <img src="assets/images/sepet.svg" alt="">
                 <p class="text-gray-500 mt-4">Sepetiniz boş</p>
                 <p class="text-sm text-gray-400">Ürün eklemek için mağazamızı keşfedin</p>
             </div>

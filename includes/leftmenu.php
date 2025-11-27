@@ -23,7 +23,7 @@
         </li>
         <li class="hover:text-(--fish-blue)!">
             <img src="assets/images/yardim.png" alt="">
-            <a class='<?= isset($active) && $active === "Yardım" ? "text-(--fish-blue)" : "" ?>' href="/destek.php">Yardım</a>
+            <a class='<?= isset($active) && $active === "Destek" ? "text-(--fish-blue)" : "" ?>' href="/destek.php">Destek</a>
         </li>
         <li class="hover:text-red-600!">
         <img src="assets/images/cikis.png" alt="">

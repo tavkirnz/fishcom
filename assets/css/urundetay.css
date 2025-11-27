@@ -1,9 +1,161 @@
-.urundetay-tag {
-  background-color: #f6f6f6;
+.urun .image-area {
+  width: calc(5/9 * 100%);
+  height: 100%;
 }
 
-.urundetay-ucretsiz {
-  background-color: #f6c500;
+.urun .image-area .image-roof {
+  margin-bottom: 15px;
+  width: 25%;
+}
+
+.urun .image-area .image-roof ul li {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+
+.urun .image-area .image-roof #roof-img {
+  height: 120px;
+}
+
+.urun .image-area .image-main {
+  width: 75%;
+  background-color: #EFEFEF;
+}
+
+.urun .image-area .image-main {
+  width: 100%;
+  background-color: #EFEFEF;
+}
+
+.urun .image-area .image-main #main-img {
+  width: 100%;
+  height: fit-content;
+}
+
+.urun .content-area {
+  width: calc(4/9 * 100%);
+  height: fit-content;
+}
+
+.urun .content-area .content-title .favorite-icon {
+  font-size: 28px;
+}
+
+.urun .content-area .content-code {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.urun .content-area .content-quantity {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.urun .content-area .content-much span {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.urun .content-area .content-much input {
+  height: 20px;
+  width: 20px;
+}
+
+.urun .content-area .content-much ul li {
+  display: flex;
+  align-items: center;
+}
+
+.urun .content-area .content-price {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.urun .content-area .content-description {
+  font-size: 20px;
+  margin: 80px 0 40px 0;
+}
+
+.urun .content-area .content-certificates {
+  padding: 10px 0 10px 0;
+  display: flex;
+  gap: 15px;
+}
+
+.urun .content-area .content-certificates button img {
+  width: 55px;
+  height: 55px;
+  transition: transform 0.2s ease;
+}
+
+.urun .content-area .content-adet {
+  width: 100px;
+  height: 60px;
+  background-color: #efefef;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.urun .content-area .content-adet #adet {
+  width: 100%;
+  -moz-appearance: textfield;
+  text-align: center;
+}
+
+.urun .content-area .content-adet #adet::-webkit-outer-spin-button,
+.urun .content-area .content-adet #adet::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.urun .content-area .content-buy {
+  background-color: #ff4c4c;
+  width: 100%;
+  height: 60px;
+  color: white;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.urun .content-area .content-links .link{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+.urun .content-area .content-links .link img{
+  height: 25px;
+  width: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.urundetay-tag {
+  background-color: #f6f6f6;
 }
 
 .urundetay-genelbilgiler {
@@ -90,69 +242,6 @@
   border: 2px solid gray;
 }
 
-.urunbilgi-kucuk {
-  width: 150px;
-}
-
-.urunbilgi-kucukresimler {
-  margin-bottom: 15px;
-}
-
-.urunbilgi-kocaman {}
-
-.urunbilgi-resim {
-  height: 700px;
-  width: 500px;
-  background-color: #EFEFEF;
-}
-
-.urunbilgi-islemler {
-  height: 700px;
-  width: 790px;
-}
-
-.fav {
-  height: 30px;
-  width: 30px;
-}
-
-.urunisim {
-  font-weight: 500;
-  font-size: 28px;
-}
-
-.urunisim-2 {
-  font-weight: 500;
-  font-size: 18px;
-}
-
-.urunkod {
-  font-size: 14px;
-}
-
-.islemler-cizgi {
-  border-top: 1px solid black;
-}
-
-.urundetay-sepetekle {
-  background-color: #ff4c4c;
-  width: 500px;
-  height: 60px;
-  color: white;
-  border-radius: 10px;
-  margin: 0 auto;
-  font-weight: 500;
-  font-size: 20px;
-}
-
-.havale {
-  color: #ff4c4c;
-  font-weight: 500;
-}
-
-.aciklamayazi {
-  font-weight: 500;
-}
 
 .urundetay-toplacikar {
   background-color: #efefef;
@@ -161,13 +250,6 @@
   font-size: 18px;
 }
 
-.margin-margin {
-  display: inline-block;
-  width: 30px;
-  text-align: center;
-  padding: 10px 0;
-  user-select: none;
-}
 
 .urunbilgi-kucukresimler ul li {
   margin-bottom: 20px;
@@ -184,18 +266,7 @@
 }
 
 /* Buton stilleri */
-.btnimg {
-  border: none;
-  background: none;
-  cursor: pointer;
-  padding: 5px;
-}
 
-.btnimg img {
-  width: 50px;
-  height: 50px;
-  transition: transform 0.2s ease;
-}
 
 /* Modal */
 .modal {
@@ -320,25 +391,6 @@
   position: absolute;
   top: 15px;
   left: 15px;
-}
-
-.product-badge {
-  display: inline-block;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 11px;
-  font-weight: 500;
-  color: white;
-  margin-bottom: 8px;
-}
-
-.product-badge.guluten-free {
-  background-color: #4caf50;
-}
-
-.product-badge.offsale,
-.product-badge.new {
-  background-color: #ff4c4c;
 }
 
 .modal-info {

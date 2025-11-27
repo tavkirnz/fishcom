@@ -228,11 +228,11 @@ const suggestions = document.getElementById('suggestions');
 
 // Örnek veri
 const data = [
-    {title: 'Tortilla', gr: '200 gr', adet:'Koli İçi Adet: 4', price:'300TL', paket:'1200TL', img: 'yemek1.webp', link:'urun.html',},
-    {title: 'Balık Köftesi', gr: '200 gr', adet:'Koli İçi Adet: 5', price:'400TL', paket:'1600TL', img: 'yemek2.webp'},
-    {title: 'Kalamar', gr: '250 gr', adet:'Koli İçi Adet: 3', price:'450TL', paket:'1350TL', img: 'yemek3.webp'},
-    {title: 'Karides', gr: '200 gr', adet:'Koli İçi Adet: 6', price:'500TL', paket:'3000TL', img: 'yemek4.jpeg'},
-    {title: 'Somon', gr: '300 gr', adet:'Koli İçi Adet: 2', price:'600TL', paket:'1200TL', img: 'yemek5.jpeg'},
+    {title: 'Tortilla', gr: '200 gr', adet:'Koli İçi Adet: 4', price:'300TL', paket:'1200TL', img: 'yemek1.webp', link:'urundetay.php'},
+    {title: 'Balık Köftesi', gr: '200 gr', adet:'Koli İçi Adet: 5', price:'400TL', paket:'1600TL', img: 'yemek2.webp', link:'urundetay.php'},
+    {title: 'Kalamar', gr: '250 gr', adet:'Koli İçi Adet: 3', price:'450TL', paket:'1350TL', img: 'yemek3.webp', link:'urundetay.php'},
+    {title: 'Karides', gr: '200 gr', adet:'Koli İçi Adet: 6', price:'500TL', paket:'3000TL', img: 'yemek4.jpeg', link:'urundetay.php'},
+    {title: 'Somon', gr: '300 gr', adet:'Koli İçi Adet: 2', price:'600TL', paket:'1200TL', img: 'yemek5.jpeg', link:'urundetay.php'},
 ];
 
 input.addEventListener('input', () => {

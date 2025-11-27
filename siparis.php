@@ -24,16 +24,16 @@
 <body>
     <?php include "includes/header.php" ?>
     <?php
-        $title = "Sipariş";
-        $crumb = "Anasayfa / Sipariş";
-        include "includes/breadcrumb.php";
+    $title = "Sipariş";
+    $crumb = "Anasayfa / Sipariş";
+    include "includes/breadcrumb.php";
     ?>
     <section class="f jc">
         <div class="container f c-s gap-10">
-            <?php 
-                $active = "Önceki Siparişlerim";
-                include "includes/leftmenu.php" 
-            ?>
+            <?php
+            $active = "Önceki Siparişlerim";
+            include "includes/leftmenu.php"
+                ?>
             <div class="siparisler">
                 <div>
                     <table>
@@ -104,6 +104,7 @@
         </div>
     </section>
     <?php include "includes/footer.php" ?>
+    <?php include "includes/product-info-modal.php" ?>
     <?php include "includes/sepet-modal.php" ?>
     <script src="assets/scripts/script.js"></script>
 </body>

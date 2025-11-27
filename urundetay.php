@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <?php include 'includes/head-links.php' ?>
     <title>Denizev | Ürün Detay</title>
@@ -19,135 +20,112 @@
     c-s   = py-10
     ----->
 </head>
+
 <body>
     <?php include 'includes/header.php'; ?>
-    <?php 
+    <?php
     $title = "Füme Serisi";
     $crumb = "Anasayfa / Ürünler / Füme Serisi";
-    include "includes/breadcrumb.php" 
-    ?>
-    <section class="flex justify-center urundetay-ucretsiz">
-        <div class="container">
-            <div id="uyariKapsayici" class="flex justify-between items-center py-3">
-                <div id="uyari" class="mx-auto">
-                    Sepet tutarını 5000 TL’ye tamamla kargon ücretsiz olsun!
-                </div>
-            </div>
+    include "includes/breadcrumb.php"
+        ?>
+    <section id="uyari" class="f jc bg-(--fish-gold)" style="">
+        <div class="container py-3 text-center">
+            Sepet tutarını 5000 TL’ye tamamla kargon ücretsiz olsun!
         </div>
     </section>
-    <section class="flex justify-center">
-        <div class="container">
-            <div class="flex justify-between py-10">
-                <div class="urunbilgi-kucukresimler">
+    <section class="urun f jc">
+        <div class="container f jb c-s gap-10">
+            <div class="image-area f gap-10">
+                <div class="image-roof">
+                    <ul>
+                        <li><img src="assets/images/urun1.png" id="roof-img"></li>
+                        <li><img src="assets/images/urun1.png" id="roof-img"></li>
+                        <li><img src="assets/images/urun1.png" id="roof-img"></li>
+                        <li><img src="assets/images/urun1.png" id="roof-img"></li>
+                        <li><img src="assets/images/neylabu.png" id="roof-img"></li>
+                    </ul>
+                </div>
+                <div class="image-main f ic">
+                    <img src="assets/images/urun1.png" id="main-img">
+                </div>
+            </div>
+            <div class="content-area">
+                <div class="content-title f ic jb">
+                    <h2 class="font-normal!">Somon Füme</h2>
+                    <i class="fa-regular fa-heart favorite-icon"></i>
+                </div>
+                <div class="content-code">
+                    <span>Ürün Kodu: 45123698</span>
+                </div>
+                <div class="content-quantity">
+                    <span>200 gr / kutu</span>
+                </div>
+                <div class="content-much f fcol my-10">
                     <ul>
                         <li>
-                            <img src="assets/images/urun.webp" class="urunbilgi-kucuk">
+                            <input type="radio" name="secim" value="3000" checked>
+                            <span>10 Kutu</span>
                         </li>
                         <li>
-                            <img src="assets/images/urun.webp" class="urunbilgi-kucuk">
+                            <input type="radio" name="secim" value="6000">
+                            <span>20 Kutu</span>
                         </li>
                         <li>
-                            <img src="assets/images/urun.webp" class="urunbilgi-kucuk">
-                        </li>
-                        <li>
-                            <img src="assets/images/neylabu.png" class="urunbilgi-kucuk" alt="">
+                            <input type="radio" name="secim" value="10000">
+                            <span>1 Koli</span>
                         </li>
                     </ul>
                 </div>
-                <div class="urunbilgi-resim flex items-center">
-                    <img src="assets/images/urun.webp" id="kocamanimg" class="urunbilgi-kocaman">
+                <div class="content-price">
+                    <span id="price"></span>TL
                 </div>
-                <div class="urunbilgi-islemler">
-                    <div class="items-center justify-between flex">
-                        <div>
-                            <span class="urunisim">Dil balığı Dolması</span>
-                        </div>
-                        <div class="fav">
-                            <img src="assets/images/yeni.png" alt="">
-                        </div>
+                <div class="text-(--fish-red) font-medium">
+                    Havale ile ödemelerinizde ekstra %5 indirim!
+                </div>
+                <div class="content-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet euismod libero.
+                </div>
+                <div class="content-certificates">
+                    <button id="button-image"><img src="assets/images/butonloggo.png"></button>
+                    <button id="button-image"><img src="assets/images/butonloggok.png"></button>
+                    <button id="button-image"><img src="assets/images/butonloggoy.png"></button>
+                </div>
+                <!-- Lightbox / Modal -->
+                <div id="modal" class="modal">
+                    <span id="close">&times;</span>
+                    <img class="modal-content" id="modal-img">
+                </div>
+                <hr>
+                <div class="f ic jb my-10 gap-5">
+                    <div class="content-adet f ic jb">
+                        <button id="cikar">-</button>
+                        <input type="number" name="adet" id="adet" value="1" min="1">
+                        <button id="ekle">+</button>
                     </div>
-                    <div class="my-2">
-                        <span class="urunkod">Ürün Kodu: 45123698</span>
+                    <button class="content-buy">Sepete Ekle</button>
+                </div>
+                <div class="content-links ic jb f">
+                    <div class="link">
+                        <img src="assets/images/yardim.png" alt="">
+                        <span>Soru Sor</span>
                     </div>
-                    <div>
-                        <span class="urunisim-2">200 gr / kutu</span>
+                    <div class="link">
+                        <img src="assets/images/not.png" alt="">
+                        <span>Siparişe Not Ekle</span>
                     </div>
-                    <div class="flex flex-col my-10">
-                        <div>
-                            <input type="radio" name="secim" value="3000" checked> 10 Kutu
-                        </div>
-                        <div>
-                            <input type="radio" name="secim" value="6000"> 20 Kutu
-                        </div>
-                        <div>
-                            <input type="radio" name="secim" value="10000"> Koli
-                        </div>
+                    <div class="link">
+                        <img src="assets/images/paylas.png" alt="">
+                        <span>Paylaş</span>
                     </div>
-                    <div class="urunisim">
-                        <span id="fiyat">0 </span><span>TL</span>
-                    </div>
-                    <div class="havale">
-                        Havale ile ödemelerinizde ekstra %5 indirim!
-                    </div>
-                    <div class="aciklamayazi my-10">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum excepturi veniam officia
-                        laboriosam dolor dolorum repellendus at rem quis assumenda magni voluptatem ad, quos voluptates
-                        repudiandae quasi a voluptate cum.
-                    </div>
-                    <div class="mb-5">
-                        <button class="btnimg"><img src="assets/images/butonloggo.png" alt=""></button>
-                        <button class="btnimg"><img src="assets/images/butonloggok.png" alt=""></button>
-                        <button class="btnimg"><img src="assets/images/butonloggoy.png" alt=""></button>
-                    </div>
-
-                    <!-- Lightbox / Modal -->
-                    <div id="modal" class="modal">
-                        <span id="close">&times;</span>
-                        <img class="modal-content" id="modal-img">
-                    </div>
-
-
-                    <div class="islemler-cizgi">
-                    </div>
-                    <div class="items-center justify-between flex">
-                        <div class="urundetay-toplacikar items-center flex justify-between my-10">
-                            <div>
-                                <button id="cikar" class="margin-margin">-</button>
-                            </div>
-                            <div>
-                                <span id="sayim" class="margin-margin sayims">1</span>
-                            </div>
-                            <div>
-                                <button id="ekle" class="margin-margin">+</button>
-                            </div>
-                        </div>
-                        <div>
-                            <button class="urundetay-sepetekle">Sepete Ekle</button>
-                        </div>
-                    </div>
-                    <div class="items-center justify-between flex">
-                        <div class="items-center justify-between flex">
-                            <img src="assets/images/yardim.png" style="width:30px;" alt="">
-                            <span class="ml-2">Soru Sor</span>
-                        </div>
-                        <div class="items-center justify-between flex">
-                            <img src="assets/images/not.png" style="width:30px; height:30px;" alt="">
-                            <span class="ml-2">Siparişe Not Ekle</span>
-                        </div>
-                        <div class="items-center justify-between flex">
-                            <img src="assets/images/paylas.png" style="width:30px;" alt="">
-                            <span class="ml-2">Paylaş</span>
-                        </div>
-                        <div class="items-center justify-between flex">
-                            <img src="assets/images/siparisler.png" style="width:30px;" alt="">
-                            <span class="ml-2">Bir Günde Teslimat</span>
-                        </div>
+                    <div class="link">
+                        <img src="assets/images/siparisler.png" alt="">
+                        <span>Bir Günde Teslimat</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="flex justify-center">
+    <section class="f jc">
         <div class="container">
             <div class="flex justify-between items-center py-3">
                 <div class="urundetay-genelbilgiler flex justify-center">
@@ -468,16 +446,17 @@
             </div>
         </div>
     </section>
+    
     <?php include 'includes/footer.php'; ?>
     <?php include 'includes/product-info-modal.php'; ?>
     <?php include 'includes/sepet-modal.php'; ?>
     <script src="assets/scripts/script.js"></script>
-    
+
     <script>
         const modal = document.getElementById('modal');
         const modalImg = document.getElementById('modal-img');
         const closeBtn = document.getElementById('close');
-        const buttons = document.querySelectorAll('.btnimg');
+        const buttons = document.querySelectorAll('#button-image');
 
         buttons.forEach(button => {
             button.addEventListener('click', () => {
@@ -500,13 +479,11 @@
             }
         });
 
-        const buyukResim = document.getElementById('kocamanimg');
-
-        const kucukResimler = document.querySelectorAll('.urunbilgi-kucuk');
-
-        kucukResimler.forEach((resim) => {
-            resim.addEventListener('click', () => {
-                buyukResim.src = resim.src;
+        const mainImg = document.getElementById('main-img');
+        const roofImg = document.querySelectorAll('#roof-img');
+        roofImg.forEach((img) => {
+            img.addEventListener('click', () => {
+                mainImg.src = img.src;
             });
         });
 
@@ -610,14 +587,14 @@
             }
         });
 
-        let sayi = 1;
-        let birimFiyat = 3000;
-
-        const uyariSection = document.querySelector("section.urundetay-ucretsiz");
+        const uyariSection = document.getElementById("uyari");
         const toplamabtn = document.getElementById("ekle");
         const cikarbtn = document.getElementById("cikar");
-        const degisensayi = document.getElementById("sayim");
-        const fiyatSpan = document.getElementById("fiyat");
+        const degisensayi = document.getElementById("adet");
+        const fiyatSpan = document.getElementById("price");
+
+        let sayi = degisensayi.value;
+        let birimFiyat = 3000;
 
         function fiyatiGuncelle() {
             const toplam = birimFiyat * sayi;
@@ -646,17 +623,18 @@
 
         toplamabtn.addEventListener("click", function () {
             sayi++;
-            degisensayi.innerText = sayi;
+            degisensayi.value = sayi;
             fiyatiGuncelle();
         });
 
         cikarbtn.addEventListener("click", function () {
             sayi--;
             if (sayi < 1) sayi = 1;
-            degisensayi.innerText = sayi;
+            degisensayi.value = sayi;
             fiyatiGuncelle();
         });
 
     </script>
 </body>
+
 </html>

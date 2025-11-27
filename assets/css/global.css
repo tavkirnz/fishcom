@@ -7,6 +7,7 @@
   --fish-sky-blue: #e7f9ff;
   --fish-sea-blue: #e8f8ff;
   --fish-pink: #ff8880;
+  --fish-gold: #f6c500;
   --fish-yellow: #eed466;
   --fish-brown: #d4c29b;
   --fish-teal: #23c5cd;
@@ -68,6 +69,10 @@ h2 {
 
 h3 {
   font-size: 24px;
+  font-weight: 500;
+}
+h4{
+  font-size: 22px;
   font-weight: 500;
 }
 h5 {
@@ -880,9 +885,9 @@ footer a {
   gap: 15px;
 }
 
-.cart-empty i {
-  font-size: 4rem;
-  color: #e0e0e0;
+.cart-empty img {
+  height: 100px;
+  opacity: 0.5;
 }
 
 .cart-empty p {

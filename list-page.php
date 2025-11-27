@@ -19,7 +19,8 @@
 
 
     <?php include "includes/footer.php" ?>
-        <?php include "includes/sepet-modal.php" ?>
+    <?php include "includes/product-info-modal.php" ?>
+    <?php include "includes/sepet-modal.php" ?>
     <script src="assets/scripts/script.js"></script>
 </body>
 

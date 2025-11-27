@@ -4,7 +4,7 @@
 <head>
     <?php include 'includes/head-links.php' ?>
     <title>Denizev | Destek</title>
-    <link rel="stylesheet" href="assets/css/destekkimi.css">
+    <link rel="stylesheet" href="assets/css/destek.css">
     <!---------------------------------------Components/-------------------------------------->
     <!----
     f     = flex
@@ -24,46 +24,31 @@
 <body>
     <?php include "includes/header.php" ?>
     <?php
-        $title = "Destek";
-        $crumb = "Anasayfa / Destek";
-        include "includes/breadcrumb.php"
-    ?>
+    $title = "Destek";
+    $crumb = "Anasayfa / Destek";
+    include "includes/breadcrumb.php"
+        ?>
     <section class="flex justify-center pages-content">
         <div class="container c-s">
             <div class="flex gap-10">
                 <?php
-                    $active = "Yardım";
-                    include "includes/leftmenu.php"
-                ?>
-                <div class="w-full pages-border pages-padding pages-right">
-                    <form id="destek-form">
-                        <div class="destek-header mb-1.5">
-                            Destek
-                        </div>
-                        <div class="destek-cizgi">
-
-                        </div>
-                        <div class="destek-message-header">
-                            Destek almak istediğiniz konu hakkında bize telefon numaranızı bırakın sizi arayalım!
-                        </div>
-                        <div>
-                            <input id="telno" type="text" class="pages-border destek-placeholder destek-message-number"
-                                placeholder="Telefon Numaranız">
-                        </div>
-                        <div>
-                            <textarea id="message" class="pages-border destek-placeholder destek-message-mesaj"
-                                placeholder="Mesajınız"></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" class="destek-button">Gönder</button>
-                        </div>
-                        <p id="messageten"></p>
+                $active = "Destek";
+                include "includes/leftmenu.php"
+                    ?>
+                <div class="destek">
+                    <h5>Destek</h5>
+                    <p>Destek almak istediğiniz konu hakkında bize telefon numaranızı bırakın sizi arayalım!</p>
+                    <form class="f fcol gap-4">
+                        <input id="telno" type="text" class="inputs" placeholder="Telefon Numaranız">
+                        <textarea id="message" class="inputs h-40" placeholder="Mesajınız"></textarea>
+                        <button type="submit" class="">Gönder</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
     <?php include "includes/footer.php" ?>
+    <?php include "includes/product-info-modal.php" ?>
     <?php include "includes/sepet-modal.php" ?>
     <script src="assets/scripts/script.js"></script>
 </body>
