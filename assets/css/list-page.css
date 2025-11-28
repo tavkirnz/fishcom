@@ -165,3 +165,6 @@
 .products-box.list-view .title-ext {
     width: 20%;
 }
+.products-box.list-view .title-ext .favorite-icon{
+    display: none;
+}
