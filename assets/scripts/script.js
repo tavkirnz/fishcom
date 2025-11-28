@@ -421,3 +421,62 @@ document.querySelectorAll('.fast-buttons button:first-child').forEach(btn => {
   });
 });
 
+// Grid View Toggle
+const gridButtons = document.querySelectorAll('.filter-grids button');
+const productsBoxes = document.querySelectorAll('.products-box');
+
+gridButtons.forEach((button, index) => {
+  button.addEventListener('click', function () {
+    // Remove active class from all buttons
+    gridButtons.forEach(btn => btn.classList.remove('active'));
+    // Add active class to clicked button
+    this.classList.add('active');
+
+    // Remove all grid classes
+    productsBoxes.forEach(box => {
+      box.classList.remove('grid-2col', 'list-view');
+    });
+
+    // Apply appropriate class based on button clicked
+    if (index === 0) {
+      // // cells: 2 columns
+      productsBoxes.forEach(box => box.classList.add('grid-2col'));
+    } else if (index === 1) {
+      // cells-large: 3 columns (default)
+      // No class needed, it's the default
+    } else if (index === 2) {
+      // table-list: list view
+      productsBoxes.forEach(box => box.classList.add('list-view'));
+    }
+  });
+});
+
+document.querySelectorAll('#sepete-ekle').forEach(button => {
+  button.addEventListener("click", function () {
+    const adet = this.nextElementSibling;
+    adet.style.display = "flex";
+    this.style.display = "none";
+  });
+});
+document.querySelectorAll('#ekle').forEach(button => {
+  button.addEventListener("click", function () {
+    const adet = this.closest('.content-adet').querySelector('#adet');
+    adet.value = parseInt(adet.value) + 1;
+  });
+});
+
+document.querySelectorAll('#cikar').forEach(button => {
+  button.addEventListener("click", function () {
+    const contentAdet = this.closest('.content-adet');
+    const adet = contentAdet.querySelector('#adet');
+    const adetSayi = parseInt(adet.value);
+
+    if (adetSayi > 1) {
+      adet.value = adetSayi - 1;
+    } else if (adetSayi === 1) {
+      // Adet 1'se, input'u gizle ve sepete ekle butonunu göster
+      contentAdet.style.display = "none";
+      contentAdet.previousElementSibling.style.display = "flex";
+    }
+  });
+});

@@ -58,7 +58,7 @@
                         </li>
                         <li>
                             <img src="assets/images/favoriler.png" alt="">
-                            <a href="#">Favorilerim</a>
+                            <a href="/favorilerim.php">Favorilerim</a>
                         </li>
                         <li class="hover:text-(--fish-blue)!">
                             <img src="assets/images/yardim.png" alt="">
@@ -72,7 +72,7 @@
                 </div>
             </div>
             <div class="user-favorites">
-                <a href="" class="ic">
+                <a href="/favorilerim.php" class="ic">
                     <i class="fa-regular fa-heart"></i>
                     <span>Favorilerim</span>
                 </a>
@@ -101,13 +101,13 @@
             <div class="user-nav f ic">
                 <ul class="f ic">
                     <li>
-                        <a class="f ic" href="">
+                        <a class="f ic" href="/siparis.php">
                             <i class="fa-solid fa-clock-rotate-left"></i>
                             Önceki Siparişlerim
                         </a>
                     </li>
                     <li>
-                        <a class="f ic" href="">
+                        <a class="f ic" href="/yeni-urunler.php">
                             <i class="fa-solid fa-star"></i>
                             Yeni Ürünlerim
                         </a>

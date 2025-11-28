@@ -1,0 +1,42 @@
+.listing-products {
+    width: 100%;
+}
+
+.listing-products .products-box {
+    position: relative;
+    width: calc(1/3 * 100%);
+    padding: 20px;
+}
+
+.products-card .title-area .content-adet {
+    background-color: #efefef;
+    border-radius: 10px;
+    display: none;
+}
+
+.products-card .title-area .content-adet #adet {
+    width: 50px;
+    appearance: textfield;
+    -moz-appearance: textfield;
+    text-align: center;
+}
+
+
+.products-card .title-area .content-adet #cikar,
+.products-card .title-area .content-adet #ekle {
+    background-color: var(--fish-red);
+    color: white;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+}
+
+.products-card .title-area .content-adet #adet::-webkit-outer-spin-button,
+.products-card .title-area .content-adet #adet::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.products-card .image-area .fast-buttons {
+    display: none;
+}

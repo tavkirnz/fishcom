@@ -122,7 +122,9 @@
 .products-box.grid-2col {
     width: calc(1/2 * 100%);
 }
-
+.products-box.grid-2col .image-area img{
+    height: auto;
+}
 .products-box.list-view {
     width: 100%;
     padding: 15px 20px;

@@ -7,7 +7,7 @@
         </li>
         <li>
         <img src="assets/images/yeni.png" alt="">
-            <a class='<?= isset($active) && $active === "Favorilerim" ? "text-(--fish-red)" : "" ?>' href="#">Yeni Ürünlerim</a>
+            <a class='<?= isset($active) && $active === "Yeni Ürünlerim" ? "text-(--fish-red)" : "" ?>' href="/yeni-urunler.php">Yeni Ürünlerim</a>
         </li>
         <li>
         <img src="assets/images/kullanici.png" alt="">
@@ -19,7 +19,7 @@
         </li>
         <li>
         <img src="assets/images/favoriler.png" alt="">
-            <a class='<?= isset($active) && $active === "Favorilerim" ? "text-(--fish-red)" : "" ?>' href="#">Favorilerim</a>
+            <a class='<?= isset($active) && $active === "Favorilerim" ? "text-(--fish-red)" : "" ?>' href="/favorilerim.php">Favorilerim</a>
         </li>
         <li class="hover:text-(--fish-blue)!">
             <img src="assets/images/yardim.png" alt="">
