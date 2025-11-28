@@ -99,6 +99,7 @@
 
 .urun .content-area .content-adet #adet {
   width: 100%;
+  appearance: textfield;
   -moz-appearance: textfield;
   text-align: center;
 }

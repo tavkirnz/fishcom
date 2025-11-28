@@ -92,7 +92,7 @@
             <div class="features-nav f ic">
                 <i id="hamburger-menu" class="fa-solid fa-bars"></i>
                 <ul class="f ic">
-                    <li><a href="">Ürünler</a></li>
+                    <li><a href="/list-page.php">Ürünler</a></li>
                     <li><a href="">Yeni Gelenler</a></li>
                     <li><a href="">Kampanyalar</a></li>
                     <li><a href="">Birlikte Al Kazan</a></li>
