@@ -482,59 +482,7 @@ section.hero {
   background-color: var(--fish-red);
 }
 
-.play-btn-text {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 120px;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none; /* let clicks pass to play button if needed */
-}
 
-.play-btn-text .play-btn {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  border: 1px solid white;
-  font-size: 18px;
-  z-index: 3;
-  pointer-events: auto; /* play button itself can receive clicks */
-}
-
-.play-circle-text {
-  position: absolute;
-  z-index: 2;
-  overflow: visible;
-  pointer-events: none;
-  /* no visible background so the SVG text sits on the card */
-  background-color: var(--fish-red);
-  border-radius: 100%;
-  transform-origin: 50% 50%;
-  /* rotate the circular text continuously */
-  animation: spin 8s linear infinite;
-}
-
-.play-circle-text text {
-  fill: #ffffff;
-  font-size: 10px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  line-height: 5px;
-}
-
-/* Respect prefers-reduced-motion */
-@media (prefers-reduced-motion: reduce) {
-  .play-circle-text {
-    animation: none !important;
-  }
-}
 /* #endregion */
 
 /* #region Newest */
