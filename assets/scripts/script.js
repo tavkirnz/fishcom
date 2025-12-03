@@ -410,7 +410,6 @@ document.querySelectorAll('.fast-buttons button:first-child').forEach(btn => {
     // Populate modal
     document.getElementById('main-img').src = imageSrc;
     document.querySelector('.content-title h2').textContent = productName;
-    document.querySelector('.content-description').textContent = quantity; // Using quantity as description
     document.getElementById('price').textContent = price.replace('TL', '').trim();
 
     // Show modal
