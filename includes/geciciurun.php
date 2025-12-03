@@ -22,7 +22,7 @@
                     <span>Balık Köftesi</span>
                     <i class="fa-regular fa-heart favorite-icon"></i>
                 </div>
-                <span class="quantity">200gr, 4 adet</span>
+                <span class="quantity">200gr, 4 adet <span class="list-quantity">Koli İçi Adet: 20</span></span>
             </div>
             <div class="price-ext">
                 <div class="price-buy f ic jb">
@@ -39,12 +39,12 @@
             ' : '' ?>
                     <?= isset($tag) && $tag === "gluten" ? '
             
-                <span class="my-5 font-medium">350 TL</span>
+                <span id="price" class="my-5 font-medium">350 TL</span>
             
             ' : '' ?>
                     <?= isset($tag) && $tag === "nothing" ? '
             
-                <span class="my-5 font-medium">300 TL</span>
+                <span id="price" class="my-5 font-medium">300 TL</span>
             
             ' : '' ?>
                     <button id="sepete-ekle">
@@ -58,7 +58,8 @@
                 </div>
                 <div class="f jb ic quantity">
                     <span>1200 TL / Paket</span>
-                    <span>Koli İçi Adet: 20</span>
+                    <span class="grid-quantity">Koli İçi Adet: 20</span>
+                    <span class="list-quantity font-semibold">Sepete Ekle</span>
                 </div>
             </div>
         </div>

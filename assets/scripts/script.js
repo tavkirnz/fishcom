@@ -408,13 +408,10 @@ document.querySelectorAll('.fast-buttons button:first-child').forEach(btn => {
     }
 
     // Populate modal
-    document.getElementById('modalProductImage').src = imageSrc;
-    document.getElementById('modalProductBadge').textContent = badgeText;
-    document.getElementById('modalProductName').textContent = productName;
-    document.getElementById('modalProductDescription').textContent = quantity; // Using quantity as description
-    document.getElementById('modalProductPrice').textContent = price;
-    document.getElementById('modalPackagePrice').textContent = packagePrice;
-    document.getElementById('modalPackageCount').textContent = packageCount;
+    document.getElementById('main-img').src = imageSrc;
+    document.querySelector('.content-title h2').textContent = productName;
+    document.querySelector('.content-description').textContent = quantity; // Using quantity as description
+    document.getElementById('price').textContent = price.replace('TL', '').trim();
 
     // Show modal
     productModal.classList.remove('hidden');

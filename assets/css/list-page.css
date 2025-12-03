@@ -161,12 +161,26 @@
     display: flex;
     justify-content: space-between;
 }
+.products-box.list-view .price-buy #price, .products-box.list-view .price-buy .offsale{
+    margin: 0 !important;
+    font-size: 18px;
+}
 .products-box.list-view .price-ext {
     width: 80%;
 }
 .products-box.list-view .title-ext {
     width: 20%;
+    font-size: 18px;
+}
+.products-box.list-view .quantity{
+    font-size: 16px;
 }
 .products-box.list-view .title-ext .favorite-icon{
     display: none;
+}
+.products-box.list-view .title-area .list-quantity {
+  display: block;
+}
+.products-box.list-view .title-area .grid-quantity {
+  display: none;
 }
