@@ -165,7 +165,38 @@
     <?php include "includes/product-info-modal.php" ?>
     <?php include "includes/sepet-modal.php" ?>
     <script src="assets/scripts/script.js"></script>
-    
+    <script>
+
+document.querySelectorAll('#sepete-ekle').forEach(button => {
+  button.addEventListener("click", function () {
+    const adet = this.nextElementSibling;
+    adet.style.display = "flex";
+    this.style.display = "none";
+  });
+});
+document.querySelectorAll('#ekle').forEach(button => {
+  button.addEventListener("click", function () {
+    const adet = this.closest('.content-adet').querySelector('#adet');
+    adet.value = parseInt(adet.value) + 1;
+  });
+});
+
+document.querySelectorAll('#cikar').forEach(button => {
+  button.addEventListener("click", function () {
+    const contentAdet = this.closest('.content-adet');
+    const adet = contentAdet.querySelector('#adet');
+    const adetSayi = parseInt(adet.value);
+
+    if (adetSayi > 1) {
+      adet.value = adetSayi - 1;
+    } else if (adetSayi === 1) {
+      // Adet 1'se, input'u gizle ve sepete ekle butonunu göster
+      contentAdet.style.display = "none";
+      contentAdet.previousElementSibling.style.display = "flex";
+    }
+  });
+});
+    </script>
 </body>
 
 </html>

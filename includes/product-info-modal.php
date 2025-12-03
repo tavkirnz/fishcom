@@ -2,9 +2,12 @@
 <div id="productModal" class="modal-overlay hidden">
     <div class="modal-content">
         <div class="modal-header">
-            <button id="closeModal" class="close-btn">
-                <i class="fa-solid fa-times"></i>
-            </button>
+            <div class="container">
+                <button id="closeModal" class="close-btn">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+            </div>
+
         </div>
         <div class="modal-body">
             <div class="container f jb gap-10">

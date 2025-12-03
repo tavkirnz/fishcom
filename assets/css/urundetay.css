@@ -1,3 +1,143 @@
+/* #region urun detay */
+
+.urun .image-area {
+  width: calc(5/9 * 100%);
+  height: 100%;
+}
+
+.urun .image-area .image-roof {
+  margin-bottom: 15px;
+  width: 25%;
+}
+
+.urun .image-area .image-roof ul li {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+
+.urun .image-area .image-roof #roof-img {
+  height: 120px;
+}
+
+.urun .image-area .image-main {
+  width: 75%;
+  background-color: #EFEFEF;
+}
+
+.urun .image-area .image-main {
+  width: 100%;
+  background-color: #EFEFEF;
+}
+
+.urun .image-area .image-main #main-img {
+  width: 100%;
+  height: fit-content;
+}
+
+.urun .content-area {
+  width: calc(4/9 * 100%);
+  height: fit-content;
+}
+
+.urun .content-area .content-title .favorite-icon {
+  font-size: 28px;
+}
+
+.urun .content-area .content-code {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.urun .content-area .content-quantity {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.urun .content-area .content-much span {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.urun .content-area .content-much input {
+  height: 20px;
+  width: 20px;
+}
+
+.urun .content-area .content-much ul li {
+  display: flex;
+  align-items: center;
+}
+
+.urun .content-area .content-price {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.urun .content-area .content-description {
+  font-size: 20px;
+  margin: 80px 0 40px 0;
+}
+
+.urun .content-area .content-certificates {
+  padding: 10px 0 10px 0;
+  display: flex;
+  gap: 15px;
+}
+
+.urun .content-area .content-certificates button img {
+  width: 55px;
+  height: 55px;
+  transition: transform 0.2s ease;
+}
+
+.urun .content-area .content-adet {
+  width: 100px;
+  height: 60px;
+  background-color: #efefef;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.urun .content-area .content-adet #adet {
+  width: 100%;
+  appearance: textfield;
+  -moz-appearance: textfield;
+  text-align: center;
+}
+
+.urun .content-area .content-adet #adet::-webkit-outer-spin-button,
+.urun .content-area .content-adet #adet::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.urun .content-area .content-buy {
+  background-color: #ff4c4c;
+  width: 100%;
+  height: 60px;
+  color: white;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.urun .content-area .content-links .link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.urun .content-area .content-links .link img {
+  height: 25px;
+  width: auto;
+}
+
+/* #endregion */
+
+
 
 .urundetay-tag {
   background-color: #f6f6f6;

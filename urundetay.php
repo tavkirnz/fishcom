@@ -451,13 +451,7 @@
         const buttons = document.querySelectorAll('#button-image');
 
 
-        const mainImg = document.getElementById('main-img');
-        const roofImg = document.querySelectorAll('#roof-img');
-        roofImg.forEach((img) => {
-            img.addEventListener('click', () => {
-                mainImg.src = img.src;
-            });
-        });
+
 
         function changeText(baslik, yazi) {
             const baslikEl = document.getElementById("baslik");

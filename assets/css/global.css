@@ -758,7 +758,7 @@ footer a {
 
 .modal-content {
   background: white;
-  max-width: 800px;
+  max-width: 1300px;
   width: 90%;
   max-height: 90vh;
   overflow-y: auto;
@@ -771,11 +771,10 @@ footer a {
   transform: scale(1);
 }
 
-.modal-header {
+.modal-header .container{
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
-  border-bottom: 1px solid var(--line-color);
 }
 
 .modal-header h2 {
@@ -791,14 +790,7 @@ footer a {
   font-size: 24px;
   color: var(--luxury-black);
   cursor: pointer;
-  padding: 8px;
-  border-radius: 50%;
-  transition: all 0.2s ease;
-}
-
-.close-btn:hover {
-  background-color: var(--fish-sky-blue);
-  color: var(--fish-red);
+  padding: 0 10px;
 }
 
 .modal-body {
@@ -807,92 +799,144 @@ footer a {
   gap: 30px;
 }
 
-.modal-image {
-  flex: 1;
-  position: relative;
+
+.modal-body .image-area {
+  width: calc(5/9 * 100%);
+  height: 100%;
 }
 
-.modal-image img {
+.modal-body .image-area .image-roof {
+  margin-bottom: 15px;
+  width: 25%;
+}
+
+.modal-body .image-area .image-roof ul li {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+
+.modal-body .image-area .image-roof #roof-img {
+  height: 120px;
+}
+
+.modal-body .image-area .image-main {
+  width: 75%;
+  background-color: #EFEFEF;
+}
+
+.modal-body .image-area .image-main {
   width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 15px;
+  background-color: #EFEFEF;
 }
 
-.modal-badges {
-  position: absolute;
-  top: 15px;
-  left: 15px;
+.modal-body .image-area .image-main #main-img {
+  width: 100%;
+  height: fit-content;
 }
 
-.product-badge {
-  display: inline-block;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 11px;
+.modal-body .content-area {
+  width: calc(4/9 * 100%);
+  height: fit-content;
+}
+
+.modal-body .content-area .content-title .favorite-icon {
+  font-size: 28px;
+}
+
+.modal-body .content-area .content-code {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.modal-body .content-area .content-quantity {
+  font-size: 18px;
   font-weight: 500;
-  color: var(--luxury-white);
-  margin-bottom: 8px;
 }
 
-.product-badge.guluten-free {
-  background-color: var(--fish-green);
+.modal-body .content-area .content-much span {
+  font-size: 20px;
+  margin-left: 10px;
 }
 
-.product-badge.offsale,
-.product-badge.new {
-  background-color: var(--fish-red);
+.modal-body .content-area .content-much input {
+  height: 20px;
+  width: 20px;
 }
 
-.modal-info {
-  flex: 1;
+.modal-body .content-area .content-much ul li {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.modal-title-section {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
-.modal-title-section h3 {
+.modal-body .content-area .content-price {
   font-size: 28px;
-  font-weight: 600;
-  color: var(--luxury-black);
-  margin: 0;
+  font-weight: 500;
+  margin-top: 50px;
 }
 
-.modal-description {
-  font-size: 16px;
-  color: #666;
-  line-height: 1.6;
-  margin: 0;
+.modal-body .content-area .content-description {
+  font-size: 20px;
+  margin: 80px 0 40px 0;
 }
 
-.modal-price-section {
+.modal-body .content-area .content-certificates {
+  padding: 10px 0 10px 0;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
-.modal-price {
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--fish-red);
+.modal-body .content-area .content-certificates button img {
+  width: 55px;
+  height: 55px;
+  transition: transform 0.2s ease;
 }
 
-.modal-package-info {
+.modal-body .content-area .content-adet {
+  width: 100px;
+  height: 60px;
+  background-color: #efefef;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.modal-body .content-area .content-adet #adet {
+  width: 100%;
+  appearance: textfield;
+  -moz-appearance: textfield;
+  text-align: center;
+}
+
+.modal-body .content-area .content-adet #adet::-webkit-outer-spin-button,
+.modal-body .content-area .content-adet #adet::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.modal-body .content-area .content-buy {
+  background-color: #ff4c4c;
+  width: 100%;
+  height: 60px;
+  color: white;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.modal-body .content-area .content-links .link {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 5px;
   font-size: 14px;
-  color: #666;
 }
 
-.modal-actions {
-  margin-top: auto;
+.modal-body .content-area .content-links .link img {
+  height: 25px;
+  width: auto;
 }
+
+
 
 .add-to-cart-btn {
   width: 100%;
@@ -1198,145 +1242,6 @@ footer a {
   .play-circle-text {
     animation: none !important;
   }
-}
-
-/* #endregion */
-
-/* #region urun detay */
-
-.urun .image-area {
-  width: calc(5/9 * 100%);
-  height: 100%;
-}
-
-.urun .image-area .image-roof {
-  margin-bottom: 15px;
-  width: 25%;
-}
-
-.urun .image-area .image-roof ul li {
-  display: flex;
-  justify-content: center;
-  width: auto;
-}
-
-.urun .image-area .image-roof #roof-img {
-  height: 120px;
-}
-
-.urun .image-area .image-main {
-  width: 75%;
-  background-color: #EFEFEF;
-}
-
-.urun .image-area .image-main {
-  width: 100%;
-  background-color: #EFEFEF;
-}
-
-.urun .image-area .image-main #main-img {
-  width: 100%;
-  height: fit-content;
-}
-
-.urun .content-area {
-  width: calc(4/9 * 100%);
-  height: fit-content;
-}
-
-.urun .content-area .content-title .favorite-icon {
-  font-size: 28px;
-}
-
-.urun .content-area .content-code {
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.urun .content-area .content-quantity {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.urun .content-area .content-much span {
-  font-size: 20px;
-  margin-left: 10px;
-}
-
-.urun .content-area .content-much input {
-  height: 20px;
-  width: 20px;
-}
-
-.urun .content-area .content-much ul li {
-  display: flex;
-  align-items: center;
-}
-
-.urun .content-area .content-price {
-  font-size: 28px;
-  font-weight: 500;
-}
-
-.urun .content-area .content-description {
-  font-size: 20px;
-  margin: 80px 0 40px 0;
-}
-
-.urun .content-area .content-certificates {
-  padding: 10px 0 10px 0;
-  display: flex;
-  gap: 15px;
-}
-
-.urun .content-area .content-certificates button img {
-  width: 55px;
-  height: 55px;
-  transition: transform 0.2s ease;
-}
-
-.urun .content-area .content-adet {
-  width: 100px;
-  height: 60px;
-  background-color: #efefef;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.urun .content-area .content-adet #adet {
-  width: 100%;
-  appearance: textfield;
-  -moz-appearance: textfield;
-  text-align: center;
-}
-
-.urun .content-area .content-adet #adet::-webkit-outer-spin-button,
-.urun .content-area .content-adet #adet::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.urun .content-area .content-buy {
-  background-color: #ff4c4c;
-  width: 100%;
-  height: 60px;
-  color: white;
-  border-radius: 10px;
-  font-weight: 500;
-  font-size: 20px;
-}
-
-.urun .content-area .content-links .link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 5px;
-  font-size: 14px;
-}
-
-.urun .content-area .content-links .link img {
-  height: 25px;
-  width: auto;
 }
 
 /* #endregion */
