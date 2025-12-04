@@ -1,3 +1,231 @@
+const productData = {
+  'Klasik': [
+    { name: 'Balık Köftesi Klasik', img: 'yemek1.webp', quantity: '200gr, 4 adet', price: '300 TL', discount: null, packagePrice: '1200 TL / Paket', packageCount: 'Koli İçi Adet: 20' },
+    { name: 'Balık Köftesi Baharatlı', img: 'yemek2.webp', quantity: '200gr, 4 adet', price: '320 TL', discount: null, packagePrice: '1280 TL / Paket', packageCount: 'Koli İçi Adet: 20' },
+    { name: 'Balık Köftesi Fırın', img: 'yemek3.webp', quantity: '200gr, 4 adet', price: '350 TL', discount: { percent: 25, oldPrice: '500 TL' }, packagePrice: '1400 TL / Paket', packageCount: 'Koli İçi Adet: 20' },
+    { name: 'Balık Köftesi Izgara', img: 'yemek1.webp', quantity: '200gr, 4 adet', price: '330 TL', discount: null, packagePrice: '1320 TL / Paket', packageCount: 'Koli İçi Adet: 20' },
+    { name: 'Balık Köftesi Soğanlı', img: 'yemek2.webp', quantity: '200gr, 4 adet', price: '310 TL', discount: null, packagePrice: '1240 TL / Paket', packageCount: 'Koli İçi Adet: 20' },
+    { name: 'Balık Köftesi Acılı', img: 'yemek3.webp', quantity: '200gr, 4 adet', price: '340 TL', discount: { percent: 20, oldPrice: '450 TL' }, packagePrice: '1360 TL / Paket', packageCount: 'Koli İçi Adet: 20' },
+    { name: 'Balık Köftesi Klasik Büyük', img: 'yemek1.webp', quantity: '250gr, 4 adet', price: '380 TL', discount: null, packagePrice: '1520 TL / Paket', packageCount: 'Koli İçi Adet: 16' },
+    { name: 'Balık Köftesi Özel', img: 'yemek2.webp', quantity: '200gr, 4 adet', price: '360 TL', discount: null, packagePrice: '1440 TL / Paket', packageCount: 'Koli İçi Adet: 20' }
+  ],
+  'Retail': [
+    { name: 'Tortilla Balıklı', img: 'yemek4.jpeg', quantity: '200gr, 4 adet', price: '280 TL', discount: null, packagePrice: '1120 TL / Paket', packageCount: 'Koli İçi Adet: 20' },
+    { name: 'Kalamar Halkası', img: 'yemek5.jpeg', quantity: '250gr, 6 adet', price: '450 TL', discount: { percent: 15, oldPrice: '550 TL' }, packagePrice: '1800 TL / Paket', packageCount: 'Koli İçi Adet: 15' },
+    { name: 'Karides Tava', img: 'yemek6.webp', quantity: '200gr, 8 adet', price: '500 TL', discount: null, packagePrice: '2000 TL / Paket', packageCount: 'Koli İçi Adet: 12' },
+    { name: 'Somon Fileto', img: 'yemek7.jpeg', quantity: '300gr, 2 adet', price: '600 TL', discount: { percent: 10, oldPrice: '700 TL' }, packagePrice: '1200 TL / Paket', packageCount: 'Koli İçi Adet: 10' },
+    { name: 'Levrek Izgara', img: 'yemek8.webp', quantity: '250gr, 3 adet', price: '550 TL', discount: null, packagePrice: '1650 TL / Paket', packageCount: 'Koli İçi Adet: 12' },
+    { name: 'Çipura Fırın', img: 'yemek9.webp', quantity: '300gr, 2 adet', price: '580 TL', discount: null, packagePrice: '1160 TL / Paket', packageCount: 'Koli İçi Adet: 10' },
+    { name: 'Mürekkep Balığı', img: 'yemek10.webp', quantity: '200gr, 5 adet', price: '420 TL', discount: { percent: 30, oldPrice: '650 TL' }, packagePrice: '1680 TL / Paket', packageCount: 'Koli İçi Adet: 18' },
+    { name: 'Ahtapot Salatası', img: 'yemek1.webp', quantity: '250gr, 4 adet', price: '480 TL', discount: null, packagePrice: '1920 TL / Paket', packageCount: 'Koli İçi Adet: 16' }
+  ],
+  'Marinat': [
+    { name: 'Balık Köftesi Marinatlı', img: 'yemek2.webp', quantity: '200gr, 4 adet', price: '350 TL', discount: null, packagePrice: '1400 TL / Paket', packageCount: 'Koli İçi Adet: 20' },
+    { name: 'Somon Marinat', img: 'yemek3.webp', quantity: '300gr, 2 adet', price: '650 TL', discount: { percent: 20, oldPrice: '850 TL' }, packagePrice: '1300 TL / Paket', packageCount: 'Koli İçi Adet: 10' },
+    { name: 'Levrek Marinat', img: 'yemek4.jpeg', quantity: '250gr, 3 adet', price: '600 TL', discount: null, packagePrice: '1800 TL / Paket', packageCount: 'Koli İçi Adet: 12' },
+    { name: 'Çipura Marinat', img: 'yemek5.jpeg', quantity: '300gr, 2 adet', price: '620 TL', discount: null, packagePrice: '1240 TL / Paket', packageCount: 'Koli İçi Adet: 10' },
+    { name: 'Kalamar Marinat', img: 'yemek6.webp', quantity: '250gr, 6 adet', price: '480 TL', discount: { percent: 25, oldPrice: '680 TL' }, packagePrice: '1920 TL / Paket', packageCount: 'Koli İçi Adet: 15' },
+    { name: 'Karides Marinat', img: 'yemek7.jpeg', quantity: '200gr, 8 adet', price: '550 TL', discount: null, packagePrice: '2200 TL / Paket', packageCount: 'Koli İçi Adet: 12' },
+    { name: 'Mürekkep Marinat', img: 'yemek8.webp', quantity: '200gr, 5 adet', price: '450 TL', discount: null, packagePrice: '1800 TL / Paket', packageCount: 'Koli İçi Adet: 18' },
+    { name: 'Ahtapot Marinat', img: 'yemek9.webp', quantity: '250gr, 4 adet', price: '520 TL', discount: { percent: 15, oldPrice: '650 TL' }, packagePrice: '2080 TL / Paket', packageCount: 'Koli İçi Adet: 16' }
+  ],
+  'Skinpack': [
+    { name: 'Balık Köftesi Skinpack', img: 'yemek10.webp', quantity: '200gr, 4 adet', price: '320 TL', discount: null, packagePrice: '1280 TL / Paket', packageCount: 'Koli İçi Adet: 20' },
+    { name: 'Somon Skinpack', img: 'yemek1.webp', quantity: '300gr, 2 adet', price: '680 TL', discount: { percent: 10, oldPrice: '780 TL' }, packagePrice: '1360 TL / Paket', packageCount: 'Koli İçi Adet: 10' },
+    { name: 'Levrek Skinpack', img: 'yemek2.webp', quantity: '250gr, 3 adet', price: '620 TL', discount: null, packagePrice: '1860 TL / Paket', packageCount: 'Koli İçi Adet: 12' },
+    { name: 'Çipura Skinpack', img: 'yemek3.webp', quantity: '300gr, 2 adet', price: '640 TL', discount: null, packagePrice: '1280 TL / Paket', packageCount: 'Koli İçi Adet: 10' },
+    { name: 'Kalamar Skinpack', img: 'yemek4.jpeg', quantity: '250gr, 6 adet', price: '500 TL', discount: { percent: 20, oldPrice: '650 TL' }, packagePrice: '2000 TL / Paket', packageCount: 'Koli İçi Adet: 15' },
+    { name: 'Karides Skinpack', img: 'yemek5.jpeg', quantity: '200gr, 8 adet', price: '570 TL', discount: null, packagePrice: '2280 TL / Paket', packageCount: 'Koli İçi Adet: 12' },
+    { name: 'Mürekkep Skinpack', img: 'yemek6.webp', quantity: '200gr, 5 adet', price: '470 TL', discount: null, packagePrice: '1880 TL / Paket', packageCount: 'Koli İçi Adet: 18' },
+    { name: 'Ahtapot Skinpack', img: 'yemek7.jpeg', quantity: '250gr, 4 adet', price: '540 TL', discount: { percent: 25, oldPrice: '750 TL' }, packagePrice: '2160 TL / Paket', packageCount: 'Koli İçi Adet: 16' }
+  ],
+  'Gurme': [
+    { name: 'Gurme Balık Köftesi', img: 'yemek8.webp', quantity: '200gr, 4 adet', price: '400 TL', discount: null, packagePrice: '1600 TL / Paket', packageCount: 'Koli İçi Adet: 20' },
+    { name: 'Gurme Somon', img: 'yemek9.webp', quantity: '300gr, 2 adet', price: '750 TL', discount: { percent: 15, oldPrice: '900 TL' }, packagePrice: '1500 TL / Paket', packageCount: 'Koli İçi Adet: 10' },
+    { name: 'Gurme Levrek', img: 'yemek10.webp', quantity: '250gr, 3 adet', price: '700 TL', discount: null, packagePrice: '2100 TL / Paket', packageCount: 'Koli İçi Adet: 12' },
+    { name: 'Gurme Çipura', img: 'yemek1.webp', quantity: '300gr, 2 adet', price: '720 TL', discount: null, packagePrice: '1440 TL / Paket', packageCount: 'Koli İçi Adet: 10' },
+    { name: 'Gurme Kalamar', img: 'yemek2.webp', quantity: '250gr, 6 adet', price: '580 TL', discount: { percent: 20, oldPrice: '750 TL' }, packagePrice: '2320 TL / Paket', packageCount: 'Koli İçi Adet: 15' },
+    { name: 'Gurme Karides', img: 'yemek3.webp', quantity: '200gr, 8 adet', price: '650 TL', discount: null, packagePrice: '2600 TL / Paket', packageCount: 'Koli İçi Adet: 12' },
+    { name: 'Gurme Mürekkep', img: 'yemek4.jpeg', quantity: '200gr, 5 adet', price: '550 TL', discount: null, packagePrice: '2200 TL / Paket', packageCount: 'Koli İçi Adet: 18' },
+    { name: 'Gurme Ahtapot', img: 'yemek5.jpeg', quantity: '250gr, 4 adet', price: '620 TL', discount: { percent: 10, oldPrice: '720 TL' }, packagePrice: '2480 TL / Paket', packageCount: 'Koli İçi Adet: 16' }
+  ],
+  'Füme': [
+    { name: 'Füme Balık Köftesi', img: 'yemek6.webp', quantity: '200gr, 4 adet', price: '380 TL', discount: null, packagePrice: '1520 TL / Paket', packageCount: 'Koli İçi Adet: 20' },
+    { name: 'Füme Somon', img: 'yemek7.jpeg', quantity: '300gr, 2 adet', price: '720 TL', discount: { percent: 25, oldPrice: '1000 TL' }, packagePrice: '1440 TL / Paket', packageCount: 'Koli İçi Adet: 10' },
+    { name: 'Füme Levrek', img: 'yemek8.webp', quantity: '250gr, 3 adet', price: '680 TL', discount: null, packagePrice: '2040 TL / Paket', packageCount: 'Koli İçi Adet: 12' },
+    { name: 'Füme Çipura', img: 'yemek9.webp', quantity: '300gr, 2 adet', price: '700 TL', discount: null, packagePrice: '1400 TL / Paket', packageCount: 'Koli İçi Adet: 10' },
+    { name: 'Füme Kalamar', img: 'yemek10.webp', quantity: '250gr, 6 adet', price: '560 TL', discount: { percent: 15, oldPrice: '680 TL' }, packagePrice: '2240 TL / Paket', packageCount: 'Koli İçi Adet: 15' },
+    { name: 'Füme Karides', img: 'yemek1.webp', quantity: '200gr, 8 adet', price: '630 TL', discount: null, packagePrice: '2520 TL / Paket', packageCount: 'Koli İçi Adet: 12' },
+    { name: 'Füme Mürekkep', img: 'yemek2.webp', quantity: '200gr, 5 adet', price: '530 TL', discount: null, packagePrice: '2120 TL / Paket', packageCount: 'Koli İçi Adet: 18' },
+    { name: 'Füme Ahtapot', img: 'yemek3.webp', quantity: '250gr, 4 adet', price: '600 TL', discount: { percent: 20, oldPrice: '780 TL' }, packagePrice: '2400 TL / Paket', packageCount: 'Koli İçi Adet: 16' }
+  ],
+  'Hamurlular': [
+    { name: 'Balık Köftesi Hamurlu', img: 'yemek4.jpeg', quantity: '200gr, 4 adet', price: '360 TL', discount: null, packagePrice: '1440 TL / Paket', packageCount: 'Koli İçi Adet: 20' },
+    { name: 'Somon Hamurlu', img: 'yemek5.jpeg', quantity: '300gr, 2 adet', price: '730 TL', discount: { percent: 10, oldPrice: '850 TL' }, packagePrice: '1460 TL / Paket', packageCount: 'Koli İçi Adet: 10' },
+    { name: 'Levrek Hamurlu', img: 'yemek6.webp', quantity: '250gr, 3 adet', price: '690 TL', discount: null, packagePrice: '2070 TL / Paket', packageCount: 'Koli İçi Adet: 12' },
+    { name: 'Çipura Hamurlu', img: 'yemek7.jpeg', quantity: '300gr, 2 adet', price: '710 TL', discount: null, packagePrice: '1420 TL / Paket', packageCount: 'Koli İçi Adet: 10' },
+    { name: 'Kalamar Hamurlu', img: 'yemek8.webp', quantity: '250gr, 6 adet', price: '570 TL', discount: { percent: 30, oldPrice: '850 TL' }, packagePrice: '2280 TL / Paket', packageCount: 'Koli İçi Adet: 15' },
+    { name: 'Karides Hamurlu', img: 'yemek9.webp', quantity: '200gr, 8 adet', price: '640 TL', discount: null, packagePrice: '2560 TL / Paket', packageCount: 'Koli İçi Adet: 12' },
+    { name: 'Mürekkep Hamurlu', img: 'yemek10.webp', quantity: '200gr, 5 adet', price: '540 TL', discount: null, packagePrice: '2160 TL / Paket', packageCount: 'Koli İçi Adet: 18' },
+    { name: 'Ahtapot Hamurlu', img: 'yemek1.webp', quantity: '250gr, 4 adet', price: '610 TL', discount: { percent: 15, oldPrice: '750 TL' }, packagePrice: '2440 TL / Paket', packageCount: 'Koli İçi Adet: 16' }
+  ],
+  'Tümünü Göster': [
+    { name: 'Balık Köftesi Mix', img: 'yemek2.webp', quantity: '200gr, 4 adet', price: '340 TL', discount: null, packagePrice: '1360 TL / Paket', packageCount: 'Koli İçi Adet: 20' },
+    { name: 'Somon Fileto', img: 'yemek3.webp', quantity: '300gr, 2 adet', price: '670 TL', discount: { percent: 20, oldPrice: '850 TL' }, packagePrice: '1340 TL / Paket', packageCount: 'Koli İçi Adet: 10' },
+    { name: 'Levrek Izgara', img: 'yemek4.jpeg', quantity: '250gr, 3 adet', price: '630 TL', discount: null, packagePrice: '1890 TL / Paket', packageCount: 'Koli İçi Adet: 12' },
+    { name: 'Çipura Fırın', img: 'yemek5.jpeg', quantity: '300gr, 2 adet', price: '650 TL', discount: null, packagePrice: '1300 TL / Paket', packageCount: 'Koli İçi Adet: 10' },
+    { name: 'Kalamar Halkası', img: 'yemek6.webp', quantity: '250gr, 6 adet', price: '520 TL', discount: { percent: 25, oldPrice: '720 TL' }, packagePrice: '2080 TL / Paket', packageCount: 'Koli İçi Adet: 15' },
+    { name: 'Karides Tava', img: 'yemek7.jpeg', quantity: '200gr, 8 adet', price: '590 TL', discount: null, packagePrice: '2360 TL / Paket', packageCount: 'Koli İçi Adet: 12' },
+    { name: 'Mürekkep Balığı', img: 'yemek8.webp', quantity: '200gr, 5 adet', price: '490 TL', discount: null, packagePrice: '1960 TL / Paket', packageCount: 'Koli İçi Adet: 18' },
+    { name: 'Ahtapot Salatası', img: 'yemek9.webp', quantity: '250gr, 4 adet', price: '570 TL', discount: { percent: 10, oldPrice: '650 TL' }, packagePrice: '2280 TL / Paket', packageCount: 'Koli İçi Adet: 16' }
+  ]
+};
+
+function renderProducts(category) {
+  const productsArea = document.querySelector('.products-area');
+  const products = productData[category];
+  let html = '';
+  products.forEach(product => {
+    let badge = '<span class="nothing"></span>';
+    if (product.discount) badge = '<span class="offsale"></span>';
+    let priceHtml = `<span class="my-5 font-medium">${product.price}</span>`;
+    if (product.discount) {
+      priceHtml = `<div class="offsale f ic">
+        <i class="fa-solid fa-caret-down text-(--fish-red) text-4xl"></i>
+        <span class="ml-1">%${product.discount.percent}</span>
+        <span class="line-through opacity-60 ml-2">${product.discount.oldPrice}</span>
+        <span class="font-medium text-(--fish-red) ml-2">${product.price}</span>
+      </div>`;
+    }
+    html += `
+      <div class="products-box group">
+        <div class="products-card" data-href="#">
+          <div class="image-area r">
+            ${badge}
+            <img src="assets/images/${product.img}" alt="">
+            <div class="fast-buttons">
+              <button>
+                <i class="fa-regular fa-eye text-lg"></i>
+              </button>
+              <button class="opencart-btn">
+                <i class="fa-brands fa-opencart text-lg"></i>
+              </button>
+            </div>
+          </div>
+          <div class="title-area">
+            <div class="f jb ic">
+              <span>${product.name}</span>
+              <i class="fa-regular fa-heart favorite-icon"></i>
+            </div>
+            <span class="quantity">${product.quantity}</span>
+            ${priceHtml}
+            <div class="f jb ic quantity">
+              <span>${product.packagePrice}</span>
+              <span>${product.packageCount}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+  productsArea.innerHTML = html;
+  attachProductEvents();
+}
+
+function attachProductEvents() {
+  // Favorite icons
+  document.querySelectorAll('.favorite-icon').forEach(function (icon) {
+    icon.addEventListener('click', function () {
+      if (this.classList.contains('fa-regular')) {
+        this.classList.remove('fa-regular');
+        this.classList.add('fa-solid');
+        this.style.color = 'var(--fish-red)';
+      } else {
+        this.classList.remove('fa-solid');
+        this.classList.add('fa-regular');
+        this.style.color = '';
+      }
+    });
+  });
+
+  // Opencart buttons
+  document.querySelectorAll('.opencart-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const icon = btn.querySelector('i');
+      if (icon.classList.contains('fa-opencart')) {
+        icon.classList.remove('fa-opencart', 'fa-brands');
+        icon.classList.add('fa-check', 'fa-solid', 'animate-bounce');
+        icon.style.color = 'var(--fish-green)';
+        setTimeout(function () {
+          icon.classList.remove('animate-bounce');
+        }, 600);
+      } else {
+        icon.classList.remove('fa-check', 'fa-solid');
+        icon.classList.add('fa-opencart', 'fa-brands');
+        icon.style.color = '';
+      }
+    });
+  });
+
+  // Product card clicks
+  document.querySelectorAll('.products-card').forEach(card => {
+    card.addEventListener('click', e => {
+      if (e.target.closest('button') || e.target.closest('.favorite-icon')) return;
+      const url = card.dataset.href;
+      if (url) {
+        window.location.href = url;
+      }
+    });
+  });
+
+  // Eye button for modal
+  document.querySelectorAll('.fast-buttons button:first-child').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const card = btn.closest('.products-card');
+      if (!card) return;
+      const img = card.querySelector('.image-area img');
+      const imageSrc = img ? img.src : '';
+      const badgeSpan = card.querySelector('.image-area span:not(.fast-buttons)');
+      let badgeText = '';
+      if (badgeSpan) {
+        const classes = badgeSpan.className.split(' ');
+        if (classes.includes('guluten-free')) badgeText = 'Gluten Free';
+        else if (classes.includes('offsale')) badgeText = 'İndirim';
+        else if (classes.includes('new')) badgeText = 'Yeni';
+      }
+      const titleSpan = card.querySelector('.title-area span');
+      const productName = titleSpan ? titleSpan.textContent.trim() : '';
+      const quantitySpan = card.querySelector('.title-area .quantity');
+      const quantity = quantitySpan ? quantitySpan.textContent.trim() : '';
+      let price = '';
+      const priceSpan = card.querySelector('.title-area .my-5');
+      if (priceSpan) {
+        price = priceSpan.textContent.trim();
+      } else {
+        const offsalePrice = card.querySelector('.offsale .font-medium');
+        if (offsalePrice) {
+          price = offsalePrice.textContent.trim();
+        }
+      }
+      const packageDiv = card.querySelector('.title-area .quantity:last-of-type');
+      let packagePrice = '';
+      let packageCount = '';
+      if (packageDiv) {
+        const spans = packageDiv.querySelectorAll('span');
+        if (spans.length >= 2) {
+          packagePrice = spans[0].textContent.trim();
+          packageCount = spans[1].textContent.trim();
+        }
+      }
+      document.getElementById('main-img').src = imageSrc;
+      document.querySelector('.content-title h2').textContent = productName;
+      document.getElementById('price').textContent = price.replace('TL', '').trim();
+      productModal.classList.remove('hidden');
+    });
+  });
+}
+
 let lastScroll = 0;
 const topbar = document.getElementById('topbar');
 const header = document.getElementById('header');
@@ -31,6 +259,8 @@ if (navbarList) {
         item.classList.remove('active');
       });
       this.classList.add('active');
+      const category = this.querySelector('a').textContent.trim();
+      renderProducts(category);
     });
   });
 }
@@ -454,3 +684,6 @@ gridButtons.forEach((button, index) => {
                 mainImg.src = img.src;
             });
         });
+
+// Initial render
+renderProducts('Klasik');
