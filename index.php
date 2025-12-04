@@ -606,6 +606,7 @@
                 <?php
                 $label = "İncele";
                 $right = "17";
+                $link = "/sef-list.php";
                 include "includes/fish-button.php"
                     ?>
             </div>
@@ -964,6 +965,9 @@
     <?php include "includes/product-info-modal.php" ?>
     <?php include "includes/sepet-modal.php" ?>
     <?php include "includes/whatsapp-contact.php" ?>
+    <?php include "includes/soru-sor.php" ?>
+    <?php include "includes/not-ekle.php" ?>
+    <?php include "includes/share-modal.php" ?>
     <script src="assets/scripts/script.js"></script>
 </body>
 

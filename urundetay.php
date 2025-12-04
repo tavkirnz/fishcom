@@ -108,7 +108,7 @@
                         <img src="assets/images/not.png" alt="">
                         <span>Siparişe Not Ekle</span>
                     </div>
-                    <div class="link">
+                    <div class="link" id="shareLink">
                         <img src="assets/images/paylas.png" alt="">
                         <span>Paylaş</span>
                     </div>
@@ -446,6 +446,7 @@
     <?php include 'includes/product-info-modal.php' ?>
     <?php include 'includes/sepet-modal.php' ?>
     <?php include "includes/whatsapp-contact.php" ?>
+    <?php include "includes/share-modal.php" ?>
     
     <!-- Certificate Modal -->
     <div id="certificateModal" class="modal hidden">
@@ -465,6 +466,7 @@
     </div>
     <?php include 'includes/not-ekle.php' ?>
     <?php include 'includes/soru-sor.php' ?>
+    <?php include 'includes/share-modal.php' ?>
     <script src="assets/scripts/script.js"></script>
 
     <script>
@@ -663,59 +665,7 @@
             }
         });
 
-        // Note Modal Functionality
-        document.getElementById('addNoteLink').addEventListener('click', function() {
-            document.getElementById('noteModal').classList.remove('hidden');
-        });
-
-        document.getElementById('closeNoteModal').addEventListener('click', function() {
-            document.getElementById('noteModal').classList.add('hidden');
-        });
-
-        document.getElementById('cancelNote').addEventListener('click', function() {
-            document.getElementById('noteModal').classList.add('hidden');
-        });
-
-        document.getElementById('saveNote').addEventListener('click', function() {
-            const note = document.getElementById('orderNote').value;
-            // Here you can save the note, e.g., send to server or store locally
-            alert('Not kaydedildi: ' + note);
-            document.getElementById('noteModal').classList.add('hidden');
-        });
-
-        // Close note modal when clicking outside
-        document.getElementById('noteModal').addEventListener('click', function(event) {
-            if (event.target === this) {
-                this.classList.add('hidden');
-            }
-        });
-
-        // Question Modal Functionality
-        document.getElementById('askQuestionLink').addEventListener('click', function() {
-            document.getElementById('questionModal').classList.remove('hidden');
-        });
-
-        document.getElementById('closeQuestionModal').addEventListener('click', function() {
-            document.getElementById('questionModal').classList.add('hidden');
-        });
-
-        document.getElementById('cancelQuestion').addEventListener('click', function() {
-            document.getElementById('questionModal').classList.add('hidden');
-        });
-
-        document.getElementById('sendQuestion').addEventListener('click', function() {
-            const question = document.getElementById('questionText').value;
-            // Here you can send the question, e.g., send to server
-            alert('Soru gönderildi: ' + question);
-            document.getElementById('questionModal').classList.add('hidden');
-        });
-
-        // Close question modal when clicking outside
-        document.getElementById('questionModal').addEventListener('click', function(event) {
-            if (event.target === this) {
-                this.classList.add('hidden');
-            }
-        });
+        
     </script>
 
     

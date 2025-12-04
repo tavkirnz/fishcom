@@ -60,15 +60,15 @@
                         <button class="content-buy">Sepete Ekle</button>
                     </div>
                     <div class="content-links ic jb f">
-                        <div class="link">
+                        <div class="link" id="askQuestionLink">
                             <img src="assets/images/yardim.png" alt="">
                             <span>Soru Sor</span>
                         </div>
-                        <div class="link">
+                        <div class="link" id="addNoteLink">
                             <img src="assets/images/not.png" alt="">
                             <span>Siparişe Not Ekle</span>
                         </div>
-                        <div class="link">
+                        <div class="link" id="shareLink">
                             <img src="assets/images/paylas.png" alt="">
                             <span>Paylaş</span>
                         </div>

@@ -180,6 +180,9 @@ section.hero {
 /* #endregion */
 
 /* #region Products */
+.products-area {
+  transition: all 0.5s ease;
+}
 /* in global.css */
 /* #endregion */
 
