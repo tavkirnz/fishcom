@@ -86,9 +86,9 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet euismod libero.
                 </div>
                 <div class="content-certificates">
-                    <button id="button-image"><img src="assets/images/butonloggo.png"></button>
-                    <button id="button-image"><img src="assets/images/butonloggok.png"></button>
-                    <button id="button-image"><img src="assets/images/butonloggoy.png"></button>
+                    <button id="cert1" class="certificate-btn"><img src="assets/images/butonloggo.png"></button>
+                    <button id="cert2" class="certificate-btn"><img src="assets/images/butonloggok.png"></button>
+                    <button id="cert3" class="certificate-btn"><img src="assets/images/butonloggoy.png"></button>
                 </div>
                 <hr>
                 <div class="f ic jb my-10 gap-5">
@@ -100,11 +100,11 @@
                     <button class="content-buy">Sepete Ekle</button>
                 </div>
                 <div class="content-links ic jb f">
-                    <div class="link">
+                    <div class="link" id="askQuestionLink">
                         <img src="assets/images/yardim.png" alt="">
                         <span>Soru Sor</span>
                     </div>
-                    <div class="link">
+                    <div class="link" id="addNoteLink">
                         <img src="assets/images/not.png" alt="">
                         <span>Siparişe Not Ekle</span>
                     </div>
@@ -445,6 +445,8 @@
     <?php include 'includes/footer.php' ?>
     <?php include 'includes/product-info-modal.php' ?>
     <?php include 'includes/sepet-modal.php' ?>
+    <?php include 'includes/not-ekle.php' ?>
+    <?php include 'includes/soru-sor.php' ?>
     <script src="assets/scripts/script.js"></script>
 
     <script>
@@ -600,6 +602,62 @@
             fiyatiGuncelle();
         });
 
+    </script>
+
+    <script>
+        // Note Modal Functionality
+        document.getElementById('addNoteLink').addEventListener('click', function() {
+            document.getElementById('noteModal').classList.remove('hidden');
+        });
+
+        document.getElementById('closeNoteModal').addEventListener('click', function() {
+            document.getElementById('noteModal').classList.add('hidden');
+        });
+
+        document.getElementById('cancelNote').addEventListener('click', function() {
+            document.getElementById('noteModal').classList.add('hidden');
+        });
+
+        document.getElementById('saveNote').addEventListener('click', function() {
+            const note = document.getElementById('orderNote').value;
+            // Here you can save the note, e.g., send to server or store locally
+            alert('Not kaydedildi: ' + note);
+            document.getElementById('noteModal').classList.add('hidden');
+        });
+
+        // Close note modal when clicking outside
+        document.getElementById('noteModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                this.classList.add('hidden');
+            }
+        });
+
+        // Question Modal Functionality
+        document.getElementById('askQuestionLink').addEventListener('click', function() {
+            document.getElementById('questionModal').classList.remove('hidden');
+        });
+
+        document.getElementById('closeQuestionModal').addEventListener('click', function() {
+            document.getElementById('questionModal').classList.add('hidden');
+        });
+
+        document.getElementById('cancelQuestion').addEventListener('click', function() {
+            document.getElementById('questionModal').classList.add('hidden');
+        });
+
+        document.getElementById('sendQuestion').addEventListener('click', function() {
+            const question = document.getElementById('questionText').value;
+            // Here you can send the question, e.g., send to server
+            alert('Soru gönderildi: ' + question);
+            document.getElementById('questionModal').classList.add('hidden');
+        });
+
+        // Close question modal when clicking outside
+        document.getElementById('questionModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                this.classList.add('hidden');
+            }
+        });
     </script>
 </body>
 

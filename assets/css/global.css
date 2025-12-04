@@ -1245,3 +1245,186 @@ footer a {
 }
 
 /* #endregion */
+
+/* #region Note Modal */
+.note-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.note-modal-overlay:not(.hidden) {
+  visibility: visible;
+  opacity: 1;
+}
+
+.note-modal {
+  background: white;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.note-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.note-modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.note-close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.note-modal-body {
+  padding: 20px;
+}
+
+.note-modal-body textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  resize: vertical;
+}
+
+.note-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.note-modal-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#saveNote {
+  background: var(--fish-red);
+  color: white;
+}
+
+#cancelNote {
+  background: #ccc;
+}
+#addNoteLink{
+  cursor: pointer;
+}
+
+/* #endregion */
+
+/* #region Question Modal */
+.question-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.question-modal-overlay:not(.hidden) {
+  visibility: visible;
+  opacity: 1;
+}
+
+.question-modal {
+  background: white;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.question-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.question-modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.question-close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.question-modal-body {
+  padding: 20px;
+}
+
+.question-modal-body textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  resize: vertical;
+}
+
+.question-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.question-modal-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#sendQuestion {
+  background: var(--fish-red);
+  color: white;
+}
+
+#cancelQuestion {
+  background: #ccc;
+}
+
+#askQuestionLink {
+  cursor: pointer;
+}
+
+/* #endregion */

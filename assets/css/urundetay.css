@@ -85,10 +85,16 @@
   gap: 15px;
 }
 
+.urun .content-area .content-certificates button {
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+.urun .content-area .content-certificates button:hover {
+  transform: translateY(-5px);
+}
 .urun .content-area .content-certificates button img {
   width: 55px;
   height: 55px;
-  transition: transform 0.2s ease;
 }
 
 .urun .content-area .content-adet {
