@@ -1428,3 +1428,87 @@ footer a {
 }
 
 /* #endregion */
+/* #region WhatsApp Button */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 28px;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-btn i {
+  position: relative;
+  z-index: 10;
+}
+
+/* Pulse Animation */
+.whatsapp-pulse {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #25D366;
+  border-radius: 50%;
+  animation: pulse 3s infinite;
+}
+
+.whatsapp-pulse:nth-child(1) {
+  animation-delay: 0s;
+  opacity: 1;
+}
+
+.whatsapp-pulse:nth-child(2) {
+  animation-delay: 1s;
+  opacity: 0.8;
+}
+
+.whatsapp-pulse:nth-child(3) {
+  animation-delay: 2s;
+  opacity: 0.6;
+}
+
+.whatsapp-btn:hover .whatsapp-pulse {
+  animation: pulse 1s infinite;
+}
+
+.whatsapp-btn:hover .whatsapp-pulse:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.whatsapp-btn:hover .whatsapp-pulse:nth-child(2) {
+  animation-delay: 0.50s;
+}
+
+.whatsapp-btn:hover .whatsapp-pulse:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+
+/* #endregion*/

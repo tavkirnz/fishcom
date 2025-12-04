@@ -34,8 +34,14 @@
             $active = "Yeni Ürünlerim";
             include "includes/leftmenu.php"
                 ?>
-            <div class="listing-products f fwrap">
-                <?php $tag = "gluten";
+            <div class="right">
+                <section id="uyari" class="f jc bg-(--fish-gold)" style="">
+                    <div class="container py-3 text-center">
+                        Son girişinizden sonraki gelen yeni ürünler!
+                    </div>
+                </section>
+                <div class="listing-products f fwrap">
+                    <?php $tag = "gluten";
                     include "includes/geciciurun.php" ?>
                     <?php $tag = "nothing";
                     include "includes/geciciurun.php" ?>
@@ -59,12 +65,14 @@
                     include "includes/geciciurun.php" ?>
                     <?php $tag = "nothing";
                     include "includes/geciciurun.php" ?>
+                </div>
             </div>
         </div>
     </section>
     <?php include "includes/footer.php" ?>
     <?php include "includes/product-info-modal.php" ?>
     <?php include "includes/sepet-modal.php" ?>
+    <?php include "includes/whatsapp-contact.php" ?>
     <script src="assets/scripts/script.js"></script>
 </body>
 

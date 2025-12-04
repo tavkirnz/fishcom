@@ -164,6 +164,7 @@
     <?php include "includes/footer.php" ?>
     <?php include "includes/product-info-modal.php" ?>
     <?php include "includes/sepet-modal.php" ?>
+    <?php include "includes/whatsapp-contact.php" ?>
     <script src="assets/scripts/script.js"></script>
     <script>
 

@@ -1,3 +1,11 @@
+.right{
+    width: 100%;
+}
+.right #uyari{
+    border-radius: 10px;
+    margin: 0 20px;
+}
+
 .listing-products {
     width: 100%;
 }
@@ -39,4 +47,7 @@
 
 .products-card .image-area .fast-buttons {
     display: none;
+}
+.left{
+    width: 27%;
 }
