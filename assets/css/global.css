@@ -101,11 +101,13 @@ h5 {
 /* #region ---------------Fonts */
 @font-face {
   font-family: "Biro";
-  src: url("assets/fonts/biro-script-plus.ttf") format("truetype");
+  src: url("../fonts/biro-script-plus.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
+.biro {
+  font-family: "Biro";
+}
 /* #endregion */
 
 /* #region ---------------Animations */
