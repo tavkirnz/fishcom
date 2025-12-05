@@ -969,6 +969,7 @@
     <?php include "includes/not-ekle.php" ?>
     <?php include "includes/share-modal.php" ?>
     <script src="assets/scripts/script.js"></script>
+    <script src="assets/scripts/index.js"></script>
 </body>
 
 </html>

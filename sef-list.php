@@ -152,6 +152,21 @@
                     </div>
                 </div>
             </div>
+            <div class="listing-footer f jc ic gap-5">
+                <div class="pagination f ic gap-3">
+                    <button class="prev-page f ic jc">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="page-num active">1</button>
+                    <button class="page-num">2</button>
+                    <button class="page-num">3</button>
+                    <button class="page-num">4</button>
+                    <button class="page-num">5</button>
+                    <button class="next-page f ic jc">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
     <?php include "includes/footer.php" ?>

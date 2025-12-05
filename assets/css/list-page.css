@@ -100,23 +100,7 @@
 .products-card .image-area .fast-buttons {
     display: none;
 }
-.listing-footer{
-    padding-top: 40px;
-}
-.listing-footer button{
-    width: 40px;
-    border-radius: 5px;
-    aspect-ratio: calc(1/1);
-    padding: 5px;
-    border: 1px solid #efefef;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-.listing-footer button:hover,
-.listing-footer button.active{
-    background-color: var(--fish-blue);
-    color: white;
-}
+
 
 /* Grid View Modes */
 .products-box.grid-2col {
