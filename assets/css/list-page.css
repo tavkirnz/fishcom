@@ -8,6 +8,8 @@
 }
 .listing-header .filter-grids{
     font-size: 20px;
+    display: flex;
+    gap: 5px;
 }
 .listing-header .filter-sort #sort {
     border: 1px solid #efefef;
@@ -54,6 +56,11 @@
   align-items: center;
   gap: 5px;
   font-size: 18px;
+}
+.listing-content .filter-cargo .link .image{
+  width: 20%;
+  display: flex;
+    justify-content: center;
 }
 
 
@@ -102,7 +109,7 @@
 }
 
 
-/* Grid View Modes */
+/* #region Grid View Modes */
 .products-box.grid-2col {
     width: calc(1/2 * 100%);
 }
@@ -168,3 +175,10 @@
 .products-box.list-view .title-area .grid-quantity {
   display: none;
 }
+/* #endregion */
+
+
+
+
+
+

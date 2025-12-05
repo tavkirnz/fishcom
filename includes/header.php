@@ -46,7 +46,7 @@
                         </li>
                         <li>
                             <img src="assets/images/yeni.png" alt="">
-                            <a href="#">Yeni Ürünlerim</a>
+                            <a href="/yeni-urunler.php">Yeni Ürünlerim</a>
                         </li>
                         <li>
                             <img src="assets/images/kullanici.png" alt="">
@@ -93,7 +93,7 @@
                 <i id="hamburger-menu" class="fa-solid fa-bars"></i>
                 <ul class="f ic">
                     <li><a href="/list-page.php">Ürünler</a></li>
-                    <li><a href="">Yeni Gelenler</a></li>
+                    <li><a href="/yeni-gelenler.php">Yeni Gelenler</a></li>
                     <li><a href="">Kampanyalar</a></li>
                     <li><a href="">Birlikte Al Kazan</a></li>
                 </ul>

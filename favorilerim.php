@@ -25,7 +25,7 @@
     <?php include "includes/header.php" ?>
     <?php
     $title = "Favorilerim";
-    $crumb = "Anasayfa / Favorilerim";
+    $crumb = " / Favorilerim";
     include "includes/breadcrumb.php";
     ?>
     <section class="f jc">

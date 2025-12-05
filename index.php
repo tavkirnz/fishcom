@@ -451,17 +451,17 @@
     </section>
     <section class="specials f jc">
         <div class="container f fcol ic gap-5 c-s">
-            <div class="specials-title f jb ie">
+            <div class="specials-title f jb ic">
                 <div class="specials-text f fcol">
                     <h2>Mutfak Şeflerinin Tercihleri</h2>
                     <p>Cafe, Restoran, Otel vb. Horeca sektörünün tercih ettiği en güzel lezzetleri sizin için
                         getiriyoruz.</p>
                 </div>
                 <div class="specials-button">
-                    <button class="specials-btn" type="submit">
+                    <a class="specials-btn" href="/sef-list.php">
                         <span class="r z-10">Tümünü Görüntüle</span>
                         <span class="specials-btn-bg"></span>
-                    </button>
+                    </a>
                 </div>
             </div>
             <div class="specials-products f fwrap">
@@ -606,7 +606,7 @@
                 <?php
                 $label = "İncele";
                 $right = "17";
-                $link = "/sef-list.php";
+                $link = "/specials.php";
                 include "includes/fish-button.php"
                     ?>
             </div>
@@ -677,16 +677,16 @@
     </section>
     <section class="newest f jc">
         <div class="container f fcol ic gap-5 c-s">
-            <div class="specials-title f jb ie">
+            <div class="specials-title f jb ic">
                 <div class="specials-text f fcol">
                     <h2>Yeni Gelenler</h2>
                     <div class="bg-[#0691d6] h-1.5 w-2/3"></div>
                 </div>
                 <div class="specials-button">
-                    <button class="specials-btn" type="submit">
+                    <a class="specials-btn" href="/yeni-gelenler.php">
                         <span class="r z-10">Tümünü Görüntüle</span>
                         <span class="specials-btn-bg"></span>
-                    </button>
+                    </a>
                 </div>
             </div>
             <div class="specials-products f fwrap">

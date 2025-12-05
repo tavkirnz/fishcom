@@ -25,7 +25,7 @@
     <?php include "includes/header.php" ?>
     <?php
     $title = "Destek";
-    $crumb = "Anasayfa / Destek";
+    $crumb = " / Destek";
     include "includes/breadcrumb.php"
         ?>
     <section class="flex justify-center pages-content">

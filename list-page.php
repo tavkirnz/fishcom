@@ -11,7 +11,7 @@
     <?php include "includes/header.php" ?>
     <?php
     $title = "Ürünler";
-    $crumb = "Anasayfa / Ürünler";
+    $crumb = " / Ürünler";
     include "includes/breadcrumb.php"
         ?>
 
@@ -98,11 +98,15 @@
                         <span class="title">Kargo ve Teslimat</span>
                         <div class="cargo-content f fcol gap-5 py-10">
                             <div class="link">
-                                <img class="h-7" src="assets/images/img3.png" alt="">
+                                <div class="image">
+                                    <img class="h-7" src="assets/images/img3.png" alt="">
+                                </div>
                                 <span>Bir Günde Teslimat</span>
                             </div>
                             <div class="link">
-                                <img class="h-10" src="assets/images/img9.png" alt="">
+                                <div class="image">
+                                    <img class="h-10" src="assets/images/img9.png" alt="">
+                                </div>
                                 <span>Güvenli Ödeme Sistemi</span>
                             </div>
                         </div>
@@ -166,37 +170,38 @@
     <?php include "includes/sepet-modal.php" ?>
     <?php include "includes/whatsapp-contact.php" ?>
     <script src="assets/scripts/script.js"></script>
+    <script src="assets/scripts/view.js"></script>
     <script>
 
-document.querySelectorAll('#sepete-ekle').forEach(button => {
-  button.addEventListener("click", function () {
-    const adet = this.nextElementSibling;
-    adet.style.display = "flex";
-    this.style.display = "none";
-  });
-});
-document.querySelectorAll('#ekle').forEach(button => {
-  button.addEventListener("click", function () {
-    const adet = this.closest('.content-adet').querySelector('#adet');
-    adet.value = parseInt(adet.value) + 1;
-  });
-});
+        document.querySelectorAll('#sepete-ekle').forEach(button => {
+            button.addEventListener("click", function () {
+                const adet = this.nextElementSibling;
+                adet.style.display = "flex";
+                this.style.display = "none";
+            });
+        });
+        document.querySelectorAll('#ekle').forEach(button => {
+            button.addEventListener("click", function () {
+                const adet = this.closest('.content-adet').querySelector('#adet');
+                adet.value = parseInt(adet.value) + 1;
+            });
+        });
 
-document.querySelectorAll('#cikar').forEach(button => {
-  button.addEventListener("click", function () {
-    const contentAdet = this.closest('.content-adet');
-    const adet = contentAdet.querySelector('#adet');
-    const adetSayi = parseInt(adet.value);
+        document.querySelectorAll('#cikar').forEach(button => {
+            button.addEventListener("click", function () {
+                const contentAdet = this.closest('.content-adet');
+                const adet = contentAdet.querySelector('#adet');
+                const adetSayi = parseInt(adet.value);
 
-    if (adetSayi > 1) {
-      adet.value = adetSayi - 1;
-    } else if (adetSayi === 1) {
-      // Adet 1'se, input'u gizle ve sepete ekle butonunu göster
-      contentAdet.style.display = "none";
-      contentAdet.previousElementSibling.style.display = "flex";
-    }
-  });
-});
+                if (adetSayi > 1) {
+                    adet.value = adetSayi - 1;
+                } else if (adetSayi === 1) {
+                    // Adet 1'se, input'u gizle ve sepete ekle butonunu göster
+                    contentAdet.style.display = "none";
+                    contentAdet.previousElementSibling.style.display = "flex";
+                }
+            });
+        });
     </script>
 </body>
 

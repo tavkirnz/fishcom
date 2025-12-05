@@ -300,6 +300,7 @@ section.hero {
   transition: all 0.3s ease;
   z-index: 0;
   display: inline-block;
+  border-radius: 6px;
 }
 .specials-title .specials-text{
   gap: 12px;

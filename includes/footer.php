@@ -49,7 +49,7 @@
                             <li><a href="">SSS</a></li>
                             <li><a href="">Hesap Numaraları</a></li>
                             <li><a href="">İptal & İade Koşulları</a></li>
-                            <li><a href="">KVKK</a></li>
+                            <li><a href="/kvkk.php">KVKK</a></li>
                             <li><a href="">Mesafeli Satış Sözleşmesi</a></li>
                             <li><a href="">Çerez Politikası</a></li>
                         </ul>

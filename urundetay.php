@@ -25,7 +25,7 @@
     <?php include 'includes/header.php'; ?>
     <?php
     $title = "Füme Serisi";
-    $crumb = "Anasayfa / Ürünler / Füme Serisi";
+    $crumb = " / Ürünler / Füme Serisi";
     include "includes/breadcrumb.php"
         ?>
     <section id="uyari" class="f jc bg-(--fish-gold)" style="">
@@ -38,15 +38,14 @@
             <div class="image-area f gap-10">
                 <div class="image-roof">
                     <ul>
-                        <li><img src="assets/images/urun1.png" id="roof-img"></li>
-                        <li><img src="assets/images/urun1.png" id="roof-img"></li>
-                        <li><img src="assets/images/urun1.png" id="roof-img"></li>
-                        <li><img src="assets/images/urun1.png" id="roof-img"></li>
-                        <li><img src="assets/images/neylabu.png" id="roof-img"></li>
+                        <li><img src="assets/images/16.png" id="roof-img"></li>
+                        <li><img src="assets/images/17.png" id="roof-img"></li>
+                        <li><img src="assets/images/18.png" id="roof-img"></li>
+                        <li><img src="assets/images/example.png" id="roof-img"></li>
                     </ul>
                 </div>
                 <div class="image-main f ic">
-                    <img src="assets/images/urun1.png" id="main-img">
+                    <img src="assets/images/16.png" id="main-img">
                 </div>
             </div>
             <div class="content-area">
@@ -451,6 +450,7 @@
     <?php include 'includes/not-ekle.php' ?>
     <?php include 'includes/soru-sor.php' ?>
     <script src="assets/scripts/script.js"></script>
+    <script src="assets/scripts/view.js"></script>
     <script>
         const buttons = document.querySelectorAll('#button-image');
 

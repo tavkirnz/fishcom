@@ -25,7 +25,7 @@
     <?php include "includes/header.php" ?>
     <?php
     $title = "Yeni Ürünlerim";
-    $crumb = "Anasayfa / Yeni Ürünlerim";
+    $crumb = " / Yeni Ürünlerim";
     include "includes/breadcrumb.php";
     ?>
     <section class="f jc">

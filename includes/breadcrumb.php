@@ -4,7 +4,7 @@
             <span><?= isset($title) ? htmlspecialchars($title) : "" ?></span>
         </div>
         <div class="crumb f fcol">
-            <span><?= isset($crumb) ? htmlspecialchars($crumb) : "" ?></span>
+            <span><a href="/">Anasayfa</a><?= isset($crumb) ? htmlspecialchars($crumb) : "" ?></span>
         </div>
     </div>
 </section>

@@ -28,7 +28,7 @@
             <div class="container r">
                 <?php
                 $title = "Üyelik Formu";
-                $crumb = "Anasayfa / Üyelik Formu";
+                $crumb = " / Üyelik Formu";
                 include "includes/breadcrumb.php";
                 ?>
                 <a href="" class="play-btn-text cursor-pointer">

@@ -608,7 +608,7 @@ footer a {
   padding: 28px;
 }
 
-.image-area span {
+.products-card .image-area span {
   position: absolute;
   top: 25px;
   color: var(--luxury-white);
@@ -618,12 +618,12 @@ footer a {
   z-index: 10;
 }
 
-.image-area {
+.products-card .image-area {
   overflow: hidden;
   /* ensure scaled image doesn't overflow the card */
 }
 
-.image-area img {
+.products-card .image-area img {
   width: 100%;
   height: 230px;
   object-fit: cover;
@@ -633,36 +633,36 @@ footer a {
   transform-origin: center center;
 }
 
-.products-card:hover .image-area img {
+.products-card:hover .products-card .image-area img {
   transform: scale(1.06);
 }
 
-.image-area .guluten-free {
+.products-card .image-area .guluten-free {
   background-color: var(--fish-green);
 }
 
-.image-area .guluten-free::before {
+.products-card .image-area .guluten-free::before {
   content: "Gulütensiz";
 }
 
-.image-area .nothing {
+.products-card .image-area .nothing {
   display: none;
 }
 
-.image-area .offsale,
+.products-card .image-area .offsale,
 .new {
   background-color: var(--fish-red);
 }
 
-.image-area .offsale::before {
+.products-card .image-area .offsale::before {
   content: "İndirimli";
 }
 
-.image-area .new::before {
+.products-card .image-area .new::before {
   content: "Yeni";
 }
 
-.image-area .fast-buttons {
+.products-card .image-area .fast-buttons {
   position: absolute;
   display: flex;
   gap: 10px;
@@ -679,7 +679,7 @@ footer a {
   z-index: 20;
 }
 
-.image-area .fast-buttons button {
+.products-card .image-area .fast-buttons button {
   background-color: white;
   padding: 5px;
   width: 30px;

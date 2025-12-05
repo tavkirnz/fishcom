@@ -102,8 +102,8 @@
 <body>
     <?php include "includes/header.php" ?>
     <?php
-    $title = "Şeflerin Seçtikleri";
-    $crumb = " / Şeflerin Seçtikleri";
+    $title = "Yeni Gelenler";
+    $crumb = " / Yeni Gelenler";
     include "includes/breadcrumb.php"
         ?>
 

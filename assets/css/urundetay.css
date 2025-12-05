@@ -8,20 +8,27 @@
 .urun .image-area .image-roof {
   margin-bottom: 15px;
   width: 25%;
+  overflow-y: scroll;
+  height: 600px;
 }
 
 .urun .image-area .image-roof ul li {
   display: flex;
   justify-content: center;
-  width: auto;
+  width: 100%;
+  aspect-ratio: 3/4;
+}
+.urun .image-area .image-roof ul{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.urun .image-area .image-roof #roof-img {
-  height: 120px;
-}
 
 .urun .image-area .image-main {
-  width: 75%;
+  width: 100%;
+  max-width: 75%;
+  aspect-ratio: 3/4;
   background-color: #EFEFEF;
 }
 
@@ -89,9 +96,11 @@
   transition: transform 0.2s ease;
   cursor: pointer;
 }
+
 .urun .content-area .content-certificates button:hover {
   transform: translateY(-5px);
 }
+
 .urun .content-area .content-certificates button img {
   width: 55px;
   height: 55px;
@@ -320,4 +329,3 @@
 .modal-body {
   padding: 20px;
 }
-
