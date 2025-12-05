@@ -1,8 +1,4 @@
-
 const buttons = document.querySelectorAll('#button-image');
-
-
-
 
 function changeText(baslik, yazi) {
     const baslikEl = document.getElementById("baslik");
@@ -117,12 +113,6 @@ function fiyatiGuncelle() {
     const toplam = birimFiyat * sayi;
     fiyatSpan.textContent = toplam;
 
-    // 5000 TL üzerindeyse gözükmesin ama yerini korusun
-    if (toplam > 5000) {
-        uyariSection.style.visibility = "hidden";
-    } else {
-        uyariSection.style.visibility = "visible";
-    }
 }
 
 // Başlangıç
@@ -150,6 +140,7 @@ cikarbtn.addEventListener("click", function () {
     degisensayi.value = sayi;
     fiyatiGuncelle();
 });
+
 
 
 // Certificate Modal Functionality
@@ -191,4 +182,3 @@ document.getElementById('certificateModal').addEventListener('click', function (
         this.classList.add('hidden');
     }
 });
-

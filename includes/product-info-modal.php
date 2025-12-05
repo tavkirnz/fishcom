@@ -46,9 +46,9 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet euismod libero.
                     </div>
                     <div class="content-certificates">
-                        <button id="button-image"><img src="assets/images/butonloggo.png"></button>
-                        <button id="button-image"><img src="assets/images/butonloggok.png"></button>
-                        <button id="button-image"><img src="assets/images/butonloggoy.png"></button>
+                        <button id="cert1" class="certificate-btn"><img src="assets/images/butonloggo.png"></button>
+                    <button id="cert2" class="certificate-btn"><img src="assets/images/butonloggok.png"></button>
+                    <button id="cert3" class="certificate-btn"><img src="assets/images/butonloggoy.png"></button>
                     </div>
                     <hr>
                     <div class="f ic jb my-10 gap-5">

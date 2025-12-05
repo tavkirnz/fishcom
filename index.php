@@ -882,7 +882,8 @@
     <section class="cargo-service py-20 select-none">
         <div class="cargo-service-top w-full py-20">
             <div class="pink h-60 w-2/3 bg-red-100 r">
-                <figure class="absolute z-29 -right-100 -top-50"><img class="h-150" src="assets/images/cargo.png" alt="">
+                <figure class="absolute z-29 -right-100 -top-50"><img class="h-150" src="assets/images/cargo.png"
+                        alt="">
                 </figure>
                 <h2 class="absolute left-30 -top-10 leading-13">Siparişlerin <span class="text-6xl text-red-400">soğuk
                         zincirle</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; işletmende
@@ -968,6 +969,7 @@
     <?php include "includes/soru-sor.php" ?>
     <?php include "includes/not-ekle.php" ?>
     <?php include "includes/share-modal.php" ?>
+    <?php include "includes/sertifika-modal.php" ?>
     <script src="assets/scripts/script.js"></script>
     <script src="assets/scripts/index.js"></script>
 </body>

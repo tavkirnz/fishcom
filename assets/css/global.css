@@ -887,11 +887,16 @@ footer a {
   display: flex;
   gap: 15px;
 }
-
+.modal-body .content-area .content-certificates button {
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+.modal-body .content-area .content-certificates button:hover {
+  transform: translateY(-5px);
+}
 .modal-body .content-area .content-certificates button img {
   width: 55px;
   height: 55px;
-  transition: transform 0.2s ease;
 }
 
 .modal-body .content-area .content-adet {
