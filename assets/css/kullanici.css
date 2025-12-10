@@ -28,7 +28,6 @@
     border-radius: 10px;
     width: 100%;
 }
-
 #minefield {
   display: grid;
   grid-template-columns: repeat(10, 30px);

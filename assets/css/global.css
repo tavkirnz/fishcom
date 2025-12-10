@@ -1948,7 +1948,7 @@ footer a {
 
 /* #endregion */
 
-/* tarif */
+/* #region tarif */
 .tarif-genel{
   margin-inline: auto;
   display: flex;
@@ -2008,6 +2008,9 @@ footer a {
   width: 30px;
   min-width: 30px;
 }
+
+/* #endregion */
+
 /* #region Breadcrumb */
 .top-img{
   background-position: top;
