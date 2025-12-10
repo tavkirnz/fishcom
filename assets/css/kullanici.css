@@ -1,0 +1,64 @@
+.kullanici-inputs{
+    padding: 10px 20px;
+    border: 1px solid #d1d1d1;
+    border-radius: 15px;
+    width: 100%;
+}
+.kullanici-form-hor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0px;
+    gap: 50px;
+}
+.kullanici{
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    border: 1px solid #d1d1d1;
+    border-radius: 20px;
+}
+.form-name{
+    font-size: 18px;
+}
+.kullanici-buton{
+    background-color: #0282ca;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+#minefield {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  gap: 2px;
+  width: max-content;
+  margin: 20px 0;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  background: #ccc;
+  border: 1px solid #999;
+  font-size: 18px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cell.revealed {
+  background: #eee;
+  cursor: default;
+}
+
+.cell.mine {
+  background: red;
+  color: white;
+}
+
+.cell.flag {
+  background: #f7d26a;
+}
