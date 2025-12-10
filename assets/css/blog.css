@@ -1,0 +1,214 @@
+/* #region Blog */
+.blog .container {
+    gap: 50px;
+}
+
+.blog-content {
+    width: 70%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.blog-list {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blog-card {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card figure {
+    width: 100%;
+    height: 100%;
+}
+
+.blog-card figure img {
+    width: 100%;
+    height: 100%;
+}
+
+.left-content {
+    gap: 10px;
+}
+
+.list-popular-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.popular-post {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.popular-post:hover {
+    background-color: var(--line-color);
+
+}
+
+.popular-post figure {
+    width: 30%;
+    height: 100%;
+}
+
+.popular-post figure img {
+    width: 100%;
+    height: 100%;
+}
+
+.popular-post .popular-text {
+    width: 70%;
+}
+
+.recent-post {
+    padding: 10px 5px;
+}
+
+.recent-post:hover {
+    background-color: var(--line-color);
+}
+
+
+
+
+
+
+
+
+.blog-yazidiv {
+    padding: 40px;
+}
+
+.blog-baslik {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog-baslik .baslik-tarih img {
+    width: 20px;
+}
+
+.blog-yazi {
+    margin: 30px 0px;
+    font-weight: 200;
+    width: 90%;
+}
+
+.blog-impflex {
+    display: flex;
+    gap: 10px;
+    align-items: top;
+}
+
+.blog-hover {
+    transition: color 0.3s ease;
+}
+
+.blog-hover:hover {
+    color: #0282ca;
+}
+
+.bloglist-section {
+    width: 35%;
+}
+
+.blog-cizgi {
+    display: flex;
+    align-items: center;
+}
+
+.blog-cizgi1 {
+    width: 40%;
+    border: #0282ca 2px solid;
+}
+
+.blog-cizgi2 {
+    width: 60%;
+    border: #d1d1d188 2px solid;
+}
+
+.blog-img {
+    width: 85px;
+    min-width: 85px;
+}
+
+
+
+.list-tarih {
+    margin-bottom: 4px;
+    color: #666;
+    font-size: 14px;
+}
+
+.blog-header {
+    font-size: 28px;
+}
+
+
+.blog-square {
+    width: 8px;
+    background-color: #0282ca;
+    height: 8px;
+    margin-top: 10px;
+    min-width: 8px;
+}
+
+.post-tarih {
+    margin-top: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+.blog-sectionheader {
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.baslik-tarih {
+    color: #0282ca;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* #endregion */
+
+
+/* #region uyelik-formu */
+
+.detay-share {
+  width: 100%;
+  background-color: #0282ca;
+  padding: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 50px 0px;
+  justify-content: left;
+}
+
+.detay-uyelik {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  padding: 40px;
+}
+
+.detay-share i {
+  font-size: 34px;
+  margin-right: 10px;
+}
+/* #endregion */

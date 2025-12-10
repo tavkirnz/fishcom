@@ -12,7 +12,7 @@
   --fish-brown: #d4c29b;
   --fish-teal: #23c5cd;
   --fish-green: #2cb673;
-  --line-color: #d2d2d2;
+  --line-color: #e8e8e8;
 }
 
 /* #region ---------------Tanımlar */
@@ -624,8 +624,8 @@ footer a {
 }
 
 .products-card .image-area img {
-  width: 100%;
-  height: 230px;
+  width: 350px;
+  height: 240px;
   object-fit: cover;
   background-position: center;
   display: block;
@@ -633,7 +633,7 @@ footer a {
   transform-origin: center center;
 }
 
-.products-card:hover .products-card .image-area img {
+.products-card:hover .image-area img {
   transform: scale(1.06);
 }
 
@@ -723,7 +723,7 @@ footer a {
 
 /* #endregion */
 
-/* #region Cargo-Service */
+/* #region ---------------Cargo-Service */
 .number-bottom .numbers {
   width: fit-content;
   font-size: 128px;
@@ -981,10 +981,33 @@ footer a {
   top: 55px;
   z-index: 40;
 }
-
+.top-img{
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+}
+.top-img .overlay{
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+}
+.top-img .breadcrumb{
+    background-color: transparent;
+    color: white;
+}
+.top-img .breadcrumb .container{
+    flex-direction: column;
+    align-items: start;
+}
+.top-img .breadcrumb .title{
+    font-size: 38px;
+    font-weight: 600;
+}
 /* #endregion */
 
-/* #region Cart Modal */
+/* #region ---------------Cart Modal */
 .cart-modal-overlay {
   position: fixed;
   top: 0;
@@ -1147,7 +1170,7 @@ footer a {
 
 /* #endregion */
 
-/* #region left menu*/
+/* #region ---------------left menu*/
 .left-menu {
   padding: 20px;
   border: 1px solid #d1d1d1;
@@ -1195,7 +1218,7 @@ footer a {
 
 /* #endregion */
 
-/* #region playbtn*/
+/* #region ---------------playbtn */
 .play-btn-text {
   position: absolute;
   right: 0;
@@ -1254,7 +1277,7 @@ footer a {
 
 /* #endregion */
 
-/* #region Note Modal */
+/* #region ---------------Note Modal */
 .note-modal-overlay {
   position: fixed;
   top: 0;
@@ -1345,7 +1368,7 @@ footer a {
 
 /* #endregion */
 
-/* #region Question Modal */
+/* #region ---------------Question Modal */
 .question-modal-overlay {
   position: fixed;
   top: 0;
@@ -1433,7 +1456,7 @@ footer a {
 
 /* #endregion */
 
-/* #region Share Modal */
+/* #region ---------------Share Modal */
 .share-modal-overlay {
   position: fixed;
   top: 0;
@@ -1577,7 +1600,7 @@ footer a {
 
 /* #endregion */
 
-/* #region WhatsApp Button */
+/* #region ---------------WhatsApp Button */
 .whatsapp-btn {
   position: fixed;
   bottom: 30px;
@@ -1662,8 +1685,7 @@ footer a {
 
 /* #endregion*/
 
-
-/* #region pages list*/
+/* #region ---------------pages list*/
 
 .listing-footer{
     padding-top: 40px;
@@ -1684,7 +1706,6 @@ footer a {
 }
 
 /* #endregion */
-
 
 /* #region uyelik-formu */
 .uyelik-ustresim {
@@ -1834,184 +1855,6 @@ footer a {
 
 .uyelik-altyazi {
   font-size: 28px;
-}
-/* #endregion */
-
-
-/* #region uyelik-formu */
-
-.blog-genel {
-  margin-inline: auto;
-  display: flex;
-  justify-content: space-between;
-  width: 80.5%;
-  font-size: 18px;
-  gap: 50px;
-  margin-top: 100px;
-  margin-bottom: 50px;
-}
-
-.blog-section {
-  width: 65%;
-}
-
-.blog-kocadiv {
-  width: 100%;
-  height: auto;
-  margin-bottom: 40px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
-}
-
-.blog-kocadiv:hover {
-  transform: translateY(-5px);
-}
-
-.blog-img {
-  width: 100%;
-  height: 100%;
-}
-
-.blog-yazidiv {
-  padding: 40px;
-}
-
-.blog-baslik {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.blog-baslik img {
-  width: 20px;
-}
-
-.blog-yazi {
-  margin: 30px 0px;
-  font-weight: 200;
-  width: 90%;
-}
-
-.blog-impflex {
-  display: flex;
-  gap: 10px;
-  align-items: top;
-}
-
-.blog-hover {
-  transition: color 0.3s ease;
-}
-
-.blog-hover:hover {
-  color: #0282ca;
-}
-
-.bloglist-section {
-  width: 35%;
-}
-
-.blog-cizgi {
-  display: flex;
-  align-items: center;
-}
-
-.blog-cizgi1 {
-  width: 15%;
-  border: #0282ca 2px solid;
-}
-
-.blog-cizgi2 {
-  width: 85%;
-  border: #d1d1d188 2px solid;
-}
-
-.blog img {
-  width: 85px;
-  min-width: 85px;
-}
-
-.popular-post {
-  display: flex;
-  gap: 20px;
-  margin: 30px 0;
-}
-
-.popular-post img {
-  width: 85;
-  height: 85px;
-}
-
-.list-tarih {
-  margin-bottom: 4px;
-  color: #666;
-  font-size: 14px;
-}
-
-.popular-text {
-  padding: 10px 0;
-}
-
-.blog-header {
-  font-size: 28px;
-}
-
-.recent-post {
-  margin: 30px 0;
-}
-
-.recent-post img {
-  width: 10px;
-}
-
-.blog-square {
-  width: 8px;
-  background-color: #0282ca;
-  height: 8px;
-  margin-top: 10px;
-  min-width: 8px;
-}
-
-.post-tarih {
-  margin-top: 8px;
-  color: #666;
-  font-size: 14px;
-}
-
-.blog-sectionheader {
-  font-weight: bolder;
-  font-size: 24px;
-}
-
-.baslik-tarih {
-  color: #0282ca;
-  font-weight: 400;
-  font-size: 16px;
-}
-/* #endregion */
-
-
-/* #region uyelik-formu */
-
-.detay-share {
-  width: 100%;
-  background-color: #0282ca;
-  padding: 20px;
-  color: white;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 50px 0px;
-  justify-content: left;
-}
-
-.detay-uyelik {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
-  padding: 40px;
-}
-
-.detay-share i {
-  font-size: 34px;
-  margin-right: 10px;
 }
 /* #endregion */
 

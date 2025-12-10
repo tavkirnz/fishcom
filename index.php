@@ -112,7 +112,7 @@
                     <div class="products-card" data-href="#">
                         <div class="image-area r">
                             <span class="guluten-free"></span>
-                            <img src="assets/images/yemek1.webp" alt="">
+                            <img src="assets/images/ornekurun.png" alt="">
                             <div class="fast-buttons">
                                 <button>
                                     <i class="fa-regular fa-eye text-lg"></i>
