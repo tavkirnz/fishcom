@@ -5,20 +5,6 @@
     <?php include 'includes/head-links.php' ?>
     <title>Denizev | Destek</title>
     <link rel="stylesheet" href="assets/css/destek.css">
-    <!---------------------------------------Components/-------------------------------------->
-    <!----
-    f     = flex
-    fcol  = flex-col
-    frow  = flex-row
-    fwrap = flex-wrap
-    jc    = justify-center
-    jb    = justify-between
-    ic    = items-center
-    ie    = items-end
-    r     = relative
-    a     = absolute
-    c-s   = py-10
-    ----->
 </head>
 
 <body>

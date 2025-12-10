@@ -5,20 +5,6 @@
     <?php include "includes/head-links.php" ?>
     <title>Denizev | Anasayfa</title>
     <link href="assets/css/index.css" rel="stylesheet">
-    <!---------------------------------------Components/-------------------------------------->
-    <!----
-    f     = flex
-    fcol  = flex-col
-    frow  = flex-row
-    fwrap = flex-wrap
-    jc    = justify-center
-    jb    = justify-between
-    ic    = items-center
-    ie    = items-end
-    r     = relative
-    a     = absolute
-    c-s   = py-10
-    ----->
 </head>
 
 <body>
@@ -879,89 +865,8 @@
             </div>
         </div>
     </section>
-    <section class="cargo-service py-20 select-none">
-        <div class="cargo-service-top w-full py-20">
-            <div class="pink h-60 w-2/3 bg-red-100 r">
-                <figure class="absolute z-29 -right-100 -top-50"><img class="h-150" src="assets/images/cargo.png"
-                        alt="">
-                </figure>
-                <h2 class="absolute left-30 -top-10 leading-13">Siparişlerin <span class="text-6xl text-red-400">soğuk
-                        zincirle</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; işletmende
-                </h2>
-            </div>
-        </div>
-        <div class="cargo-service-bottom py-20 f jc">
-            <div class="container f">
-                <article class="f fcol w-1/5">
-                    <div class="article-icons f w-full">
-                        <div class="numbers">
-                            01
-                        </div>
-                        <div class="content-img w-fit f ic">
-                            <img class="w-20" src="assets/images/img1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="article-desription text-2xl font-bold text-neutral-700 uppercase pr-25">
-                        Yüzlerce Deniz Ürünü
-                    </div>
-                </article>
-                <article class="f fcol w-1/5">
-                    <div class="article-icons f w-full">
-                        <div class="numbers">
-                            02
-                        </div>
-                        <div class="content-img w-fit f ic">
-                            <img class="w-20" src="assets/images/img8.svg" alt="">
-                        </div>
-                    </div>
-
-                    <div class="article-desription text-2xl font-bold text-neutral-700 uppercase pr-25">
-                        Sürekli Stok Güvencesiyle
-                    </div>
-                </article>
-                <article class="f fcol w-1/5">
-                    <div class="article-icons f w-full">
-                        <div class="numbers">
-                            03
-                        </div>
-                        <div class="content-img w-fit f ic">
-                            <img class="w-20" src="assets/images/img7.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="article-desription text-2xl font-bold text-neutral-700 uppercase pr-25">
-                        En Uygun Fiyatla
-                    </div>
-                </article>
-                <article class="f fcol w-1/5">
-                    <div class="article-icons f w-full">
-                        <div class="numbers">
-                            04
-                        </div>
-                        <div class="content-img w-fit f ic">
-                            <img class="w-22" src="assets/images/img9.png" alt="">
-                        </div>
-                    </div>
-                    <div class="article-desription text-2xl font-bold text-neutral-700 uppercase pr-25">
-                        Güvenli Ödeme Sistemi İle
-                    </div>
-                </article>
-                <article class="f fcol w-1/5 ">
-                    <div class="article-icons f w-full">
-                        <div class="numbers">
-                            05
-                        </div>
-                        <div class="content-img w-fit f ic">
-                            <img class="w-40" src="assets/images/img3.png" alt="">
-                        </div>
-                    </div>
-                    <div class="article-desription text-2xl font-bold text-neutral-700 uppercase pr-25">
-                        Hızlı Teslimat ile kapında
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
+    <?php include "includes/cargo.php" ?>
+    <?php include "includes/numbers.php" ?>
     <?php include "includes/footer.php" ?>
     <?php include "includes/product-info-modal.php" ?>
     <?php include "includes/sepet-modal.php" ?>

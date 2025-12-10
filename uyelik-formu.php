@@ -5,51 +5,17 @@
     <?php include 'includes/head-links.php' ?>
     <title>Denizev | Sipariş</title>
     <link rel="stylesheet" href="assets/css/uyelikform.css">
-    <!---------------------------------------Components/-------------------------------------->
-    <!----
-    f     = flex
-    fcol  = flex-col
-    frow  = flex-row
-    fwrap = flex-wrap
-    jc    = justify-center
-    jb    = justify-between
-    ic    = items-center
-    ie    = items-end
-    r     = relative
-    a     = absolute
-    c-s   = py-10
-    ----->
 </head>
 
 <body>
     <?php include "includes/header.php" ?>
-    <div class="top-img">
-        <div class="overlay f jc ic">
-            <div class="container r">
-                <?php
-                $title = "Üyelik Formu";
-                $crumb = " / Üyelik Formu";
-                include "includes/breadcrumb.php";
-                ?>
-                <a href="" class="play-btn-text cursor-pointer">
-                    <div class="play-circle-text" aria-hidden="true">
-                        <svg viewBox="0 0 120 120" width="80" height="80" class="circle-svg">
-                            <defs>
-                                <!-- Small offset hack so the path is a full circle -->
-                                <path id="recipeCirclePath" d="M60,15 a45,45 0 1,1 -0.1,0" />
-                            </defs>
-                            <text>
-                                <textPath href="#recipeCirclePath" startOffset="0%">
-                                    En Uygun Fiyat Avantajı ------------------
-                                </textPath>
-                            </text>
-                        </svg>
-                    </div>
-                    <div class="play-btn"><i class="fa-solid fa-coins"></i></div>
-                </a>
-            </div>
-        </div>
-    </div>
+    <?php
+        $img = "/assets/images/uye.jpg";
+        $title = "Üyelik Formu";
+        $crumb = " / Üyelik Formu";
+        include "includes/breadcrumb-big.php" 
+    ?>
+
     <section class="sub-form f jc">
         <div class="container f jb c-s gap-5">
             <div class="uyelik-list">
@@ -184,77 +150,7 @@
             </div>
         </div>
     </section>
-    <div class="number-bottom py-20 f jc">
-        <div class="container f">
-            <article class="f fcol w-1/5">
-                <div class="article-icons f w-full">
-                    <div class="numbers">
-                        01
-                    </div>
-                    <div class="content-img w-fit f ic">
-                        <img class="w-20" src="assets/images/img1.png" alt="">
-                    </div>
-                </div>
-                <div class="article-desription text-2xl font-bold text-neutral-700 uppercase pr-25">
-                    Yüzlerce Deniz Ürünü
-                </div>
-            </article>
-            <article class="f fcol w-1/5">
-                <div class="article-icons f w-full">
-                    <div class="numbers">
-                        02
-                    </div>
-                    <div class="content-img w-fit f ic">
-                        <img class="w-20" src="assets/images/img8.svg" alt="">
-                    </div>
-                </div>
-
-                <div class="article-desription text-2xl font-bold text-neutral-700 uppercase pr-25">
-                    Sürekli Stok Güvencesiyle
-                </div>
-            </article>
-            <article class="f fcol w-1/5">
-                <div class="article-icons f w-full">
-                    <div class="numbers">
-                        03
-                    </div>
-                    <div class="content-img w-fit f ic">
-                        <img class="w-20" src="assets/images/img7.png" alt="">
-                    </div>
-                </div>
-
-                <div class="article-desription text-2xl font-bold text-neutral-700 uppercase pr-25">
-                    En Uygun Fiyatla
-                </div>
-            </article>
-            <article class="f fcol w-1/5">
-                <div class="article-icons f w-full">
-                    <div class="numbers">
-                        04
-                    </div>
-                    <div class="content-img w-fit f ic">
-                        <img class="w-22" src="assets/images/img9.png" alt="">
-                    </div>
-                </div>
-                <div class="article-desription text-2xl font-bold text-neutral-700 uppercase pr-25">
-                    Güvenli Ödeme Sistemi İle
-                </div>
-            </article>
-            <article class="f fcol w-1/5 ">
-                <div class="article-icons f w-full">
-                    <div class="numbers">
-                        05
-                    </div>
-                    <div class="content-img w-fit f ic">
-                        <img class="w-40" src="assets/images/img3.png" alt="">
-                    </div>
-                </div>
-                <div class="article-desription text-2xl font-bold text-neutral-700 uppercase pr-25">
-                    Hızlı Teslimat ile kapında
-                </div>
-            </article>
-        </div>
-    </div>
+    <?php include "includes/numbers.php" ?>
     <?php include "includes/footer.php" ?>
     <?php include "includes/product-info-modal.php" ?>
     <?php include "includes/sepet-modal.php" ?>
