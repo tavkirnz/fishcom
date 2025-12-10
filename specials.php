@@ -4,7 +4,7 @@
 <head>
     <?php include 'includes/head-links.php' ?>
     <title>Denizev | Sipariş</title>
-    <link rel="stylesheet" href="assets/css/sef-list.css">
+    <link rel="stylesheet" href="assets/css/specials.css">
 </head>
 
 <body>
